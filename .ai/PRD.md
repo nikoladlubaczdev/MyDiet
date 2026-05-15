@@ -561,53 +561,6 @@ Stałe, predefiniowane nazwy:
 
 ## 6. Technical Architecture
 
-### 6.1 Tech Stack
-
-**Frontend:**
-
-- **Framework:** React Native + Expo
-- **Język:** TypeScript
-- **Styling:** NativeWind v4+ (Tailwind CSS dla React Native)
-- **Nawigacja:** Expo Router v3.x (filesystem-based routing)
-  - Layout-based navigation z automatycznym Bottom Tab
-  - Type-safe routing z parametrami
-  - Deep linking out-of-the-box
-- **State Management:** Zustand v4.5.x
-  - Lightweight, bez boilerplate
-  - Persist middleware dla offline support
-  - DevTools integration
-- **Data Fetching & Caching:** TanStack Query (React Query) v5.x
-  - Automatyczny cache i refetch dla Firebase
-  - Optimistic updates
-  - Offline queue dla mutations
-- **Animacje:** React Native Reanimated v3.10+
-  - 60fps+ animacje na native thread
-  - Gesture Handler integration
-- **Storage:** React Native MMKV v2.x
-  - 100x szybszy niż AsyncStorage
-  - Synchronous API
-  - Zustand persist middleware compatible
-- **Walidacja:** Zod v3.22+
-  - Runtime schema validation
-  - Type inference dla TypeScript
-  - Walidacja JSON recipes i Firebase data
-- **Formularze:** React Hook Form v7.x
-  - Lightweight, uncontrolled forms
-  - Integracja z Zod dla validation
-
-**Backend & Database:**
-
-- **Firebase Firestore:** NoSQL database do przechowywania danych
-- **Firebase Authentication:** Anonymous auth lub custom token auth (bez email/password)
-- **Firebase Hosting:** (opcjonalnie dla configuration/assets)
-- **Plan:** Spark (Free) - 1GB storage, 50k reads/day, 20k writes/day
-
-**Development Tools:**
-
-- **Expo CLI + EAS Build:** Development, build i deployment
-- **TypeScript ESLint + Prettier:** Code quality i formatting
-- **iOS only** w MVP - brak kodu Android-specific
-
 ### 6.2 Data Models
 
 #### Collection: `households`

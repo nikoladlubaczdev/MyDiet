@@ -158,27 +158,3 @@ Stack zoptymalizowany dla **prywatnej aplikacji iOS** dla 2 użytkowników. Prio
 - Dark mode support (nice to have, nie w MVP)
 
 **Brak Android w MVP** - kod iOS-specific allowed
-
----
-
-## Dependencies Overview
-
-### Production Dependencies
-```json
-{
-  "expo": "~52.0.0",
-  "expo-router": "~3.5.0",
-  "react": "18.3.0",
-  "react-native": "0.76.0",
-  
-  "firebase": "^10.12.0",
-  "zustand": "^4.5.0",
-  "@tanstack/react-query": "^5.40.0",
-  "@react-native-async-storage/async-storage": "^1.23.0",
-  
-  "nativewind": "^4.1.0",
-  "tailwindcss": "^3.4.0",
-  
-  "date-fns": "^3.6.0",
-  "nanoid": "^5.0.0"
-}
