@@ -3,6 +3,7 @@
 This file establishes standard rules for automated agents working on the MyDiet monorepo project.
 
 ## Project Context
+
 - **Name**: MyDiet
 - **Description**: A mobile iPhone application designed for meal planning and automated shopping list aggregation, built with Expo and optimized for offline usage.
 - **Stack**: Expo SDK 54, React Native (React 19), Tailwind CSS (NativeWind 4), TypeScript 5.
