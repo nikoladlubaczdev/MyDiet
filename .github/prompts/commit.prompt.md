@@ -7,6 +7,15 @@ description: "Use when: the user wants to commit and push changes with an automa
 
 You are tasked with analyzing the current unstaged and staged changes, generating a clear, professional English commit message, adding all changes to staging, committing them, and pushing to the remote repository.
 
+## Branch Management Rules
+
+1. **No direct commits to `main`**: Never commit application features or bug fixes directly to the `main` branch. All development should take place on dedicated branches. (Minor config updates or documentation within `.ai/` are permitted exceptions).
+2. **Branch Naming Conventions**:
+   - Features: `feat/feature-name` (e.g., `feat/auth-onboarding`)
+   - Fixes: `fix/bug-desc` (e.g., `fix/shopping-list-sync`)
+   - Config / Settings: `chore/task` (e.g., `chore/firebase-setup`)
+3. **Execution Safety**: Before completing the commit, always check the current branch using `git branch --show-current`. If on `main`, prompt the user or automatically create a new branch containing the staged changes before committing.
+
 ## Requirements
 
 1. **Verify & Stage changes**: Check what files are modified, added, or deleted using `git status` or `git diff`. Automatically stage all changed files (except those that are intentionally ignored in `.gitignore`) using `git add -A`.
