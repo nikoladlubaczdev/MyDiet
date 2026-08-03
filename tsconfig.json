@@ -4,6 +4,20 @@
     "strict": true,
     "jsx": "react-jsx",
     "jsxImportSource": "nativewind",
-    "types": ["nativewind/types"]
-  }
+    "types": [
+      "nativewind/types"
+    ],
+    "paths": {
+      "@/*": [
+        "./src/*"
+      ]
+    }
+  },
+  "include": [
+    "**/*.ts",
+    "**/*.tsx",
+    ".expo/types/**/*.ts",
+    "expo-env.d.ts",
+    "nativewind-env.d.ts"
+  ]
 }
