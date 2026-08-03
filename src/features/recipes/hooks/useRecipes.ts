@@ -9,7 +9,7 @@ interface UseRecipesOptions {
 
 export function useRecipes(options?: UseRecipesOptions) {
   const recipes = useMemo(() => {
-    let filtered: Recipe[] = recipesData.recipes;
+    let filtered: Recipe[] = (recipesData.recipes as Recipe[]);
 
     if (options?.category) {
       filtered = filtered.filter(recipe => recipe.category === options.category);
