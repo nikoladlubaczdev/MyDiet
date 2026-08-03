@@ -1,9 +1,11 @@
 export type MealCategory = 'śniadanie' | 'drugie-śniadanie' | 'obiad' | 'kolacja' | 'kawa' | 'przekąska';
+export type WeightUnit = 'g' | 'ml';
 
 export interface Ingredient {
   product: string;
-  weight: number; // w gramach
-  quantity?: string; // np. "2 x Łyżka"
+  weight: number;
+  unit: WeightUnit;
+  hint?: string; // np. "0.5 x Szklanka", "2 x Łyżka"
 }
 
 export interface Macros {
@@ -19,7 +21,6 @@ export interface Recipe {
   id: string;
   name: string;
   category: MealCategory;
-  description: string;
   ingredients: Ingredient[];
   instructions: string[]; // kroki przygotowania
   tips?: string[];

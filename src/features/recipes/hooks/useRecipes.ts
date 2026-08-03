@@ -18,8 +18,7 @@ export function useRecipes(options?: UseRecipesOptions) {
     if (options?.search) {
       const query = options.search.toLowerCase();
       filtered = filtered.filter(recipe =>
-        recipe.name.toLowerCase().includes(query) ||
-        recipe.description.toLowerCase().includes(query)
+        recipe.name.toLowerCase().includes(query)
       );
     }
 

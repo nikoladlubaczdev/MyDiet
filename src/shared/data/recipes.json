@@ -4,22 +4,24 @@
       "id": "coffee-bulletproof-monday",
       "name": "KAWA KULOODPORNA",
       "category": "kawa",
-      "description": "Kawa ze zdrowotnymi dodatkami na bazie mleczka kokosowego i olejku MCT",
       "ingredients": [
         {
           "product": "Mleczko kokosowe (21%)",
           "weight": 40,
-          "quantity": "2 x Łyżka"
+          "unit": "ml",
+          "hint": "2 x Łyżka"
         },
         {
           "product": "Olej MCT (Olimp)",
           "weight": 28,
-          "quantity": "2 x Łyżka"
+          "unit": "ml",
+          "hint": "2 x Łyżka"
         },
         {
           "product": "Masło orzechowe",
           "weight": 15,
-          "quantity": "1 x Łyżeczka"
+          "unit": "ml",
+          "hint": "1 x Łyżeczka"
         }
       ],
       "instructions": [
@@ -40,37 +42,42 @@
       "id": "smoothie-mango-raspberry-monday",
       "name": "SMOOTHIE MANGO - MALINA",
       "category": "śniadanie",
-      "description": "Kolorowy smoothie z mango, malinami, twarogiem i masłem orzechowym",
       "ingredients": [
         {
           "product": "Napój migdałowy",
           "weight": 125,
-          "quantity": "0.5 x Szklanka"
+          "unit": "ml",
+          "hint": "0.5 x Szklanka"
         },
         {
           "product": "Maliny",
           "weight": 120,
-          "quantity": "2 x Garść"
+          "unit": "g",
+          "hint": "2 x Garść"
         },
         {
           "product": "Ser twarogowy półtłusty",
           "weight": 100,
-          "quantity": "0.5 x Opakowanie"
+          "unit": "g",
+          "hint": "0.5 x Opakowanie"
         },
         {
           "product": "Mango, mrożone",
           "weight": 70,
-          "quantity": "1 x Garść"
+          "unit": "g",
+          "hint": "1 x Garść"
         },
         {
           "product": "Masło orzechowe",
           "weight": 30,
-          "quantity": "2 x Łyżeczka"
+          "unit": "ml",
+          "hint": "2 x Łyżeczka"
         },
         {
           "product": "Len, nasiona",
           "weight": 10,
-          "quantity": "2 x Łyżeczka"
+          "unit": "ml",
+          "hint": "2 x Łyżeczka"
         }
       ],
       "instructions": [
@@ -94,12 +101,12 @@
       "id": "walnuts-monday",
       "name": "ORZECHY WŁOSKIE",
       "category": "śniadanie",
-      "description": "Surowe orzechy włoskie jako źródło zdrowych tłuszczy",
       "ingredients": [
         {
           "product": "Orzechy włoskie",
           "weight": 60,
-          "quantity": "4 x Łyżka"
+          "unit": "ml",
+          "hint": "4 x Łyżka"
         }
       ],
       "instructions": [
@@ -120,52 +127,60 @@
       "id": "mini-kopiec-kreta-monday",
       "name": "MINI KOPIEC KRETA",
       "category": "drugie-śniadanie",
-      "description": "Omlet z ricottą, bananem i migdałami - słodki i pożywny posiłek",
       "ingredients": [
         {
           "product": "Jaja kurze całe",
           "weight": 112,
-          "quantity": "2 x Sztuka"
+          "unit": "g",
+          "hint": "2 x Sztuka"
         },
         {
           "product": "Ser ricotta (z pełnego mleka)",
           "weight": 80,
-          "quantity": "4 x Łyżka"
+          "unit": "ml",
+          "hint": "4 x Łyżka"
         },
         {
           "product": "Banan",
           "weight": 60,
-          "quantity": "0.5 x Sztuka"
+          "unit": "g",
+          "hint": "0.5 x Sztuka"
         },
         {
           "product": "Mąka owsiana pełnoziarnista",
           "weight": 30,
-          "quantity": "2 x Łyżka"
+          "unit": "ml",
+          "hint": "2 x Łyżka"
         },
         {
           "product": "Migdały w płatkach",
           "weight": 15,
-          "quantity": "1.5 x Łyżka"
+          "unit": "ml",
+          "hint": "1.5 x Łyżka"
         },
         {
           "product": "Oliwa z oliwek",
           "weight": 10,
-          "quantity": "1 x Łyżka"
+          "unit": "ml",
+          "hint": "1 x Łyżka"
         },
         {
           "product": "Erytrol",
           "weight": 5,
-          "quantity": "1 x Łyżeczka"
+          "unit": "ml",
+          "hint": "1 x Łyżeczka"
         },
         {
           "product": "Kakao 16% proszek",
           "weight": 5,
-          "quantity": "0.5 x Łyżka"
+          "unit": "ml",
+          "hint": "0.5 x Łyżka"
         },
         {
           "product": "Proszek do pieczenia",
           "weight": 3,
-          "quantity": "1 x Łyżeczka"
+          "unit": "ml",
+          "hint": "1 x Łyżeczka"
         }
       ],
       "instructions": [
@@ -190,57 +205,66 @@
       "id": "shrimp-chinese-monday",
       "name": "CHIŃSZCZYZNA Z KREWETKAMI W SOSIE ORZECHOWYM",
       "category": "obiad",
-      "description": "Szybki obiad z krewetkami, szpinakiem i ryżem basmati w sosie orzechowym",
       "ingredients": [
         {
           "product": "Warzywa na patelnię chińskie",
           "weight": 200,
-          "quantity": "2 x Porcja"
+          "unit": "g",
+          "hint": "2 x Porcja"
         },
         {
           "product": "Szpinak",
           "weight": 150,
-          "quantity": "6 x Garść"
+          "unit": "g",
+          "hint": "6 x Garść"
         },
         {
           "product": "Krewetki",
           "weight": 100,
-          "quantity": "1 x Porcja"
+          "unit": "g",
+          "hint": "1 x Porcja"
         },
         {
           "product": "Ryż basmati",
           "weight": 30,
-          "quantity": "2 x Łyżka"
+          "unit": "ml",
+          "hint": "2 x Łyżka"
         },
         {
           "product": "Masło orzechowe",
           "weight": 20,
-          "quantity": "1.3 x Łyżeczka"
+          "unit": "ml",
+          "hint": "1.3 x Łyżeczka"
         },
         {
           "product": "Suszone pomidory",
           "weight": 14,
-          "quantity": "2 x Sztuka"
+          "unit": "g",
+          "hint": "2 x Sztuka"
         },
         {
           "product": "Oliwa z oliwek",
           "weight": 10,
-          "quantity": "1 x Łyżka"
+          "unit": "ml",
+          "hint": "1 x Łyżka"
         },
         {
           "product": "Sezam nasiona",
           "weight": 10,
-          "quantity": "1 x Łyżka"
+          "unit": "ml",
+          "hint": "1 x Łyżka"
         },
         {
           "product": "Czosnek",
           "weight": 5,
-          "quantity": "1 x Ząbek"
+          "unit": "g",
+          "hint": "1 x Ząbek"
         },
         {
           "product": "Kurkuma",
           "weight": 1,
-          "quantity": "0.2 x Łyżeczka"
+          "unit": "ml",
+          "hint": "0.2 x Łyżeczka"
         }
       ],
       "instructions": [
@@ -266,52 +290,60 @@
       "id": "salad-mozzarella-walnuts-monday",
       "name": "SAŁATKA Z MOZZARELLĄ I ORZECHAMI, GRZANKI",
       "category": "kolacja",
-      "description": "Lekka i pożywna sałatka z mozzarellą, orzechami i grzankami",
       "ingredients": [
         {
           "product": "Pomidory koktajlowe",
           "weight": 100,
-          "quantity": "5 x Sztuka"
+          "unit": "g",
+          "hint": "5 x Sztuka"
         },
         {
           "product": "Chleb graham",
           "weight": 60,
-          "quantity": "2 x Kromka"
+          "unit": "g",
+          "hint": "2 x Kromka"
         },
         {
           "product": "Ser mozzarella bez tłuszczu",
           "weight": 60,
-          "quantity": "4 x Plaster"
+          "unit": "g",
+          "hint": "4 x Plaster"
         },
         {
           "product": "Ogórek",
           "weight": 40,
-          "quantity": "1 x Sztuka"
+          "unit": "g",
+          "hint": "1 x Sztuka"
         },
         {
           "product": "Orzechy włoskie",
           "weight": 30,
-          "quantity": "2 x Łyżka"
+          "unit": "ml",
+          "hint": "2 x Łyżka"
         },
         {
           "product": "Suszone pomidory",
           "weight": 14,
-          "quantity": "2 x Sztuka"
+          "unit": "g",
+          "hint": "2 x Sztuka"
         },
         {
           "product": "Dynia pestki łuskane",
           "weight": 10,
-          "quantity": "1 x Łyżka"
+          "unit": "ml",
+          "hint": "1 x Łyżka"
         },
         {
           "product": "Oliwa z oliwek",
           "weight": 10,
-          "quantity": "1 x Łyżka"
+          "unit": "ml",
+          "hint": "1 x Łyżka"
         },
         {
           "product": "Kiełki brokuła",
           "weight": 5,
-          "quantity": "0.6 x Łyżka"
+          "unit": "ml",
+          "hint": "0.6 x Łyżka"
         }
       ],
       "instructions": [
@@ -333,22 +365,24 @@
       "id": "coffee-bulletproof-tuesday",
       "name": "KAWA KULOODPORNA",
       "category": "kawa",
-      "description": "Kawa ze zdrowotnymi dodatkami na bazie mleczka kokosowego i olejku MCT",
       "ingredients": [
         {
           "product": "Mleczko kokosowe (21%)",
           "weight": 40,
-          "quantity": "2 x Łyżka"
+          "unit": "ml",
+          "hint": "2 x Łyżka"
         },
         {
           "product": "Olej MCT (Olimp)",
           "weight": 28,
-          "quantity": "2 x Łyżka"
+          "unit": "ml",
+          "hint": "2 x Łyżka"
         },
         {
           "product": "Masło orzechowe",
           "weight": 15,
-          "quantity": "1 x Łyżeczka"
+          "unit": "ml",
+          "hint": "1 x Łyżeczka"
         }
       ],
       "instructions": [
@@ -369,32 +403,36 @@
       "id": "smoothie-mango-raspberry-tuesday",
       "name": "SMOOTHIE MANGO - MALINA",
       "category": "śniadanie",
-      "description": "Kolorowy smoothie z mango, malinami, odżywką białkową",
       "ingredients": [
         {
           "product": "Napój migdałowy",
           "weight": 125,
-          "quantity": "0.5 x Szklanka"
+          "unit": "ml",
+          "hint": "0.5 x Szklanka"
         },
         {
           "product": "Maliny",
           "weight": 120,
-          "quantity": "2 x Garść"
+          "unit": "g",
+          "hint": "2 x Garść"
         },
         {
           "product": "Mango mrożone",
           "weight": 70,
-          "quantity": "1 x Garść"
+          "unit": "g",
+          "hint": "1 x Garść"
         },
         {
           "product": "Odżywka białkowa izolat",
           "weight": 30,
-          "quantity": "1 x Miarka"
+          "unit": "g",
+          "hint": "1 x Miarka"
         },
         {
           "product": "Len nasiona",
           "weight": 10,
-          "quantity": "2 x Łyżeczka"
+          "unit": "ml",
+          "hint": "2 x Łyżeczka"
         }
       ],
       "instructions": [
@@ -415,12 +453,12 @@
       "id": "walnuts-tuesday",
       "name": "ORZECHY WŁOSKIE",
       "category": "śniadanie",
-      "description": "Surowe orzechy włoskie",
       "ingredients": [
         {
           "product": "Orzechy włoskie",
           "weight": 60,
-          "quantity": "4 x Łyżka"
+          "unit": "ml",
+          "hint": "4 x Łyżka"
         }
       ],
       "instructions": [
@@ -441,62 +479,72 @@
       "id": "waffles-hummus-salmon-tuesday",
       "name": "GOFRY Z HUMMUSEM, ŁOSOSIEM I WARZYWAMI",
       "category": "drugie-śniadanie",
-      "description": "Drożdżowe gofry z hummusem, wędzonym łososiem i warzywami",
       "ingredients": [
         {
           "product": "Łosoś wędzony",
           "weight": 60,
-          "quantity": "2 x Kawałek"
+          "unit": "g",
+          "hint": "2 x Kawałek"
         },
         {
           "product": "Jaja kurze całe",
           "weight": 56,
-          "quantity": "1 x Sztuka"
+          "unit": "g",
+          "hint": "1 x Sztuka"
         },
         {
           "product": "Mąka owsiana pełnoziarnista",
           "weight": 50,
-          "quantity": "3.3 x Łyżka"
+          "unit": "ml",
+          "hint": "3.3 x Łyżka"
         },
         {
           "product": "Hummus klasyczny",
           "weight": 50,
-          "quantity": "5 x Łyżeczka"
+          "unit": "ml",
+          "hint": "5 x Łyżeczka"
         },
         {
           "product": "Mleko spożywcze 1.5% tłuszczu",
           "weight": 30,
-          "quantity": "0.1 x Szklanka"
+          "unit": "ml",
+          "hint": "0.1 x Szklanka"
         },
         {
           "product": "Rzodkiewka",
           "weight": 30,
-          "quantity": "2 x Sztuka"
+          "unit": "g",
+          "hint": "2 x Sztuka"
         },
         {
           "product": "Roszponka",
           "weight": 20,
-          "quantity": "1 x Garść"
+          "unit": "g",
+          "hint": "1 x Garść"
         },
         {
           "product": "Ser parmezan",
           "weight": 16,
-          "quantity": "2 x Łyżka"
+          "unit": "ml",
+          "hint": "2 x Łyżka"
         },
         {
           "product": "Oliwa z oliwek",
           "weight": 10,
-          "quantity": "1 x Łyżka"
+          "unit": "ml",
+          "hint": "1 x Łyżka"
         },
         {
           "product": "Kiełki brokuła",
           "weight": 5,
-          "quantity": "0.6 x Łyżka"
+          "unit": "ml",
+          "hint": "0.6 x Łyżka"
         },
         {
           "product": "Proszek do pieczenia",
           "weight": 1,
-          "quantity": "0.3 x Łyżeczka"
+          "unit": "ml",
+          "hint": "0.3 x Łyżeczka"
         }
       ],
       "instructions": [
@@ -521,47 +569,54 @@
       "id": "pasta-chicken-broccoli-tuesday",
       "name": "ZAPIEKANKA MAKARONOWA Z KURCZAKIEM, BROKUŁEM I PARMEZANEM",
       "category": "obiad",
-      "description": "Zmięczana zapiekanka makronu z kurczakiem i sosem kokosowym",
       "ingredients": [
         {
           "product": "Brokuły mrożone",
           "weight": 200,
-          "quantity": "0.4 x Opakowanie"
+          "unit": "g",
+          "hint": "0.4 x Opakowanie"
         },
         {
           "product": "Mięso piersi kurczaka bez skóry",
           "weight": 100,
-          "quantity": "1 x Kawałek"
+          "unit": "g",
+          "hint": "1 x Kawałek"
         },
         {
           "product": "Mleczko kokosowe 21%",
           "weight": 100,
-          "quantity": "5 x Łyżka"
+          "unit": "ml",
+          "hint": "5 x Łyżka"
         },
         {
           "product": "Makaron penne pełnoziarnisty",
           "weight": 50,
-          "quantity": "0.7 x Szklanka"
+          "unit": "ml",
+          "hint": "0.7 x Szklanka"
         },
         {
           "product": "Cytryna",
           "weight": 16,
-          "quantity": "0.2 x Sztuka"
+          "unit": "ml",
+          "hint": "0.2 x Sztuka"
         },
         {
           "product": "Oliwa z oliwek",
           "weight": 10,
-          "quantity": "1 x Łyżka"
+          "unit": "ml",
+          "hint": "1 x Łyżka"
         },
         {
           "product": "Sezam nasiona",
           "weight": 10,
-          "quantity": "1 x Łyżka"
+          "unit": "ml",
+          "hint": "1 x Łyżka"
         },
         {
           "product": "Ser parmezan",
           "weight": 8,
-          "quantity": "1 x Łyżka"
+          "unit": "ml",
+          "hint": "1 x Łyżka"
         }
       ],
       "instructions": [
@@ -587,57 +642,66 @@
       "id": "avocado-pesto-toast-tuesday",
       "name": "GRZANKI Z PESTO, AWOKADO, MOZZARELLĄ I WARZYWAMI",
       "category": "kolacja",
-      "description": "Pikantne grzanki z pesto, awokado, mozzarellą",
       "ingredients": [
         {
           "product": "Awokado",
           "weight": 70,
-          "quantity": "0.5 x Sztuka"
+          "unit": "g",
+          "hint": "0.5 x Sztuka"
         },
         {
           "product": "Pomidor",
           "weight": 60,
-          "quantity": "0.5 x Sztuka"
+          "unit": "g",
+          "hint": "0.5 x Sztuka"
         },
         {
           "product": "Chleb graham",
           "weight": 60,
-          "quantity": "2 x Kromka"
+          "unit": "g",
+          "hint": "2 x Kromka"
         },
         {
           "product": "Ser mozzarella bez tłuszczu",
           "weight": 60,
-          "quantity": "4 x Plaster"
+          "unit": "g",
+          "hint": "4 x Plaster"
         },
         {
           "product": "Pesto zielone z bazylii",
           "weight": 40,
-          "quantity": "2 x Łyżka"
+          "unit": "ml",
+          "hint": "2 x Łyżka"
         },
         {
           "product": "Rzodkiewka",
           "weight": 30,
-          "quantity": "2 x Sztuka"
+          "unit": "g",
+          "hint": "2 x Sztuka"
         },
         {
           "product": "Suszone pomidory",
           "weight": 14,
-          "quantity": "2 x Sztuka"
+          "unit": "g",
+          "hint": "2 x Sztuka"
         },
         {
           "product": "Oliwa z oliwek",
           "weight": 10,
-          "quantity": "1 x Łyżka"
+          "unit": "ml",
+          "hint": "1 x Łyżka"
         },
         {
           "product": "Dynia pestki łuskane",
           "weight": 10,
-          "quantity": "1 x Łyżka"
+          "unit": "ml",
+          "hint": "1 x Łyżka"
         },
         {
           "product": "Kiełki brokuła",
           "weight": 5,
-          "quantity": "0.6 x Łyżka"
+          "unit": "ml",
+          "hint": "0.6 x Łyżka"
         }
       ],
       "instructions": [
@@ -658,22 +722,24 @@
       "id": "coffee-bulletproof-wednesday",
       "name": "KAWA KULOODPORNA",
       "category": "kawa",
-      "description": "Kawa ze zdrowotnymi dodatkami",
       "ingredients": [
         {
           "product": "Mleczko kokosowe (21%)",
           "weight": 40,
-          "quantity": "2 x Łyżka"
+          "unit": "ml",
+          "hint": "2 x Łyżka"
         },
         {
           "product": "Olej MCT (Olimp)",
           "weight": 28,
-          "quantity": "2 x Łyżka"
+          "unit": "ml",
+          "hint": "2 x Łyżka"
         },
         {
           "product": "Masło orzechowe",
           "weight": 15,
-          "quantity": "1 x Łyżeczka"
+          "unit": "ml",
+          "hint": "1 x Łyżeczka"
         }
       ],
       "instructions": [
@@ -694,37 +760,42 @@
       "id": "smoothie-banana-strawberry-wednesday",
       "name": "SMOOTHIE BANAN - TRUSKAWKA",
       "category": "śniadanie",
-      "description": "Smoothie z banana, truskawkami i twarogiem",
       "ingredients": [
         {
           "product": "Napój migdałowy",
           "weight": 125,
-          "quantity": "0.5 x Szklanka"
+          "unit": "ml",
+          "hint": "0.5 x Szklanka"
         },
         {
           "product": "Ser twarogowy półtłusty",
           "weight": 100,
-          "quantity": "0.5 x Opakowanie"
+          "unit": "g",
+          "hint": "0.5 x Opakowanie"
         },
         {
           "product": "Truskawki mrożone",
           "weight": 100,
-          "quantity": "1 x Szklanka"
+          "unit": "ml",
+          "hint": "1 x Szklanka"
         },
         {
           "product": "Banan",
           "weight": 60,
-          "quantity": "0.5 x Sztuka"
+          "unit": "g",
+          "hint": "0.5 x Sztuka"
         },
         {
           "product": "Wiórki kokosowe",
           "weight": 12,
-          "quantity": "2 x Łyżka"
+          "unit": "ml",
+          "hint": "2 x Łyżka"
         },
         {
           "product": "Len nasiona",
           "weight": 10,
-          "quantity": "2 x Łyżeczka"
+          "unit": "ml",
+          "hint": "2 x Łyżeczka"
         }
       ],
       "instructions": [
@@ -747,12 +818,12 @@
       "id": "walnuts-wednesday",
       "name": "ORZECHY WŁOSKIE",
       "category": "śniadanie",
-      "description": "Surowe orzechy włoskie",
       "ingredients": [
         {
           "product": "Orzechy włoskie",
           "weight": 60,
-          "quantity": "4 x Łyżka"
+          "unit": "ml",
+          "hint": "4 x Łyżka"
         }
       ],
       "instructions": [
@@ -773,47 +844,54 @@
       "id": "toasts-pesto-halloumi-wednesday",
       "name": "TOSTY Z PESTO, HALLOUMI I WARZYWAMI",
       "category": "drugie-śniadanie",
-      "description": "Tosty z pesto, grillowanym halloumi i świeżymi warzywami",
       "ingredients": [
         {
           "product": "Pomidory koktajlowe",
           "weight": 100,
-          "quantity": "5 x Sztuka"
+          "unit": "g",
+          "hint": "5 x Sztuka"
         },
         {
           "product": "Ser halloumi",
           "weight": 100,
-          "quantity": "1 x Porcja"
+          "unit": "g",
+          "hint": "1 x Porcja"
         },
         {
           "product": "Chleb graham",
           "weight": 60,
-          "quantity": "2 x Kromka"
+          "unit": "g",
+          "hint": "2 x Kromka"
         },
         {
           "product": "Ogórek",
           "weight": 40,
-          "quantity": "1 x Sztuka"
+          "unit": "g",
+          "hint": "1 x Sztuka"
         },
         {
           "product": "Pesto zielone z bazylii",
           "weight": 40,
-          "quantity": "2 x Łyżka"
+          "unit": "ml",
+          "hint": "2 x Łyżka"
         },
         {
           "product": "Rzodkiewka",
           "weight": 30,
-          "quantity": "2 x Sztuka"
+          "unit": "g",
+          "hint": "2 x Sztuka"
         },
         {
           "product": "Dynia pestki łuskane",
           "weight": 10,
-          "quantity": "1 x Łyżka"
+          "unit": "ml",
+          "hint": "1 x Łyżka"
         },
         {
           "product": "Kiełki brokuła",
           "weight": 5,
-          "quantity": "0.6 x Łyżka"
+          "unit": "ml",
+          "hint": "0.6 x Łyżka"
         }
       ],
       "instructions": [
@@ -836,62 +914,72 @@
       "id": "bowl-chicken-peanut-wednesday",
       "name": "BOWL Z SZARPANYM KURCZAKIEM, SOSEM ORZECHOWYM I WARZYWAMI",
       "category": "obiad",
-      "description": "Bowl z szarpanym kurczakiem w sosie orzechowym, warzywami i ryżem",
       "ingredients": [
         {
           "product": "Pomidory koktajlowe",
           "weight": 100,
-          "quantity": "5 x Sztuka"
+          "unit": "g",
+          "hint": "5 x Sztuka"
         },
         {
           "product": "Mięso ud kurczaka bez skóry",
           "weight": 100,
-          "quantity": "1 x Kawałek"
+          "unit": "g",
+          "hint": "1 x Kawałek"
         },
         {
           "product": "Ryż basmati",
           "weight": 45,
-          "quantity": "3 x Łyżka"
+          "unit": "ml",
+          "hint": "3 x Łyżka"
         },
         {
           "product": "Ogórek",
           "weight": 40,
-          "quantity": "1 x Sztuka"
+          "unit": "g",
+          "hint": "1 x Sztuka"
         },
         {
           "product": "Roszponka",
           "weight": 40,
-          "quantity": "2 x Garść"
+          "unit": "g",
+          "hint": "2 x Garść"
         },
         {
           "product": "Cytryna",
           "weight": 16,
-          "quantity": "0.2 x Sztuka"
+          "unit": "ml",
+          "hint": "0.2 x Sztuka"
         },
         {
           "product": "Masło orzechowe",
           "weight": 15,
-          "quantity": "1 x Łyżeczka"
+          "unit": "ml",
+          "hint": "1 x Łyżeczka"
         },
         {
           "product": "Suszone pomidory",
           "weight": 14,
-          "quantity": "2 x Sztuka"
+          "unit": "g",
+          "hint": "2 x Sztuka"
         },
         {
           "product": "Oliwa z oliwek",
           "weight": 10,
-          "quantity": "1 x Łyżka"
+          "unit": "ml",
+          "hint": "1 x Łyżka"
         },
         {
           "product": "Sezam nasiona",
           "weight": 10,
-          "quantity": "1 x Łyżka"
+          "unit": "ml",
+          "hint": "1 x Łyżka"
         },
         {
           "product": "Kiełki brokuła",
           "weight": 5,
-          "quantity": "0.6 x Łyżka"
+          "unit": "ml",
+          "hint": "0.6 x Łyżka"
         }
       ],
       "instructions": [
@@ -916,67 +1004,78 @@
       "id": "pasta-salmon-spinach-wednesday",
       "name": "PENNE ZE SZPINAKIEM, WĘDZONYM ŁOSOSIEM I POMIDORKAMI",
       "category": "kolacja",
-      "description": "Makaron z szpinakiem, łososiem wędzonym i pomidorkami",
       "ingredients": [
         {
           "product": "Szpinak",
           "weight": 150,
-          "quantity": "6 x Garść"
+          "unit": "g",
+          "hint": "6 x Garść"
         },
         {
           "product": "Pomidory koktajlowe",
           "weight": 100,
-          "quantity": "5 x Sztuka"
+          "unit": "g",
+          "hint": "5 x Sztuka"
         },
         {
           "product": "Łosoś wędzony",
           "weight": 60,
-          "quantity": "2 x Kawałek"
+          "unit": "g",
+          "hint": "2 x Kawałek"
         },
         {
           "product": "Makaron penne pełnoziarnisty",
           "weight": 50,
-          "quantity": "0.7 x Szklanka"
+          "unit": "ml",
+          "hint": "0.7 x Szklanka"
         },
         {
           "product": "Serek naturalny do smarowania",
           "weight": 50,
-          "quantity": "2 x Łyżka"
+          "unit": "ml",
+          "hint": "2 x Łyżka"
         },
         {
           "product": "Oliwki czarne",
           "weight": 45,
-          "quantity": "3 x Łyżka"
+          "unit": "ml",
+          "hint": "3 x Łyżka"
         },
         {
           "product": "Cebula dymka",
           "weight": 20,
-          "quantity": "1 x Sztuka"
+          "unit": "g",
+          "hint": "1 x Sztuka"
         },
         {
           "product": "Suszone pomidory",
           "weight": 14,
-          "quantity": "2 x Sztuka"
+          "unit": "g",
+          "hint": "2 x Sztuka"
         },
         {
           "product": "Pietruszka liście",
           "weight": 12,
-          "quantity": "2 x Łyżeczka"
+          "unit": "ml",
+          "hint": "2 x Łyżeczka"
         },
         {
           "product": "Oliwa z oliwek",
           "weight": 10,
-          "quantity": "1 x Łyżka"
+          "unit": "ml",
+          "hint": "1 x Łyżka"
         },
         {
           "product": "Sezam nasiona",
           "weight": 10,
-          "quantity": "1 x Łyżka"
+          "unit": "ml",
+          "hint": "1 x Łyżka"
         },
         {
           "product": "Czosnek",
           "weight": 5,
-          "quantity": "1 x Ząbek"
+          "unit": "g",
+          "hint": "1 x Ząbek"
         }
       ],
       "instructions": [
@@ -999,22 +1098,24 @@
       "id": "coffee-bulletproof-thursday",
       "name": "KAWA KULOODPORNA",
       "category": "kawa",
-      "description": "Kawa ze zdrowotnymi dodatkami",
       "ingredients": [
         {
           "product": "Mleczko kokosowe (21%)",
           "weight": 40,
-          "quantity": "2 x Łyżka"
+          "unit": "ml",
+          "hint": "2 x Łyżka"
         },
         {
           "product": "Olej MCT (Olimp)",
           "weight": 28,
-          "quantity": "2 x Łyżka"
+          "unit": "ml",
+          "hint": "2 x Łyżka"
         },
         {
           "product": "Masło orzechowe",
           "weight": 15,
-          "quantity": "1 x Łyżeczka"
+          "unit": "ml",
+          "hint": "1 x Łyżeczka"
         }
       ],
       "instructions": [
@@ -1035,32 +1136,36 @@
       "id": "smoothie-banana-raspberry-thursday",
       "name": "SMOOTHIE BANAN - MALINA",
       "category": "śniadanie",
-      "description": "Smoothie banan-malina",
       "ingredients": [
         {
           "product": "Napój migdałowy",
           "weight": 125,
-          "quantity": "0.5 x Szklanka"
+          "unit": "ml",
+          "hint": "0.5 x Szklanka"
         },
         {
           "product": "Maliny",
           "weight": 120,
-          "quantity": "2 x Garść"
+          "unit": "g",
+          "hint": "2 x Garść"
         },
         {
           "product": "Ser twarogowy półtłusty",
           "weight": 100,
-          "quantity": "0.5 x Opakowanie"
+          "unit": "g",
+          "hint": "0.5 x Opakowanie"
         },
         {
           "product": "Banan",
           "weight": 60,
-          "quantity": "0.5 x Sztuka"
+          "unit": "g",
+          "hint": "0.5 x Sztuka"
         },
         {
           "product": "Len nasiona",
           "weight": 10,
-          "quantity": "2 x Łyżeczka"
+          "unit": "ml",
+          "hint": "2 x Łyżeczka"
         }
       ],
       "instructions": [
@@ -1081,12 +1186,12 @@
       "id": "walnuts-thursday",
       "name": "ORZECHY WŁOSKIE",
       "category": "śniadanie",
-      "description": "Surowe orzechy włoskie",
       "ingredients": [
         {
           "product": "Orzechy włoskie",
           "weight": 60,
-          "quantity": "4 x Łyżka"
+          "unit": "ml",
+          "hint": "4 x Łyżka"
         }
       ],
       "instructions": [
@@ -1107,57 +1212,66 @@
       "id": "tuna-egg-pasta-thursday",
       "name": "PASTA Z TUŃCZYKA I JAJKA, PIECZYWO",
       "category": "drugie-śniadanie",
-      "description": "Pasta z tuńczyka, jajka i awokado",
       "ingredients": [
         {
           "product": "Jaja kurze całe",
           "weight": 112,
-          "quantity": "2 x Sztuka"
+          "unit": "g",
+          "hint": "2 x Sztuka"
         },
         {
           "product": "Tuńczyk w oleju",
           "weight": 80,
-          "quantity": "0.5 x Opakowanie"
+          "unit": "ml",
+          "hint": "0.5 x Opakowanie"
         },
         {
           "product": "Awokado",
           "weight": 70,
-          "quantity": "0.5 x Sztuka"
+          "unit": "g",
+          "hint": "0.5 x Sztuka"
         },
         {
           "product": "Chleb graham",
           "weight": 60,
-          "quantity": "2 x Kromka"
+          "unit": "g",
+          "hint": "2 x Kromka"
         },
         {
           "product": "Ogórek",
           "weight": 40,
-          "quantity": "1 x Sztuka"
+          "unit": "g",
+          "hint": "1 x Sztuka"
         },
         {
           "product": "Rzodkiewka",
           "weight": 30,
-          "quantity": "2 x Sztuka"
+          "unit": "g",
+          "hint": "2 x Sztuka"
         },
         {
           "product": "Majonez wegański Go Vege",
           "weight": 30,
-          "quantity": "2 x Łyżeczka"
+          "unit": "ml",
+          "hint": "2 x Łyżeczka"
         },
         {
           "product": "Dynia pestki łuskane",
           "weight": 10,
-          "quantity": "1 x Łyżka"
+          "unit": "ml",
+          "hint": "1 x Łyżka"
         },
         {
           "product": "Szczypiorek",
           "weight": 10,
-          "quantity": "2 x Łyżeczka"
+          "unit": "ml",
+          "hint": "2 x Łyżeczka"
         },
         {
           "product": "Kiełki brokuła",
           "weight": 5,
-          "quantity": "0.6 x Łyżka"
+          "unit": "ml",
+          "hint": "0.6 x Łyżka"
         }
       ],
       "instructions": [
@@ -1180,62 +1294,72 @@
       "id": "beef-goulash-thursday",
       "name": "GULASZ WOŁOWY Z ZIEMNIAKAMI",
       "category": "obiad",
-      "description": "Tradycyjny gulasz wołowy z ziemniakami",
       "ingredients": [
         {
           "product": "Ziemniaki",
           "weight": 210,
-          "quantity": "3 x Sztuka"
+          "unit": "g",
+          "hint": "3 x Sztuka"
         },
         {
           "product": "Pomidory z puszki krojone",
           "weight": 200,
-          "quantity": "2 x Porcja"
+          "unit": "g",
+          "hint": "2 x Porcja"
         },
         {
           "product": "Wołowina polędwica",
           "weight": 100,
-          "quantity": "1 x Kawałek"
+          "unit": "g",
+          "hint": "1 x Kawałek"
         },
         {
           "product": "Papryka żółta",
           "weight": 70,
-          "quantity": "0.5 x Sztuka"
+          "unit": "g",
+          "hint": "0.5 x Sztuka"
         },
         {
           "product": "Marchew",
           "weight": 45,
-          "quantity": "1 x Sztuka"
+          "unit": "g",
+          "hint": "1 x Sztuka"
         },
         {
           "product": "Pieczarka uprawna świeża",
           "weight": 40,
-          "quantity": "2 x Sztuka"
+          "unit": "g",
+          "hint": "2 x Sztuka"
         },
         {
           "product": "Sezam nasiona",
           "weight": 20,
-          "quantity": "2 x Łyżka"
+          "unit": "ml",
+          "hint": "2 x Łyżka"
         },
         {
           "product": "Cebula dymka",
           "weight": 20,
-          "quantity": "1 x Sztuka"
+          "unit": "g",
+          "hint": "1 x Sztuka"
         },
         {
           "product": "Pietruszka liście",
           "weight": 12,
-          "quantity": "2 x Łyżeczka"
+          "unit": "ml",
+          "hint": "2 x Łyżeczka"
         },
         {
           "product": "Oliwa z oliwek",
           "weight": 10,
-          "quantity": "1 x Łyżka"
+          "unit": "ml",
+          "hint": "1 x Łyżka"
         },
         {
           "product": "Czosnek",
           "weight": 5,
-          "quantity": "1 x Ząbek"
+          "unit": "g",
+          "hint": "1 x Ząbek"
         }
       ],
       "instructions": [
@@ -1260,47 +1384,54 @@
       "id": "salad-halloumi-thursday",
       "name": "SAŁATKA Z GRILLOWANYM HALLOUMI I WARZYWAMI, GRZANKI",
       "category": "kolacja",
-      "description": "Sałatka z grillowanym halloumi i grzankami",
       "ingredients": [
         {
           "product": "Pomidory koktajlowe",
           "weight": 100,
-          "quantity": "5 x Sztuka"
+          "unit": "g",
+          "hint": "5 x Sztuka"
         },
         {
           "product": "Ser halloumi",
           "weight": 100,
-          "quantity": "1 x Porcja"
+          "unit": "g",
+          "hint": "1 x Porcja"
         },
         {
           "product": "Chleb graham",
           "weight": 60,
-          "quantity": "2 x Kromka"
+          "unit": "g",
+          "hint": "2 x Kromka"
         },
         {
           "product": "Oliwki czarne",
           "weight": 45,
-          "quantity": "3 x Łyżka"
+          "unit": "ml",
+          "hint": "3 x Łyżka"
         },
         {
           "product": "Ogórek",
           "weight": 40,
-          "quantity": "1 x Sztuka"
+          "unit": "g",
+          "hint": "1 x Sztuka"
         },
         {
           "product": "Roszponka",
           "weight": 20,
-          "quantity": "1 x Garść"
+          "unit": "g",
+          "hint": "1 x Garść"
         },
         {
           "product": "Oliwa z oliwek",
           "weight": 10,
-          "quantity": "1 x Łyżka"
+          "unit": "ml",
+          "hint": "1 x Łyżka"
         },
         {
           "product": "Dynia pestki łuskane",
           "weight": 10,
-          "quantity": "1 x Łyżka"
+          "unit": "ml",
+          "hint": "1 x Łyżka"
         }
       ],
       "instructions": [
@@ -1323,22 +1454,24 @@
       "id": "coffee-bulletproof-friday",
       "name": "KAWA KULOODPORNA",
       "category": "kawa",
-      "description": "Kawa ze zdrowotnymi dodatkami",
       "ingredients": [
         {
           "product": "Mleczko kokosowe (21%)",
           "weight": 40,
-          "quantity": "2 x Łyżka"
+          "unit": "ml",
+          "hint": "2 x Łyżka"
         },
         {
           "product": "Olej MCT (Olimp)",
           "weight": 28,
-          "quantity": "2 x Łyżka"
+          "unit": "ml",
+          "hint": "2 x Łyżka"
         },
         {
           "product": "Masło orzechowe",
           "weight": 15,
-          "quantity": "1 x Łyżeczka"
+          "unit": "ml",
+          "hint": "1 x Łyżeczka"
         }
       ],
       "instructions": [
@@ -1359,42 +1492,48 @@
       "id": "smoothie-mango-friday",
       "name": "SMOOTHIE MANGO - MALINA",
       "category": "śniadanie",
-      "description": "Smoothie mango-malina z odżywką",
       "ingredients": [
         {
           "product": "Mango mrożone",
           "weight": 140,
-          "quantity": "2 x Garść"
+          "unit": "g",
+          "hint": "2 x Garść"
         },
         {
           "product": "Napój migdałowy",
           "weight": 125,
-          "quantity": "0.5 x Szklanka"
+          "unit": "ml",
+          "hint": "0.5 x Szklanka"
         },
         {
           "product": "Maliny",
           "weight": 120,
-          "quantity": "2 x Garść"
+          "unit": "g",
+          "hint": "2 x Garść"
         },
         {
           "product": "Odżywka białkowa izolat",
           "weight": 30,
-          "quantity": "1 x Miarka"
+          "unit": "g",
+          "hint": "1 x Miarka"
         },
         {
           "product": "Masło orzechowe",
           "weight": 15,
-          "quantity": "1 x Łyżeczka"
+          "unit": "ml",
+          "hint": "1 x Łyżeczka"
         },
         {
           "product": "Len nasiona",
           "weight": 10,
-          "quantity": "2 x Łyżeczka"
+          "unit": "ml",
+          "hint": "2 x Łyżeczka"
         },
         {
           "product": "Cynamon",
           "weight": 1,
-          "quantity": "0.2 x Łyżeczka"
+          "unit": "ml",
+          "hint": "0.2 x Łyżeczka"
         }
       ],
       "instructions": [
@@ -1417,12 +1556,12 @@
       "id": "walnuts-friday",
       "name": "ORZECHY WŁOSKIE",
       "category": "śniadanie",
-      "description": "Surowe orzechy włoskie",
       "ingredients": [
         {
           "product": "Orzechy włoskie",
           "weight": 45,
-          "quantity": "3 x Łyżka"
+          "unit": "ml",
+          "hint": "3 x Łyżka"
         }
       ],
       "instructions": [
@@ -1443,52 +1582,60 @@
       "id": "chicken-dried-tomato-pasta-friday",
       "name": "PASTA Z KURCZAKA I SUSZONYCH POMIDORÓW, PIECZYWO",
       "category": "drugie-śniadanie",
-      "description": "Pasta z kurczaka, suszonych pomidorów i awokado",
       "ingredients": [
         {
           "product": "Mięso ud kurczaka bez skóry",
           "weight": 100,
-          "quantity": "1 x Kawałek"
+          "unit": "g",
+          "hint": "1 x Kawałek"
         },
         {
           "product": "Chleb graham",
           "weight": 60,
-          "quantity": "2 x Kromka"
+          "unit": "g",
+          "hint": "2 x Kromka"
         },
         {
           "product": "Oliwki czarne",
           "weight": 45,
-          "quantity": "3 x Łyżka"
+          "unit": "ml",
+          "hint": "3 x Łyżka"
         },
         {
           "product": "Ogórek",
           "weight": 40,
-          "quantity": "1 x Sztuka"
+          "unit": "g",
+          "hint": "1 x Sztuka"
         },
         {
           "product": "Majonez wegański Go Vege",
           "weight": 30,
-          "quantity": "2 x Łyżeczka"
+          "unit": "ml",
+          "hint": "2 x Łyżeczka"
         },
         {
           "product": "Dynia pestki łuskane",
           "weight": 20,
-          "quantity": "2 x Łyżka"
+          "unit": "ml",
+          "hint": "2 x Łyżka"
         },
         {
           "product": "Suszone pomidory",
           "weight": 14,
-          "quantity": "2 x Sztuka"
+          "unit": "g",
+          "hint": "2 x Sztuka"
         },
         {
           "product": "Oliwa z oliwek",
           "weight": 10,
-          "quantity": "1 x Łyżka"
+          "unit": "ml",
+          "hint": "1 x Łyżka"
         },
         {
           "product": "Kiełki brokuła",
           "weight": 5,
-          "quantity": "0.6 x Łyżka"
+          "unit": "ml",
+          "hint": "0.6 x Łyżka"
         }
       ],
       "instructions": [
@@ -1510,57 +1657,66 @@
       "id": "sushi-bowl-salmon-friday",
       "name": "SUSHI BOWL Z WĘDZONYM ŁOSOSIEM",
       "category": "obiad",
-      "description": "Bowl z ryżem, łososiem, awokado i warzywami",
       "ingredients": [
         {
           "product": "Łosoś wędzony",
           "weight": 120,
-          "quantity": "4 x Kawałek"
+          "unit": "g",
+          "hint": "4 x Kawałek"
         },
         {
           "product": "Ogórek",
           "weight": 80,
-          "quantity": "2 x Sztuka"
+          "unit": "g",
+          "hint": "2 x Sztuka"
         },
         {
           "product": "Awokado",
           "weight": 70,
-          "quantity": "0.5 x Sztuka"
+          "unit": "g",
+          "hint": "0.5 x Sztuka"
         },
         {
           "product": "Ryż basmati",
           "weight": 45,
-          "quantity": "3 x Łyżka"
+          "unit": "ml",
+          "hint": "3 x Łyżka"
         },
         {
           "product": "Sezam nasiona",
           "weight": 20,
-          "quantity": "2 x Łyżka"
+          "unit": "ml",
+          "hint": "2 x Łyżka"
         },
         {
           "product": "Oliwa z oliwek",
           "weight": 10,
-          "quantity": "1 x Łyżka"
+          "unit": "ml",
+          "hint": "1 x Łyżka"
         },
         {
           "product": "Cytryna",
           "weight": 8,
-          "quantity": "0.1 x Sztuka"
+          "unit": "ml",
+          "hint": "0.1 x Sztuka"
         },
         {
           "product": "Kiełki brokuła",
           "weight": 5,
-          "quantity": "0.6 x Łyżka"
+          "unit": "ml",
+          "hint": "0.6 x Łyżka"
         },
         {
           "product": "Kurkuma",
           "weight": 5,
-          "quantity": "1 x Łyżeczka"
+          "unit": "ml",
+          "hint": "1 x Łyżeczka"
         },
         {
           "product": "Algi nori arkusze",
           "weight": 3,
-          "quantity": "1 x Sztuka"
+          "unit": "g",
+          "hint": "1 x Sztuka"
         }
       ],
       "instructions": [
@@ -1584,67 +1740,78 @@
       "id": "zucchini-soup-friday",
       "name": "ZUPA KREM Z CUKINII, GRZANKI",
       "category": "kolacja",
-      "description": "Kremowa zupa z cukinii, mleczkiem kokosowym i soczewicą",
       "ingredients": [
         {
           "product": "Cukinia",
           "weight": 150,
-          "quantity": "0.5 x Sztuka"
+          "unit": "g",
+          "hint": "0.5 x Sztuka"
         },
         {
           "product": "Bulion warzywny domowy",
           "weight": 125,
-          "quantity": "0.5 x Szklanka"
+          "unit": "ml",
+          "hint": "0.5 x Szklanka"
         },
         {
           "product": "Mleczko kokosowe 21%",
           "weight": 100,
-          "quantity": "5 x Łyżka"
+          "unit": "ml",
+          "hint": "5 x Łyżka"
         },
         {
           "product": "Soczewica czerwona ugotowana",
           "weight": 75,
-          "quantity": "3.8 x Łyżka"
+          "unit": "ml",
+          "hint": "3.8 x Łyżka"
         },
         {
           "product": "Papryka czerwona",
           "weight": 70,
-          "quantity": "0.5 x Sztuka"
+          "unit": "g",
+          "hint": "0.5 x Sztuka"
         },
         {
           "product": "Ser mozzarella bez tłuszczu",
           "weight": 60,
-          "quantity": "4 x Plaster"
+          "unit": "g",
+          "hint": "4 x Plaster"
         },
         {
           "product": "Chleb graham",
           "weight": 30,
-          "quantity": "1 x Kromka"
+          "unit": "g",
+          "hint": "1 x Kromka"
         },
         {
           "product": "Dynia pestki łuskane",
           "weight": 20,
-          "quantity": "2 x Łyżka"
+          "unit": "ml",
+          "hint": "2 x Łyżka"
         },
         {
           "product": "Pietruszka liście",
           "weight": 12,
-          "quantity": "2 x Łyżeczka"
+          "unit": "ml",
+          "hint": "2 x Łyżeczka"
         },
         {
           "product": "Oliwa z oliwek",
           "weight": 10,
-          "quantity": "1 x Łyżka"
+          "unit": "ml",
+          "hint": "1 x Łyżka"
         },
         {
           "product": "Czosnek",
           "weight": 5,
-          "quantity": "1 x Ząbek"
+          "unit": "g",
+          "hint": "1 x Ząbek"
         },
         {
           "product": "Bazylia świeża",
           "weight": 2,
-          "quantity": "2 x Listek"
+          "unit": "g",
+          "hint": "2 x Listek"
         }
       ],
       "instructions": [
@@ -1669,22 +1836,24 @@
       "id": "coffee-bulletproof-saturday",
       "name": "KAWA KULOODPORNA",
       "category": "kawa",
-      "description": "Kawa ze zdrowotnymi dodatkami",
       "ingredients": [
         {
           "product": "Mleczko kokosowe (21%)",
           "weight": 40,
-          "quantity": "2 x Łyżka"
+          "unit": "ml",
+          "hint": "2 x Łyżka"
         },
         {
           "product": "Olej MCT (Olimp)",
           "weight": 28,
-          "quantity": "2 x Łyżka"
+          "unit": "ml",
+          "hint": "2 x Łyżka"
         },
         {
           "product": "Masło orzechowe",
           "weight": 15,
-          "quantity": "1 x Łyżeczka"
+          "unit": "ml",
+          "hint": "1 x Łyżeczka"
         }
       ],
       "instructions": [
@@ -1705,37 +1874,42 @@
       "id": "smoothie-banana-raspberry-saturday",
       "name": "SMOOTHIE BANAN - MALINA",
       "category": "śniadanie",
-      "description": "Smoothie z banana, malin i nasionami",
       "ingredients": [
         {
           "product": "Napój migdałowy",
           "weight": 125,
-          "quantity": "0.5 x Szklanka"
+          "unit": "ml",
+          "hint": "0.5 x Szklanka"
         },
         {
           "product": "Maliny",
           "weight": 120,
-          "quantity": "2 x Garść"
+          "unit": "g",
+          "hint": "2 x Garść"
         },
         {
           "product": "Ser twarogowy półtłusty",
           "weight": 100,
-          "quantity": "0.5 x Opakowanie"
+          "unit": "g",
+          "hint": "0.5 x Opakowanie"
         },
         {
           "product": "Banan",
           "weight": 60,
-          "quantity": "0.5 x Sztuka"
+          "unit": "g",
+          "hint": "0.5 x Sztuka"
         },
         {
           "product": "Len nasiona",
           "weight": 10,
-          "quantity": "2 x Łyżeczka"
+          "unit": "ml",
+          "hint": "2 x Łyżeczka"
         },
         {
           "product": "Wiórki kokosowe",
           "weight": 6,
-          "quantity": "1 x Łyżka"
+          "unit": "ml",
+          "hint": "1 x Łyżka"
         }
       ],
       "instructions": [
@@ -1756,12 +1930,12 @@
       "id": "walnuts-saturday",
       "name": "ORZECHY WŁOSKIE",
       "category": "śniadanie",
-      "description": "Surowe orzechy włoskie",
       "ingredients": [
         {
           "product": "Orzechy włoskie",
           "weight": 60,
-          "quantity": "4 x Łyżka"
+          "unit": "ml",
+          "hint": "4 x Łyżka"
         }
       ],
       "instructions": [
@@ -1782,57 +1956,66 @@
       "id": "shakshuka-saturday",
       "name": "SZAKSZUKA Z WARZYWAMI, GRZANKI",
       "category": "drugie-śniadanie",
-      "description": "Szakszuka - jaja w sosie pomidorowym z fasolą",
       "ingredients": [
         {
           "product": "Pomidory z puszki krojone",
           "weight": 200,
-          "quantity": "2 x Porcja"
+          "unit": "g",
+          "hint": "2 x Porcja"
         },
         {
           "product": "Jaja kurze całe",
           "weight": 112,
-          "quantity": "2 x Sztuka"
+          "unit": "g",
+          "hint": "2 x Sztuka"
         },
         {
           "product": "Fasola czerwona w zalewie konserwowa",
           "weight": 80,
-          "quantity": "4 x Łyżka"
+          "unit": "ml",
+          "hint": "4 x Łyżka"
         },
         {
           "product": "Papryka czerwona",
           "weight": 70,
-          "quantity": "0.5 x Sztuka"
+          "unit": "g",
+          "hint": "0.5 x Sztuka"
         },
         {
           "product": "Chleb graham",
           "weight": 60,
-          "quantity": "2 x Kromka"
+          "unit": "g",
+          "hint": "2 x Kromka"
         },
         {
           "product": "Ser parmezan",
           "weight": 16,
-          "quantity": "2 x Łyżka"
+          "unit": "ml",
+          "hint": "2 x Łyżka"
         },
         {
           "product": "Szczypiorek",
           "weight": 10,
-          "quantity": "2 x Łyżeczka"
+          "unit": "ml",
+          "hint": "2 x Łyżeczka"
         },
         {
           "product": "Oliwa z oliwek",
           "weight": 10,
-          "quantity": "1 x Łyżka"
+          "unit": "ml",
+          "hint": "1 x Łyżka"
         },
         {
           "product": "Dynia pestki łuskane",
           "weight": 10,
-          "quantity": "1 x Łyżka"
+          "unit": "ml",
+          "hint": "1 x Łyżka"
         },
         {
           "product": "Kiełki brokuła",
           "weight": 5,
-          "quantity": "0.6 x Łyżka"
+          "unit": "ml",
+          "hint": "0.6 x Łyżka"
         }
       ],
       "instructions": [
@@ -1857,52 +2040,60 @@
       "id": "salmon-garlic-butter-saturday",
       "name": "ŁOSOŚ Z MASŁEM CZOSNKOWYM, PIECZONYMI ZIEMNIAKAMI I SURÓWKĄ",
       "category": "obiad",
-      "description": "Świeży łosoś z masłem czosnkowym i pieczonymi ziemniakami",
       "ingredients": [
         {
           "product": "Łosoś świeży",
           "weight": 200,
-          "quantity": "2 x Kawałek"
+          "unit": "g",
+          "hint": "2 x Kawałek"
         },
         {
           "product": "Ziemniaki",
           "weight": 140,
-          "quantity": "2 x Sztuka"
+          "unit": "g",
+          "hint": "2 x Sztuka"
         },
         {
           "product": "Kapusta czerwona",
           "weight": 100,
-          "quantity": "2 x Liść"
+          "unit": "g",
+          "hint": "2 x Liść"
         },
         {
           "product": "Marchew",
           "weight": 45,
-          "quantity": "1 x Sztuka"
+          "unit": "g",
+          "hint": "1 x Sztuka"
         },
         {
           "product": "Cytryna",
           "weight": 40,
-          "quantity": "0.5 x Sztuka"
+          "unit": "ml",
+          "hint": "0.5 x Sztuka"
         },
         {
           "product": "Pietruszka liście",
           "weight": 12,
-          "quantity": "2 x Łyżeczka"
+          "unit": "ml",
+          "hint": "2 x Łyżeczka"
         },
         {
           "product": "Masło ekstra",
           "weight": 10,
-          "quantity": "2 x Łyżeczka"
+          "unit": "ml",
+          "hint": "2 x Łyżeczka"
         },
         {
           "product": "Olej lniany tłoczony na zimno",
           "weight": 10,
-          "quantity": "1 x Łyżka"
+          "unit": "ml",
+          "hint": "1 x Łyżka"
         },
         {
           "product": "Czosnek",
           "weight": 5,
-          "quantity": "1 x Ząbek"
+          "unit": "g",
+          "hint": "1 x Ząbek"
         }
       ],
       "instructions": [
@@ -1929,47 +2120,54 @@
       "id": "pizza-pesto-saturday",
       "name": "EKSPRESOWA PIZZA Z PESTO, MOZZARELLĄ, SZYNKĄ I OLIWKAMI",
       "category": "kolacja",
-      "description": "Szybka pizza na tortilli z pesto, mozzarellą i szynką",
       "ingredients": [
         {
           "product": "Tortilla pełnoziarnista",
           "weight": 61,
-          "quantity": "1 x Sztuka"
+          "unit": "g",
+          "hint": "1 x Sztuka"
         },
         {
           "product": "Ser mozzarella bez tłuszczu",
           "weight": 60,
-          "quantity": "4 x Plaster"
+          "unit": "g",
+          "hint": "4 x Plaster"
         },
         {
           "product": "Szynka z indyka",
           "weight": 60,
-          "quantity": "4 x Plasterek"
+          "unit": "g",
+          "hint": "4 x Plasterek"
         },
         {
           "product": "Oliwki czarne",
           "weight": 45,
-          "quantity": "3 x Łyżka"
+          "unit": "ml",
+          "hint": "3 x Łyżka"
         },
         {
           "product": "Pieczarka uprawna świeża",
           "weight": 40,
-          "quantity": "2 x Sztuka"
+          "unit": "g",
+          "hint": "2 x Sztuka"
         },
         {
           "product": "Pesto zielone z bazylii",
           "weight": 40,
-          "quantity": "2 x Łyżka"
+          "unit": "ml",
+          "hint": "2 x Łyżka"
         },
         {
           "product": "Oliwa z oliwek",
           "weight": 15,
-          "quantity": "1.5 x Łyżka"
+          "unit": "ml",
+          "hint": "1.5 x Łyżka"
         },
         {
           "product": "Bazylia świeża",
           "weight": 4,
-          "quantity": "4 x Listek"
+          "unit": "g",
+          "hint": "4 x Listek"
         }
       ],
       "instructions": [
@@ -1992,22 +2190,24 @@
       "id": "coffee-bulletproof-sunday",
       "name": "KAWA KULOODPORNA",
       "category": "kawa",
-      "description": "Kawa ze zdrowotnymi dodatkami",
       "ingredients": [
         {
           "product": "Mleczko kokosowe (21%)",
           "weight": 40,
-          "quantity": "2 x Łyżka"
+          "unit": "ml",
+          "hint": "2 x Łyżka"
         },
         {
           "product": "Olej MCT (Olimp)",
           "weight": 28,
-          "quantity": "2 x Łyżka"
+          "unit": "ml",
+          "hint": "2 x Łyżka"
         },
         {
           "product": "Masło orzechowe",
           "weight": 15,
-          "quantity": "1 x Łyżeczka"
+          "unit": "ml",
+          "hint": "1 x Łyżeczka"
         }
       ],
       "instructions": [
@@ -2028,37 +2228,42 @@
       "id": "smoothie-banana-strawberry-sunday",
       "name": "SMOOTHIE BANAN - TRUSKAWKA",
       "category": "śniadanie",
-      "description": "Smoothie z banana, truskawkami i nasionami",
       "ingredients": [
         {
           "product": "Napój migdałowy",
           "weight": 250,
-          "quantity": "1 x Szklanka"
+          "unit": "ml",
+          "hint": "1 x Szklanka"
         },
         {
           "product": "Ser twarogowy półtłusty",
           "weight": 100,
-          "quantity": "0.5 x Opakowanie"
+          "unit": "g",
+          "hint": "0.5 x Opakowanie"
         },
         {
           "product": "Truskawki mrożone",
           "weight": 100,
-          "quantity": "1 x Szklanka"
+          "unit": "ml",
+          "hint": "1 x Szklanka"
         },
         {
           "product": "Banan",
           "weight": 60,
-          "quantity": "0.5 x Sztuka"
+          "unit": "g",
+          "hint": "0.5 x Sztuka"
         },
         {
           "product": "Wiórki kokosowe",
           "weight": 12,
-          "quantity": "2 x Łyżka"
+          "unit": "ml",
+          "hint": "2 x Łyżka"
         },
         {
           "product": "Len nasiona",
           "weight": 5,
-          "quantity": "1 x Łyżeczka"
+          "unit": "ml",
+          "hint": "1 x Łyżeczka"
         }
       ],
       "instructions": [
@@ -2079,12 +2284,12 @@
       "id": "walnuts-sunday",
       "name": "ORZECHY WŁOSKIE",
       "category": "śniadanie",
-      "description": "Surowe orzechy włoskie",
       "ingredients": [
         {
           "product": "Orzechy włoskie",
           "weight": 45,
-          "quantity": "3 x Łyżka"
+          "unit": "ml",
+          "hint": "3 x Łyżka"
         }
       ],
       "instructions": [
@@ -2105,57 +2310,66 @@
       "id": "scrambled-eggs-sunday",
       "name": "JAJECZNICA Z WARZYWAMI, GRZANKI",
       "category": "drugie-śniadanie",
-      "description": "Jajecznica ze specjałami i pierniczkami",
       "ingredients": [
         {
           "product": "Jaja kurze całe",
           "weight": 112,
-          "quantity": "2 x Sztuka"
+          "unit": "g",
+          "hint": "2 x Sztuka"
         },
         {
           "product": "Chleb graham",
           "weight": 60,
-          "quantity": "2 x Kromka"
+          "unit": "g",
+          "hint": "2 x Kromka"
         },
         {
           "product": "Pomidor",
           "weight": 60,
-          "quantity": "0.5 x Sztuka"
+          "unit": "g",
+          "hint": "0.5 x Sztuka"
         },
         {
           "product": "Szynka z indyka",
           "weight": 60,
-          "quantity": "4 x Plasterek"
+          "unit": "g",
+          "hint": "4 x Plasterek"
         },
         {
           "product": "Hummus klasyczny",
           "weight": 40,
-          "quantity": "4 x Łyżeczka"
+          "unit": "ml",
+          "hint": "4 x Łyżeczka"
         },
         {
           "product": "Cebula dymka",
           "weight": 20,
-          "quantity": "1 x Sztuka"
+          "unit": "g",
+          "hint": "1 x Sztuka"
         },
         {
           "product": "Dynia pestki łuskane",
           "weight": 20,
-          "quantity": "2 x Łyżka"
+          "unit": "ml",
+          "hint": "2 x Łyżka"
         },
         {
           "product": "Roszponka",
           "weight": 20,
-          "quantity": "1 x Garść"
+          "unit": "g",
+          "hint": "1 x Garść"
         },
         {
           "product": "Oliwa z oliwek",
           "weight": 10,
-          "quantity": "1 x Łyżka"
+          "unit": "ml",
+          "hint": "1 x Łyżka"
         },
         {
           "product": "Szczypiorek",
           "weight": 5,
-          "quantity": "1 x Łyżeczka"
+          "unit": "ml",
+          "hint": "1 x Łyżeczka"
         }
       ],
       "instructions": [
@@ -2178,57 +2392,66 @@
       "id": "noodles-shrimp-thai-sunday",
       "name": "MAKARON Z KREWETKAMI PO TAJSKU",
       "category": "obiad",
-      "description": "Makaron z krewetkami w sosie kokosowym",
       "ingredients": [
         {
           "product": "Krewetki",
           "weight": 150,
-          "quantity": "1.5 x Porcja"
+          "unit": "g",
+          "hint": "1.5 x Porcja"
         },
         {
           "product": "Cukinia",
           "weight": 150,
-          "quantity": "0.5 x Sztuka"
+          "unit": "g",
+          "hint": "0.5 x Sztuka"
         },
         {
           "product": "Szpinak",
           "weight": 100,
-          "quantity": "4 x Garść"
+          "unit": "g",
+          "hint": "4 x Garść"
         },
         {
           "product": "Mleczko kokosowe 21%",
           "weight": 100,
-          "quantity": "5 x Łyżka"
+          "unit": "ml",
+          "hint": "5 x Łyżka"
         },
         {
           "product": "Makaron spaghetti pełnoziarnisty",
           "weight": 50,
-          "quantity": "1 x Porcja"
+          "unit": "g",
+          "hint": "1 x Porcja"
         },
         {
           "product": "Cebula dymka",
           "weight": 20,
-          "quantity": "1 x Sztuka"
+          "unit": "g",
+          "hint": "1 x Sztuka"
         },
         {
           "product": "Pietruszka liście",
           "weight": 12,
-          "quantity": "2 x Łyżeczka"
+          "unit": "ml",
+          "hint": "2 x Łyżeczka"
         },
         {
           "product": "Oliwa z oliwek",
           "weight": 10,
-          "quantity": "1 x Łyżka"
+          "unit": "ml",
+          "hint": "1 x Łyżka"
         },
         {
           "product": "Sezam nasiona",
           "weight": 10,
-          "quantity": "1 x Łyżka"
+          "unit": "ml",
+          "hint": "1 x Łyżka"
         },
         {
           "product": "Czosnek",
           "weight": 5,
-          "quantity": "1 x Ząbek"
+          "unit": "g",
+          "hint": "1 x Ząbek"
         }
       ],
       "instructions": [
@@ -2253,52 +2476,60 @@
       "id": "tortilla-tuna-hummus-sunday",
       "name": "TORTILLA Z HUMMUSEM, TUŃCZYKIEM I WARZYWAMI",
       "category": "kolacja",
-      "description": "Tortilla z tuńczykiem, hummusem i warzywami",
       "ingredients": [
         {
           "product": "Tuńczyk w oleju",
           "weight": 80,
-          "quantity": "0.5 x Opakowanie"
+          "unit": "ml",
+          "hint": "0.5 x Opakowanie"
         },
         {
           "product": "Tortilla pełnoziarnista",
           "weight": 61,
-          "quantity": "1 x Sztuka"
+          "unit": "g",
+          "hint": "1 x Sztuka"
         },
         {
           "product": "Hummus klasyczny",
           "weight": 50,
-          "quantity": "5 x Łyżeczka"
+          "unit": "ml",
+          "hint": "5 x Łyżeczka"
         },
         {
           "product": "Ogórek",
           "weight": 40,
-          "quantity": "1 x Sztuka"
+          "unit": "g",
+          "hint": "1 x Sztuka"
         },
         {
           "product": "Rzodkiewka",
           "weight": 30,
-          "quantity": "2 x Sztuka"
+          "unit": "g",
+          "hint": "2 x Sztuka"
         },
         {
           "product": "Suszone pomidory",
           "weight": 21,
-          "quantity": "3 x Sztuka"
+          "unit": "g",
+          "hint": "3 x Sztuka"
         },
         {
           "product": "Sezam nasiona",
           "weight": 10,
-          "quantity": "1 x Łyżka"
+          "unit": "ml",
+          "hint": "1 x Łyżka"
         },
         {
           "product": "Oliwa z oliwek",
           "weight": 10,
-          "quantity": "1 x Łyżka"
+          "unit": "ml",
+          "hint": "1 x Łyżka"
         },
         {
           "product": "Kiełki brokuła",
           "weight": 5,
-          "quantity": "0.6 x Łyżka"
+          "unit": "ml",
+          "hint": "0.6 x Łyżka"
         }
       ],
       "instructions": [

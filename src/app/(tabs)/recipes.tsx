@@ -13,7 +13,6 @@ export default function RecipesScreen() {
             accessibilityLabel={`${item.name} - ${item.category}`}
         >
             <Text className="text-lg font-semibold text-amber-900">{item.name}</Text>
-            <Text className="mt-1 text-sm text-slate-600">{item.description}</Text>
             <View className="mt-2 flex-row gap-2">
                 <View className="rounded-full bg-amber-100 px-3 py-1">
                     <Text className="text-xs font-medium text-amber-700">{item.category}</Text>
