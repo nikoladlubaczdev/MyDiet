@@ -1,0 +1,2322 @@
+{
+  "recipes": [
+    {
+      "id": "coffee-bulletproof-monday",
+      "name": "KAWA KULOODPORNA",
+      "category": "kawa",
+      "description": "Kawa ze zdrowotnymi dodatkami na bazie mleczka kokosowego i olejku MCT",
+      "ingredients": [
+        {
+          "product": "Mleczko kokosowe (21%)",
+          "weight": 40,
+          "quantity": "2 x Łyżka"
+        },
+        {
+          "product": "Olej MCT (Olimp)",
+          "weight": 28,
+          "quantity": "2 x Łyżka"
+        },
+        {
+          "product": "Masło orzechowe",
+          "weight": 15,
+          "quantity": "1 x Łyżeczka"
+        }
+      ],
+      "instructions": [
+        "Przygotuj kawę, z ulubionymi dodatkami."
+      ],
+      "tips": [],
+      "macros": {
+        "K": 400.9,
+        "B": 4.1,
+        "T": 44.2,
+        "WP": 2.8,
+        "F": 0.8,
+        "WW": 0.3
+      },
+      "prepTimeMinutes": 5
+    },
+    {
+      "id": "smoothie-mango-raspberry-monday",
+      "name": "SMOOTHIE MANGO - MALINA",
+      "category": "śniadanie",
+      "description": "Kolorowy smoothie z mango, malinami, twarogiem i masłem orzechowym",
+      "ingredients": [
+        {
+          "product": "Napój migdałowy",
+          "weight": 125,
+          "quantity": "0.5 x Szklanka"
+        },
+        {
+          "product": "Maliny",
+          "weight": 120,
+          "quantity": "2 x Garść"
+        },
+        {
+          "product": "Ser twarogowy półtłusty",
+          "weight": 100,
+          "quantity": "0.5 x Opakowanie"
+        },
+        {
+          "product": "Mango, mrożone",
+          "weight": 70,
+          "quantity": "1 x Garść"
+        },
+        {
+          "product": "Masło orzechowe",
+          "weight": 30,
+          "quantity": "2 x Łyżeczka"
+        },
+        {
+          "product": "Len, nasiona",
+          "weight": 10,
+          "quantity": "2 x Łyżeczka"
+        }
+      ],
+      "instructions": [
+        "Wszystkie składniki zmiksuj na smoothie - opcjonalnie uzupełnij wodą.",
+        "Orzechy zmiksuj w smoothie lub podaj do posiłku."
+      ],
+      "tips": [
+        "W sezonie jesienno - zimowym polecam sięgać po mrożone owoce jagodowe."
+      ],
+      "macros": {
+        "K": 877.8,
+        "B": 39.8,
+        "T": 61.4,
+        "WP": 36.5,
+        "F": 16.4,
+        "WW": 3.7
+      },
+      "prepTimeMinutes": 8
+    },
+    {
+      "id": "walnuts-monday",
+      "name": "ORZECHY WŁOSKIE",
+      "category": "śniadanie",
+      "description": "Surowe orzechy włoskie jako źródło zdrowych tłuszczy",
+      "ingredients": [
+        {
+          "product": "Orzechy włoskie",
+          "weight": 60,
+          "quantity": "4 x Łyżka"
+        }
+      ],
+      "instructions": [
+        "Orzechy zmiksuj w smoothie lub podaj do posiłku."
+      ],
+      "tips": [],
+      "macros": {
+        "K": 0,
+        "B": 0,
+        "T": 0,
+        "WP": 0,
+        "F": 0,
+        "WW": 0
+      },
+      "prepTimeMinutes": 0
+    },
+    {
+      "id": "mini-kopiec-kreta-monday",
+      "name": "MINI KOPIEC KRETA",
+      "category": "drugie-śniadanie",
+      "description": "Omlet z ricottą, bananem i migdałami - słodki i pożywny posiłek",
+      "ingredients": [
+        {
+          "product": "Jaja kurze całe",
+          "weight": 112,
+          "quantity": "2 x Sztuka"
+        },
+        {
+          "product": "Ser ricotta (z pełnego mleka)",
+          "weight": 80,
+          "quantity": "4 x Łyżka"
+        },
+        {
+          "product": "Banan",
+          "weight": 60,
+          "quantity": "0.5 x Sztuka"
+        },
+        {
+          "product": "Mąka owsiana pełnoziarnista",
+          "weight": 30,
+          "quantity": "2 x Łyżka"
+        },
+        {
+          "product": "Migdały w płatkach",
+          "weight": 15,
+          "quantity": "1.5 x Łyżka"
+        },
+        {
+          "product": "Oliwa z oliwek",
+          "weight": 10,
+          "quantity": "1 x Łyżka"
+        },
+        {
+          "product": "Erytrol",
+          "weight": 5,
+          "quantity": "1 x Łyżeczka"
+        },
+        {
+          "product": "Kakao 16% proszek",
+          "weight": 5,
+          "quantity": "0.5 x Łyżka"
+        },
+        {
+          "product": "Proszek do pieczenia",
+          "weight": 3,
+          "quantity": "1 x Łyżeczka"
+        }
+      ],
+      "instructions": [
+        "Białko jaja ubij na sztywno ze szczyptą soli, dodaj żółtko, erytrol, mąkę i kakao.",
+        "Omlet przestudź i pokrusz na małe kawałki - część ułóż na dnie lunchboxa, wyłóż banana i ricottę.",
+        "Posyp pozostałymi kawałkami omleta i udekoruj migdałami."
+      ],
+      "tips": [
+        "Wybieraj mniej dojrzałe, zielone banany. Przygotuj dzień wcześniej."
+      ],
+      "macros": {
+        "K": 666.8,
+        "B": 31.3,
+        "T": 42.7,
+        "WP": 39.2,
+        "F": 4.9,
+        "WW": 3.9
+      },
+      "prepTimeMinutes": 15
+    },
+    {
+      "id": "shrimp-chinese-monday",
+      "name": "CHIŃSZCZYZNA Z KREWETKAMI W SOSIE ORZECHOWYM",
+      "category": "obiad",
+      "description": "Szybki obiad z krewetkami, szpinakiem i ryżem basmati w sosie orzechowym",
+      "ingredients": [
+        {
+          "product": "Warzywa na patelnię chińskie",
+          "weight": 200,
+          "quantity": "2 x Porcja"
+        },
+        {
+          "product": "Szpinak",
+          "weight": 150,
+          "quantity": "6 x Garść"
+        },
+        {
+          "product": "Krewetki",
+          "weight": 100,
+          "quantity": "1 x Porcja"
+        },
+        {
+          "product": "Ryż basmati",
+          "weight": 30,
+          "quantity": "2 x Łyżka"
+        },
+        {
+          "product": "Masło orzechowe",
+          "weight": 20,
+          "quantity": "1.3 x Łyżeczka"
+        },
+        {
+          "product": "Suszone pomidory",
+          "weight": 14,
+          "quantity": "2 x Sztuka"
+        },
+        {
+          "product": "Oliwa z oliwek",
+          "weight": 10,
+          "quantity": "1 x Łyżka"
+        },
+        {
+          "product": "Sezam nasiona",
+          "weight": 10,
+          "quantity": "1 x Łyżka"
+        },
+        {
+          "product": "Czosnek",
+          "weight": 5,
+          "quantity": "1 x Ząbek"
+        },
+        {
+          "product": "Kurkuma",
+          "weight": 1,
+          "quantity": "0.2 x Łyżeczka"
+        }
+      ],
+      "instructions": [
+        "Krewetki rozmroź, przełóż do miski z zimną wodą, odcedź, osusz.",
+        "Na patelni podsmaż krewetki, dodaj warzywa i czosnek, podlej wodą.",
+        "Dodaj masło orzechowe, dopraw i duś pod przykryciem.",
+        "Ryż wypłukaj i ugotuj al dente, wymieszaj z daniem i posyp sezamem."
+      ],
+      "tips": [
+        "Do sosu dodaj ulubione warzywa - świeże lub mrożone. Krewetki możesz zamienić na białko."
+      ],
+      "macros": {
+        "K": 613.2,
+        "B": 32.3,
+        "T": 30.3,
+        "WP": 44.9,
+        "F": 12.1,
+        "WW": 4.5
+      },
+      "prepTimeMinutes": 30
+    },
+    {
+      "id": "salad-mozzarella-walnuts-monday",
+      "name": "SAŁATKA Z MOZZARELLĄ I ORZECHAMI, GRZANKI",
+      "category": "kolacja",
+      "description": "Lekka i pożywna sałatka z mozzarellą, orzechami i grzankami",
+      "ingredients": [
+        {
+          "product": "Pomidory koktajlowe",
+          "weight": 100,
+          "quantity": "5 x Sztuka"
+        },
+        {
+          "product": "Chleb graham",
+          "weight": 60,
+          "quantity": "2 x Kromka"
+        },
+        {
+          "product": "Ser mozzarella bez tłuszczu",
+          "weight": 60,
+          "quantity": "4 x Plaster"
+        },
+        {
+          "product": "Ogórek",
+          "weight": 40,
+          "quantity": "1 x Sztuka"
+        },
+        {
+          "product": "Orzechy włoskie",
+          "weight": 30,
+          "quantity": "2 x Łyżka"
+        },
+        {
+          "product": "Suszone pomidory",
+          "weight": 14,
+          "quantity": "2 x Sztuka"
+        },
+        {
+          "product": "Dynia pestki łuskane",
+          "weight": 10,
+          "quantity": "1 x Łyżka"
+        },
+        {
+          "product": "Oliwa z oliwek",
+          "weight": 10,
+          "quantity": "1 x Łyżka"
+        },
+        {
+          "product": "Kiełki brokuła",
+          "weight": 5,
+          "quantity": "0.6 x Łyżka"
+        }
+      ],
+      "instructions": [
+        "Przygotuj sałatkę z mozzarellą i warzywami.",
+        "Skrop dressingiem na bazie oliwy, posyp posiekanymi orzechami i podaj z grzanką."
+      ],
+      "tips": [],
+      "macros": {
+        "K": 632.5,
+        "B": 34.8,
+        "T": 34.3,
+        "WP": 41.1,
+        "F": 10.7,
+        "WW": 4.1
+      },
+      "prepTimeMinutes": 10
+    },
+    {
+      "id": "coffee-bulletproof-tuesday",
+      "name": "KAWA KULOODPORNA",
+      "category": "kawa",
+      "description": "Kawa ze zdrowotnymi dodatkami na bazie mleczka kokosowego i olejku MCT",
+      "ingredients": [
+        {
+          "product": "Mleczko kokosowe (21%)",
+          "weight": 40,
+          "quantity": "2 x Łyżka"
+        },
+        {
+          "product": "Olej MCT (Olimp)",
+          "weight": 28,
+          "quantity": "2 x Łyżka"
+        },
+        {
+          "product": "Masło orzechowe",
+          "weight": 15,
+          "quantity": "1 x Łyżeczka"
+        }
+      ],
+      "instructions": [
+        "Przygotuj kawę, z ulubionymi dodatkami."
+      ],
+      "tips": [],
+      "macros": {
+        "K": 400.9,
+        "B": 4.1,
+        "T": 44.2,
+        "WP": 2.8,
+        "F": 0.8,
+        "WW": 0.3
+      },
+      "prepTimeMinutes": 5
+    },
+    {
+      "id": "smoothie-mango-raspberry-tuesday",
+      "name": "SMOOTHIE MANGO - MALINA",
+      "category": "śniadanie",
+      "description": "Kolorowy smoothie z mango, malinami, odżywką białkową",
+      "ingredients": [
+        {
+          "product": "Napój migdałowy",
+          "weight": 125,
+          "quantity": "0.5 x Szklanka"
+        },
+        {
+          "product": "Maliny",
+          "weight": 120,
+          "quantity": "2 x Garść"
+        },
+        {
+          "product": "Mango mrożone",
+          "weight": 70,
+          "quantity": "1 x Garść"
+        },
+        {
+          "product": "Odżywka białkowa izolat",
+          "weight": 30,
+          "quantity": "1 x Miarka"
+        },
+        {
+          "product": "Len nasiona",
+          "weight": 10,
+          "quantity": "2 x Łyżeczka"
+        }
+      ],
+      "instructions": [
+        "Wszystkie składniki zmiksuj na smoothie - opcjonalnie uzupełnij wodą."
+      ],
+      "tips": [],
+      "macros": {
+        "K": 671.7,
+        "B": 39.7,
+        "T": 41.6,
+        "WP": 30,
+        "F": 15.6,
+        "WW": 3.1
+      },
+      "prepTimeMinutes": 5
+    },
+    {
+      "id": "walnuts-tuesday",
+      "name": "ORZECHY WŁOSKIE",
+      "category": "śniadanie",
+      "description": "Surowe orzechy włoskie",
+      "ingredients": [
+        {
+          "product": "Orzechy włoskie",
+          "weight": 60,
+          "quantity": "4 x Łyżka"
+        }
+      ],
+      "instructions": [
+        "Orzechy zmiksuj w smoothie lub podaj do posiłku."
+      ],
+      "tips": [],
+      "macros": {
+        "K": 0,
+        "B": 0,
+        "T": 0,
+        "WP": 0,
+        "F": 0,
+        "WW": 0
+      },
+      "prepTimeMinutes": 0
+    },
+    {
+      "id": "waffles-hummus-salmon-tuesday",
+      "name": "GOFRY Z HUMMUSEM, ŁOSOSIEM I WARZYWAMI",
+      "category": "drugie-śniadanie",
+      "description": "Drożdżowe gofry z hummusem, wędzonym łososiem i warzywami",
+      "ingredients": [
+        {
+          "product": "Łosoś wędzony",
+          "weight": 60,
+          "quantity": "2 x Kawałek"
+        },
+        {
+          "product": "Jaja kurze całe",
+          "weight": 56,
+          "quantity": "1 x Sztuka"
+        },
+        {
+          "product": "Mąka owsiana pełnoziarnista",
+          "weight": 50,
+          "quantity": "3.3 x Łyżka"
+        },
+        {
+          "product": "Hummus klasyczny",
+          "weight": 50,
+          "quantity": "5 x Łyżeczka"
+        },
+        {
+          "product": "Mleko spożywcze 1.5% tłuszczu",
+          "weight": 30,
+          "quantity": "0.1 x Szklanka"
+        },
+        {
+          "product": "Rzodkiewka",
+          "weight": 30,
+          "quantity": "2 x Sztuka"
+        },
+        {
+          "product": "Roszponka",
+          "weight": 20,
+          "quantity": "1 x Garść"
+        },
+        {
+          "product": "Ser parmezan",
+          "weight": 16,
+          "quantity": "2 x Łyżka"
+        },
+        {
+          "product": "Oliwa z oliwek",
+          "weight": 10,
+          "quantity": "1 x Łyżka"
+        },
+        {
+          "product": "Kiełki brokuła",
+          "weight": 5,
+          "quantity": "0.6 x Łyżka"
+        },
+        {
+          "product": "Proszek do pieczenia",
+          "weight": 1,
+          "quantity": "0.3 x Łyżeczka"
+        }
+      ],
+      "instructions": [
+        "Jajko, mąkę, pdp, parmezan i mleko zmiksuj na gładką masę.",
+        "Gofrownicę natłuść oliwą, wylej masę i smaż przez 7 minut.",
+        "Gofry podaj z hummusem, roszponką, łososiem i warzywami."
+      ],
+      "tips": [
+        "Gofry podaj z ulubionymi dodatkami."
+      ],
+      "macros": {
+        "K": 711.5,
+        "B": 37.5,
+        "T": 43.8,
+        "WP": 39.4,
+        "F": 7.5,
+        "WW": 4
+      },
+      "prepTimeMinutes": 15
+    },
+    {
+      "id": "pasta-chicken-broccoli-tuesday",
+      "name": "ZAPIEKANKA MAKARONOWA Z KURCZAKIEM, BROKUŁEM I PARMEZANEM",
+      "category": "obiad",
+      "description": "Zmięczana zapiekanka makronu z kurczakiem i sosem kokosowym",
+      "ingredients": [
+        {
+          "product": "Brokuły mrożone",
+          "weight": 200,
+          "quantity": "0.4 x Opakowanie"
+        },
+        {
+          "product": "Mięso piersi kurczaka bez skóry",
+          "weight": 100,
+          "quantity": "1 x Kawałek"
+        },
+        {
+          "product": "Mleczko kokosowe 21%",
+          "weight": 100,
+          "quantity": "5 x Łyżka"
+        },
+        {
+          "product": "Makaron penne pełnoziarnisty",
+          "weight": 50,
+          "quantity": "0.7 x Szklanka"
+        },
+        {
+          "product": "Cytryna",
+          "weight": 16,
+          "quantity": "0.2 x Sztuka"
+        },
+        {
+          "product": "Oliwa z oliwek",
+          "weight": 10,
+          "quantity": "1 x Łyżka"
+        },
+        {
+          "product": "Sezam nasiona",
+          "weight": 10,
+          "quantity": "1 x Łyżka"
+        },
+        {
+          "product": "Ser parmezan",
+          "weight": 8,
+          "quantity": "1 x Łyżka"
+        }
+      ],
+      "instructions": [
+        "Makaron ugotuj al dente. Pod koniec dodaj brokuł i gotuj do miękkości.",
+        "Brokuł przełóż do blendera, dodaj mleczko kokosowe i zioła - zmiksuj na sos.",
+        "Kurczaka pokrój i podsmaż. Dodaj makaron, sos i wymieszaj.",
+        "Przełóż do naczynia żaroodpornego, posyp parmezanem i piecz 5 minut w 170°C."
+      ],
+      "tips": [
+        "Do zapiekanki dodaj ulubione warzywa. Polecam ugotować makaron na środową kolację."
+      ],
+      "macros": {
+        "K": 716,
+        "B": 42.1,
+        "T": 43.6,
+        "WP": 39.1,
+        "F": 10.5,
+        "WW": 3.8
+      },
+      "prepTimeMinutes": 30
+    },
+    {
+      "id": "avocado-pesto-toast-tuesday",
+      "name": "GRZANKI Z PESTO, AWOKADO, MOZZARELLĄ I WARZYWAMI",
+      "category": "kolacja",
+      "description": "Pikantne grzanki z pesto, awokado, mozzarellą",
+      "ingredients": [
+        {
+          "product": "Awokado",
+          "weight": 70,
+          "quantity": "0.5 x Sztuka"
+        },
+        {
+          "product": "Pomidor",
+          "weight": 60,
+          "quantity": "0.5 x Sztuka"
+        },
+        {
+          "product": "Chleb graham",
+          "weight": 60,
+          "quantity": "2 x Kromka"
+        },
+        {
+          "product": "Ser mozzarella bez tłuszczu",
+          "weight": 60,
+          "quantity": "4 x Plaster"
+        },
+        {
+          "product": "Pesto zielone z bazylii",
+          "weight": 40,
+          "quantity": "2 x Łyżka"
+        },
+        {
+          "product": "Rzodkiewka",
+          "weight": 30,
+          "quantity": "2 x Sztuka"
+        },
+        {
+          "product": "Suszone pomidory",
+          "weight": 14,
+          "quantity": "2 x Sztuka"
+        },
+        {
+          "product": "Oliwa z oliwek",
+          "weight": 10,
+          "quantity": "1 x Łyżka"
+        },
+        {
+          "product": "Dynia pestki łuskane",
+          "weight": 10,
+          "quantity": "1 x Łyżka"
+        },
+        {
+          "product": "Kiełki brokuła",
+          "weight": 5,
+          "quantity": "0.6 x Łyżka"
+        }
+      ],
+      "instructions": [
+        "Przygotuj grzanki z pesto, awokado, mozzarellą i warzywami."
+      ],
+      "tips": [],
+      "macros": {
+        "K": 693,
+        "B": 32.7,
+        "T": 41.5,
+        "WP": 41.3,
+        "F": 11.9,
+        "WW": 4.1
+      },
+      "prepTimeMinutes": 10
+    },
+    {
+      "id": "coffee-bulletproof-wednesday",
+      "name": "KAWA KULOODPORNA",
+      "category": "kawa",
+      "description": "Kawa ze zdrowotnymi dodatkami",
+      "ingredients": [
+        {
+          "product": "Mleczko kokosowe (21%)",
+          "weight": 40,
+          "quantity": "2 x Łyżka"
+        },
+        {
+          "product": "Olej MCT (Olimp)",
+          "weight": 28,
+          "quantity": "2 x Łyżka"
+        },
+        {
+          "product": "Masło orzechowe",
+          "weight": 15,
+          "quantity": "1 x Łyżeczka"
+        }
+      ],
+      "instructions": [
+        "Przygotuj kawę, z ulubionymi dodatkami."
+      ],
+      "tips": [],
+      "macros": {
+        "K": 400.9,
+        "B": 4.1,
+        "T": 44.2,
+        "WP": 2.8,
+        "F": 0.8,
+        "WW": 0.3
+      },
+      "prepTimeMinutes": 5
+    },
+    {
+      "id": "smoothie-banana-strawberry-wednesday",
+      "name": "SMOOTHIE BANAN - TRUSKAWKA",
+      "category": "śniadanie",
+      "description": "Smoothie z banana, truskawkami i twarogiem",
+      "ingredients": [
+        {
+          "product": "Napój migdałowy",
+          "weight": 125,
+          "quantity": "0.5 x Szklanka"
+        },
+        {
+          "product": "Ser twarogowy półtłusty",
+          "weight": 100,
+          "quantity": "0.5 x Opakowanie"
+        },
+        {
+          "product": "Truskawki mrożone",
+          "weight": 100,
+          "quantity": "1 x Szklanka"
+        },
+        {
+          "product": "Banan",
+          "weight": 60,
+          "quantity": "0.5 x Sztuka"
+        },
+        {
+          "product": "Wiórki kokosowe",
+          "weight": 12,
+          "quantity": "2 x Łyżka"
+        },
+        {
+          "product": "Len nasiona",
+          "weight": 10,
+          "quantity": "2 x Łyżeczka"
+        }
+      ],
+      "instructions": [
+        "Wszystkie składniki zmiksuj na smoothie."
+      ],
+      "tips": [
+        "Wybieraj mniej dojrzałe banany. Polecam mrożone owoce jagodowe."
+      ],
+      "macros": {
+        "K": 768.5,
+        "B": 33.5,
+        "T": 53.6,
+        "WP": 35.7,
+        "F": 11,
+        "WW": 3.7
+      },
+      "prepTimeMinutes": 5
+    },
+    {
+      "id": "walnuts-wednesday",
+      "name": "ORZECHY WŁOSKIE",
+      "category": "śniadanie",
+      "description": "Surowe orzechy włoskie",
+      "ingredients": [
+        {
+          "product": "Orzechy włoskie",
+          "weight": 60,
+          "quantity": "4 x Łyżka"
+        }
+      ],
+      "instructions": [
+        "Orzechy zmiksuj w smoothie."
+      ],
+      "tips": [],
+      "macros": {
+        "K": 0,
+        "B": 0,
+        "T": 0,
+        "WP": 0,
+        "F": 0,
+        "WW": 0
+      },
+      "prepTimeMinutes": 0
+    },
+    {
+      "id": "toasts-pesto-halloumi-wednesday",
+      "name": "TOSTY Z PESTO, HALLOUMI I WARZYWAMI",
+      "category": "drugie-śniadanie",
+      "description": "Tosty z pesto, grillowanym halloumi i świeżymi warzywami",
+      "ingredients": [
+        {
+          "product": "Pomidory koktajlowe",
+          "weight": 100,
+          "quantity": "5 x Sztuka"
+        },
+        {
+          "product": "Ser halloumi",
+          "weight": 100,
+          "quantity": "1 x Porcja"
+        },
+        {
+          "product": "Chleb graham",
+          "weight": 60,
+          "quantity": "2 x Kromka"
+        },
+        {
+          "product": "Ogórek",
+          "weight": 40,
+          "quantity": "1 x Sztuka"
+        },
+        {
+          "product": "Pesto zielone z bazylii",
+          "weight": 40,
+          "quantity": "2 x Łyżka"
+        },
+        {
+          "product": "Rzodkiewka",
+          "weight": 30,
+          "quantity": "2 x Sztuka"
+        },
+        {
+          "product": "Dynia pestki łuskane",
+          "weight": 10,
+          "quantity": "1 x Łyżka"
+        },
+        {
+          "product": "Kiełki brokuła",
+          "weight": 5,
+          "quantity": "0.6 x Łyżka"
+        }
+      ],
+      "instructions": [
+        "Przygotuj tosty z pesto, halloumi i warzywami."
+      ],
+      "tips": [
+        "Pesto możesz zamienić na awokado. Na wynos przygotuj klasyczne kanapki."
+      ],
+      "macros": {
+        "K": 769.5,
+        "B": 36,
+        "T": 52.6,
+        "WP": 33.3,
+        "F": 7.5,
+        "WW": 3.3
+      },
+      "prepTimeMinutes": 8
+    },
+    {
+      "id": "bowl-chicken-peanut-wednesday",
+      "name": "BOWL Z SZARPANYM KURCZAKIEM, SOSEM ORZECHOWYM I WARZYWAMI",
+      "category": "obiad",
+      "description": "Bowl z szarpanym kurczakiem w sosie orzechowym, warzywami i ryżem",
+      "ingredients": [
+        {
+          "product": "Pomidory koktajlowe",
+          "weight": 100,
+          "quantity": "5 x Sztuka"
+        },
+        {
+          "product": "Mięso ud kurczaka bez skóry",
+          "weight": 100,
+          "quantity": "1 x Kawałek"
+        },
+        {
+          "product": "Ryż basmati",
+          "weight": 45,
+          "quantity": "3 x Łyżka"
+        },
+        {
+          "product": "Ogórek",
+          "weight": 40,
+          "quantity": "1 x Sztuka"
+        },
+        {
+          "product": "Roszponka",
+          "weight": 40,
+          "quantity": "2 x Garść"
+        },
+        {
+          "product": "Cytryna",
+          "weight": 16,
+          "quantity": "0.2 x Sztuka"
+        },
+        {
+          "product": "Masło orzechowe",
+          "weight": 15,
+          "quantity": "1 x Łyżeczka"
+        },
+        {
+          "product": "Suszone pomidory",
+          "weight": 14,
+          "quantity": "2 x Sztuka"
+        },
+        {
+          "product": "Oliwa z oliwek",
+          "weight": 10,
+          "quantity": "1 x Łyżka"
+        },
+        {
+          "product": "Sezam nasiona",
+          "weight": 10,
+          "quantity": "1 x Łyżka"
+        },
+        {
+          "product": "Kiełki brokuła",
+          "weight": 5,
+          "quantity": "0.6 x Łyżka"
+        }
+      ],
+      "instructions": [
+        "Kurczaka gotuj około 20 minut, ostudzij i poszarp. Dodaj oliwę i sok z cytryny.",
+        "Warzywa pokrój, przygotuj dressing: masło orzechowe + wrzątek 1:1.",
+        "Ryż ugotuj do miękkości. Ułóż wszystko w miseczce, polej dressingiem i posyp sezamem."
+      ],
+      "tips": [
+        "Szarpanego kurczaka możesz zamrozić na później."
+      ],
+      "macros": {
+        "K": 611.7,
+        "B": 31,
+        "T": 30.8,
+        "WP": 47.8,
+        "F": 6.5,
+        "WW": 4.8
+      },
+      "prepTimeMinutes": 45
+    },
+    {
+      "id": "pasta-salmon-spinach-wednesday",
+      "name": "PENNE ZE SZPINAKIEM, WĘDZONYM ŁOSOSIEM I POMIDORKAMI",
+      "category": "kolacja",
+      "description": "Makaron z szpinakiem, łososiem wędzonym i pomidorkami",
+      "ingredients": [
+        {
+          "product": "Szpinak",
+          "weight": 150,
+          "quantity": "6 x Garść"
+        },
+        {
+          "product": "Pomidory koktajlowe",
+          "weight": 100,
+          "quantity": "5 x Sztuka"
+        },
+        {
+          "product": "Łosoś wędzony",
+          "weight": 60,
+          "quantity": "2 x Kawałek"
+        },
+        {
+          "product": "Makaron penne pełnoziarnisty",
+          "weight": 50,
+          "quantity": "0.7 x Szklanka"
+        },
+        {
+          "product": "Serek naturalny do smarowania",
+          "weight": 50,
+          "quantity": "2 x Łyżka"
+        },
+        {
+          "product": "Oliwki czarne",
+          "weight": 45,
+          "quantity": "3 x Łyżka"
+        },
+        {
+          "product": "Cebula dymka",
+          "weight": 20,
+          "quantity": "1 x Sztuka"
+        },
+        {
+          "product": "Suszone pomidory",
+          "weight": 14,
+          "quantity": "2 x Sztuka"
+        },
+        {
+          "product": "Pietruszka liście",
+          "weight": 12,
+          "quantity": "2 x Łyżeczka"
+        },
+        {
+          "product": "Oliwa z oliwek",
+          "weight": 10,
+          "quantity": "1 x Łyżka"
+        },
+        {
+          "product": "Sezam nasiona",
+          "weight": 10,
+          "quantity": "1 x Łyżka"
+        },
+        {
+          "product": "Czosnek",
+          "weight": 5,
+          "quantity": "1 x Ząbek"
+        }
+      ],
+      "instructions": [
+        "Makaron ugotuj al dente. Cebulę podsmaż, dodaj szpinak i czosnek.",
+        "Dodaj pomidorki, wrzuć makaron, suszone pomidory i wymieszaj z serkiem i łososiem.",
+        "Udekoruj pietruszką i sezamem."
+      ],
+      "tips": [],
+      "macros": {
+        "K": 639.8,
+        "B": 35.4,
+        "T": 32.9,
+        "WP": 46.9,
+        "F": 14.3,
+        "WW": 4.7
+      },
+      "prepTimeMinutes": 22
+    },
+    {
+      "id": "coffee-bulletproof-thursday",
+      "name": "KAWA KULOODPORNA",
+      "category": "kawa",
+      "description": "Kawa ze zdrowotnymi dodatkami",
+      "ingredients": [
+        {
+          "product": "Mleczko kokosowe (21%)",
+          "weight": 40,
+          "quantity": "2 x Łyżka"
+        },
+        {
+          "product": "Olej MCT (Olimp)",
+          "weight": 28,
+          "quantity": "2 x Łyżka"
+        },
+        {
+          "product": "Masło orzechowe",
+          "weight": 15,
+          "quantity": "1 x Łyżeczka"
+        }
+      ],
+      "instructions": [
+        "Przygotuj kawę."
+      ],
+      "tips": [],
+      "macros": {
+        "K": 400.9,
+        "B": 4.1,
+        "T": 44.2,
+        "WP": 2.8,
+        "F": 0.8,
+        "WW": 0.3
+      },
+      "prepTimeMinutes": 5
+    },
+    {
+      "id": "smoothie-banana-raspberry-thursday",
+      "name": "SMOOTHIE BANAN - MALINA",
+      "category": "śniadanie",
+      "description": "Smoothie banan-malina",
+      "ingredients": [
+        {
+          "product": "Napój migdałowy",
+          "weight": 125,
+          "quantity": "0.5 x Szklanka"
+        },
+        {
+          "product": "Maliny",
+          "weight": 120,
+          "quantity": "2 x Garść"
+        },
+        {
+          "product": "Ser twarogowy półtłusty",
+          "weight": 100,
+          "quantity": "0.5 x Opakowanie"
+        },
+        {
+          "product": "Banan",
+          "weight": 60,
+          "quantity": "0.5 x Sztuka"
+        },
+        {
+          "product": "Len nasiona",
+          "weight": 10,
+          "quantity": "2 x Łyżeczka"
+        }
+      ],
+      "instructions": [
+        "Zmiksuj wszystkie składniki."
+      ],
+      "tips": [],
+      "macros": {
+        "K": 708.3,
+        "B": 33.7,
+        "T": 46,
+        "WP": 35.6,
+        "F": 14.7,
+        "WW": 3.6
+      },
+      "prepTimeMinutes": 5
+    },
+    {
+      "id": "walnuts-thursday",
+      "name": "ORZECHY WŁOSKIE",
+      "category": "śniadanie",
+      "description": "Surowe orzechy włoskie",
+      "ingredients": [
+        {
+          "product": "Orzechy włoskie",
+          "weight": 60,
+          "quantity": "4 x Łyżka"
+        }
+      ],
+      "instructions": [
+        "Orzechy zmiksuj lub podaj."
+      ],
+      "tips": [],
+      "macros": {
+        "K": 0,
+        "B": 0,
+        "T": 0,
+        "WP": 0,
+        "F": 0,
+        "WW": 0
+      },
+      "prepTimeMinutes": 0
+    },
+    {
+      "id": "tuna-egg-pasta-thursday",
+      "name": "PASTA Z TUŃCZYKA I JAJKA, PIECZYWO",
+      "category": "drugie-śniadanie",
+      "description": "Pasta z tuńczyka, jajka i awokado",
+      "ingredients": [
+        {
+          "product": "Jaja kurze całe",
+          "weight": 112,
+          "quantity": "2 x Sztuka"
+        },
+        {
+          "product": "Tuńczyk w oleju",
+          "weight": 80,
+          "quantity": "0.5 x Opakowanie"
+        },
+        {
+          "product": "Awokado",
+          "weight": 70,
+          "quantity": "0.5 x Sztuka"
+        },
+        {
+          "product": "Chleb graham",
+          "weight": 60,
+          "quantity": "2 x Kromka"
+        },
+        {
+          "product": "Ogórek",
+          "weight": 40,
+          "quantity": "1 x Sztuka"
+        },
+        {
+          "product": "Rzodkiewka",
+          "weight": 30,
+          "quantity": "2 x Sztuka"
+        },
+        {
+          "product": "Majonez wegański Go Vege",
+          "weight": 30,
+          "quantity": "2 x Łyżeczka"
+        },
+        {
+          "product": "Dynia pestki łuskane",
+          "weight": 10,
+          "quantity": "1 x Łyżka"
+        },
+        {
+          "product": "Szczypiorek",
+          "weight": 10,
+          "quantity": "2 x Łyżeczka"
+        },
+        {
+          "product": "Kiełki brokuła",
+          "weight": 5,
+          "quantity": "0.6 x Łyżka"
+        }
+      ],
+      "instructions": [
+        "Jajko ugotuj na twardo, obierz i przełóż do miski. Dodaj tuńczyka i majonez, rozgnieć.",
+        "Dodaj pomidory i szczypiorek, wymieszaj. Przygotuj kanapki z awokado i pastą.",
+        "Ozdób warzywami."
+      ],
+      "tips": [],
+      "macros": {
+        "K": 733.1,
+        "B": 45.9,
+        "T": 43.6,
+        "WP": 35,
+        "F": 8.1,
+        "WW": 3.5
+      },
+      "prepTimeMinutes": 8
+    },
+    {
+      "id": "beef-goulash-thursday",
+      "name": "GULASZ WOŁOWY Z ZIEMNIAKAMI",
+      "category": "obiad",
+      "description": "Tradycyjny gulasz wołowy z ziemniakami",
+      "ingredients": [
+        {
+          "product": "Ziemniaki",
+          "weight": 210,
+          "quantity": "3 x Sztuka"
+        },
+        {
+          "product": "Pomidory z puszki krojone",
+          "weight": 200,
+          "quantity": "2 x Porcja"
+        },
+        {
+          "product": "Wołowina polędwica",
+          "weight": 100,
+          "quantity": "1 x Kawałek"
+        },
+        {
+          "product": "Papryka żółta",
+          "weight": 70,
+          "quantity": "0.5 x Sztuka"
+        },
+        {
+          "product": "Marchew",
+          "weight": 45,
+          "quantity": "1 x Sztuka"
+        },
+        {
+          "product": "Pieczarka uprawna świeża",
+          "weight": 40,
+          "quantity": "2 x Sztuka"
+        },
+        {
+          "product": "Sezam nasiona",
+          "weight": 20,
+          "quantity": "2 x Łyżka"
+        },
+        {
+          "product": "Cebula dymka",
+          "weight": 20,
+          "quantity": "1 x Sztuka"
+        },
+        {
+          "product": "Pietruszka liście",
+          "weight": 12,
+          "quantity": "2 x Łyżeczka"
+        },
+        {
+          "product": "Oliwa z oliwek",
+          "weight": 10,
+          "quantity": "1 x Łyżka"
+        },
+        {
+          "product": "Czosnek",
+          "weight": 5,
+          "quantity": "1 x Ząbek"
+        }
+      ],
+      "instructions": [
+        "Mięso pokrój w kostkę, wrzuć na patelnię. Dodaj dymkę i warzywa, podsmaż.",
+        "Zalej pomidorami, dopraw ziołami i duś na wolnym ogniu.",
+        "Ziemniaki ugotuj. Gulasz podaj z ziemniakami, pietruszką i sezamem."
+      ],
+      "tips": [
+        "Do sosu dodaj ulubione warzywa."
+      ],
+      "macros": {
+        "K": 588.7,
+        "B": 34,
+        "T": 26.5,
+        "WP": 50.8,
+        "F": 14,
+        "WW": 5.1
+      },
+      "prepTimeMinutes": 40
+    },
+    {
+      "id": "salad-halloumi-thursday",
+      "name": "SAŁATKA Z GRILLOWANYM HALLOUMI I WARZYWAMI, GRZANKI",
+      "category": "kolacja",
+      "description": "Sałatka z grillowanym halloumi i grzankami",
+      "ingredients": [
+        {
+          "product": "Pomidory koktajlowe",
+          "weight": 100,
+          "quantity": "5 x Sztuka"
+        },
+        {
+          "product": "Ser halloumi",
+          "weight": 100,
+          "quantity": "1 x Porcja"
+        },
+        {
+          "product": "Chleb graham",
+          "weight": 60,
+          "quantity": "2 x Kromka"
+        },
+        {
+          "product": "Oliwki czarne",
+          "weight": 45,
+          "quantity": "3 x Łyżka"
+        },
+        {
+          "product": "Ogórek",
+          "weight": 40,
+          "quantity": "1 x Sztuka"
+        },
+        {
+          "product": "Roszponka",
+          "weight": 20,
+          "quantity": "1 x Garść"
+        },
+        {
+          "product": "Oliwa z oliwek",
+          "weight": 10,
+          "quantity": "1 x Łyżka"
+        },
+        {
+          "product": "Dynia pestki łuskane",
+          "weight": 10,
+          "quantity": "1 x Łyżka"
+        }
+      ],
+      "instructions": [
+        "Warzywa pokrój, ser pokrój i podsmaż na oliwie.",
+        "Przygotuj dressing na bazie oliwy i aromatycznych ziół.",
+        "Sałatkę skrop dressingiem, posyp pestkami i podaj z grzanką."
+      ],
+      "tips": [],
+      "macros": {
+        "K": 758.1,
+        "B": 34.5,
+        "T": 52.8,
+        "WP": 32.2,
+        "F": 7.4,
+        "WW": 3.1
+      },
+      "prepTimeMinutes": 15
+    },
+    {
+      "id": "coffee-bulletproof-friday",
+      "name": "KAWA KULOODPORNA",
+      "category": "kawa",
+      "description": "Kawa ze zdrowotnymi dodatkami",
+      "ingredients": [
+        {
+          "product": "Mleczko kokosowe (21%)",
+          "weight": 40,
+          "quantity": "2 x Łyżka"
+        },
+        {
+          "product": "Olej MCT (Olimp)",
+          "weight": 28,
+          "quantity": "2 x Łyżka"
+        },
+        {
+          "product": "Masło orzechowe",
+          "weight": 15,
+          "quantity": "1 x Łyżeczka"
+        }
+      ],
+      "instructions": [
+        "Przygotuj kawę."
+      ],
+      "tips": [],
+      "macros": {
+        "K": 400.9,
+        "B": 4.1,
+        "T": 44.2,
+        "WP": 2.8,
+        "F": 0.8,
+        "WW": 0.3
+      },
+      "prepTimeMinutes": 5
+    },
+    {
+      "id": "smoothie-mango-friday",
+      "name": "SMOOTHIE MANGO - MALINA",
+      "category": "śniadanie",
+      "description": "Smoothie mango-malina z odżywką",
+      "ingredients": [
+        {
+          "product": "Mango mrożone",
+          "weight": 140,
+          "quantity": "2 x Garść"
+        },
+        {
+          "product": "Napój migdałowy",
+          "weight": 125,
+          "quantity": "0.5 x Szklanka"
+        },
+        {
+          "product": "Maliny",
+          "weight": 120,
+          "quantity": "2 x Garść"
+        },
+        {
+          "product": "Odżywka białkowa izolat",
+          "weight": 30,
+          "quantity": "1 x Miarka"
+        },
+        {
+          "product": "Masło orzechowe",
+          "weight": 15,
+          "quantity": "1 x Łyżeczka"
+        },
+        {
+          "product": "Len nasiona",
+          "weight": 10,
+          "quantity": "2 x Łyżeczka"
+        },
+        {
+          "product": "Cynamon",
+          "weight": 1,
+          "quantity": "0.2 x Łyżeczka"
+        }
+      ],
+      "instructions": [
+        "Zmiksuj wszystkie składniki na smoothie."
+      ],
+      "tips": [
+        "Odżywkę możesz zamienić na twaróg/jogurt."
+      ],
+      "macros": {
+        "K": 712.3,
+        "B": 40.6,
+        "T": 40.4,
+        "WP": 41,
+        "F": 17.1,
+        "WW": 4.1
+      },
+      "prepTimeMinutes": 5
+    },
+    {
+      "id": "walnuts-friday",
+      "name": "ORZECHY WŁOSKIE",
+      "category": "śniadanie",
+      "description": "Surowe orzechy włoskie",
+      "ingredients": [
+        {
+          "product": "Orzechy włoskie",
+          "weight": 45,
+          "quantity": "3 x Łyżka"
+        }
+      ],
+      "instructions": [
+        "Orzechy zmiksuj lub podaj."
+      ],
+      "tips": [],
+      "macros": {
+        "K": 0,
+        "B": 0,
+        "T": 0,
+        "WP": 0,
+        "F": 0,
+        "WW": 0
+      },
+      "prepTimeMinutes": 0
+    },
+    {
+      "id": "chicken-dried-tomato-pasta-friday",
+      "name": "PASTA Z KURCZAKA I SUSZONYCH POMIDORÓW, PIECZYWO",
+      "category": "drugie-śniadanie",
+      "description": "Pasta z kurczaka, suszonych pomidorów i awokado",
+      "ingredients": [
+        {
+          "product": "Mięso ud kurczaka bez skóry",
+          "weight": 100,
+          "quantity": "1 x Kawałek"
+        },
+        {
+          "product": "Chleb graham",
+          "weight": 60,
+          "quantity": "2 x Kromka"
+        },
+        {
+          "product": "Oliwki czarne",
+          "weight": 45,
+          "quantity": "3 x Łyżka"
+        },
+        {
+          "product": "Ogórek",
+          "weight": 40,
+          "quantity": "1 x Sztuka"
+        },
+        {
+          "product": "Majonez wegański Go Vege",
+          "weight": 30,
+          "quantity": "2 x Łyżeczka"
+        },
+        {
+          "product": "Dynia pestki łuskane",
+          "weight": 20,
+          "quantity": "2 x Łyżka"
+        },
+        {
+          "product": "Suszone pomidory",
+          "weight": 14,
+          "quantity": "2 x Sztuka"
+        },
+        {
+          "product": "Oliwa z oliwek",
+          "weight": 10,
+          "quantity": "1 x Łyżka"
+        },
+        {
+          "product": "Kiełki brokuła",
+          "weight": 5,
+          "quantity": "0.6 x Łyżka"
+        }
+      ],
+      "instructions": [
+        "Kurczaka gotuj 20 minut, ostudzij i poszarp. Do kurczaka dodaj suszone pomidory i majonez.",
+        "Wymieszaj na pastę. Przygotuj kanapki z domową pastą i warzywami."
+      ],
+      "tips": [],
+      "macros": {
+        "K": 657.7,
+        "B": 30.7,
+        "T": 40.4,
+        "WP": 39.3,
+        "F": 8.4,
+        "WW": 3.9
+      },
+      "prepTimeMinutes": 45
+    },
+    {
+      "id": "sushi-bowl-salmon-friday",
+      "name": "SUSHI BOWL Z WĘDZONYM ŁOSOSIEM",
+      "category": "obiad",
+      "description": "Bowl z ryżem, łososiem, awokado i warzywami",
+      "ingredients": [
+        {
+          "product": "Łosoś wędzony",
+          "weight": 120,
+          "quantity": "4 x Kawałek"
+        },
+        {
+          "product": "Ogórek",
+          "weight": 80,
+          "quantity": "2 x Sztuka"
+        },
+        {
+          "product": "Awokado",
+          "weight": 70,
+          "quantity": "0.5 x Sztuka"
+        },
+        {
+          "product": "Ryż basmati",
+          "weight": 45,
+          "quantity": "3 x Łyżka"
+        },
+        {
+          "product": "Sezam nasiona",
+          "weight": 20,
+          "quantity": "2 x Łyżka"
+        },
+        {
+          "product": "Oliwa z oliwek",
+          "weight": 10,
+          "quantity": "1 x Łyżka"
+        },
+        {
+          "product": "Cytryna",
+          "weight": 8,
+          "quantity": "0.1 x Sztuka"
+        },
+        {
+          "product": "Kiełki brokuła",
+          "weight": 5,
+          "quantity": "0.6 x Łyżka"
+        },
+        {
+          "product": "Kurkuma",
+          "weight": 5,
+          "quantity": "1 x Łyżeczka"
+        },
+        {
+          "product": "Algi nori arkusze",
+          "weight": 3,
+          "quantity": "1 x Sztuka"
+        }
+      ],
+      "instructions": [
+        "Ryż wypłukaj i ugotuj z kurkumą, ostudzij. Pokrój ogórek julienne, awokado w plasterki.",
+        "Ułóż w miseczce: ryż, warzywa, awokado, łosoś. Udekoruj kiełkami i sezamem."
+      ],
+      "tips": [
+        "Dodaj glony i sos Sriracha. Bowla możesz zamienić na kanapki/sałatkę."
+      ],
+      "macros": {
+        "K": 734.9,
+        "B": 37.4,
+        "T": 43.4,
+        "WP": 42.1,
+        "F": 7.7,
+        "WW": 4.2
+      },
+      "prepTimeMinutes": 27
+    },
+    {
+      "id": "zucchini-soup-friday",
+      "name": "ZUPA KREM Z CUKINII, GRZANKI",
+      "category": "kolacja",
+      "description": "Kremowa zupa z cukinii, mleczkiem kokosowym i soczewicą",
+      "ingredients": [
+        {
+          "product": "Cukinia",
+          "weight": 150,
+          "quantity": "0.5 x Sztuka"
+        },
+        {
+          "product": "Bulion warzywny domowy",
+          "weight": 125,
+          "quantity": "0.5 x Szklanka"
+        },
+        {
+          "product": "Mleczko kokosowe 21%",
+          "weight": 100,
+          "quantity": "5 x Łyżka"
+        },
+        {
+          "product": "Soczewica czerwona ugotowana",
+          "weight": 75,
+          "quantity": "3.8 x Łyżka"
+        },
+        {
+          "product": "Papryka czerwona",
+          "weight": 70,
+          "quantity": "0.5 x Sztuka"
+        },
+        {
+          "product": "Ser mozzarella bez tłuszczu",
+          "weight": 60,
+          "quantity": "4 x Plaster"
+        },
+        {
+          "product": "Chleb graham",
+          "weight": 30,
+          "quantity": "1 x Kromka"
+        },
+        {
+          "product": "Dynia pestki łuskane",
+          "weight": 20,
+          "quantity": "2 x Łyżka"
+        },
+        {
+          "product": "Pietruszka liście",
+          "weight": 12,
+          "quantity": "2 x Łyżeczka"
+        },
+        {
+          "product": "Oliwa z oliwek",
+          "weight": 10,
+          "quantity": "1 x Łyżka"
+        },
+        {
+          "product": "Czosnek",
+          "weight": 5,
+          "quantity": "1 x Ząbek"
+        },
+        {
+          "product": "Bazylia świeża",
+          "weight": 2,
+          "quantity": "2 x Listek"
+        }
+      ],
+      "instructions": [
+        "Cukinię i paprykę pokrój, podsmaż na oliwie z czoskiem.",
+        "Dodaj bulion, mleczko kokosowe i zioła, gotuj 10 minut. Dodaj soczewicę i zmiksuj na krem.",
+        "Podaj z mozzarellą, pietruszką, pestkami i grzanką."
+      ],
+      "tips": [
+        "Soczewica dostępna w puszkach po 75g. Użyj gotowego bulionu."
+      ],
+      "macros": {
+        "K": 711.4,
+        "B": 39.1,
+        "T": 42,
+        "WP": 37.3,
+        "F": 13.6,
+        "WW": 3.9
+      },
+      "prepTimeMinutes": 25
+    },
+    {
+      "id": "coffee-bulletproof-saturday",
+      "name": "KAWA KULOODPORNA",
+      "category": "kawa",
+      "description": "Kawa ze zdrowotnymi dodatkami",
+      "ingredients": [
+        {
+          "product": "Mleczko kokosowe (21%)",
+          "weight": 40,
+          "quantity": "2 x Łyżka"
+        },
+        {
+          "product": "Olej MCT (Olimp)",
+          "weight": 28,
+          "quantity": "2 x Łyżka"
+        },
+        {
+          "product": "Masło orzechowe",
+          "weight": 15,
+          "quantity": "1 x Łyżeczka"
+        }
+      ],
+      "instructions": [
+        "Przygotuj kawę."
+      ],
+      "tips": [],
+      "macros": {
+        "K": 400.9,
+        "B": 4.1,
+        "T": 44.2,
+        "WP": 2.8,
+        "F": 0.8,
+        "WW": 0.3
+      },
+      "prepTimeMinutes": 5
+    },
+    {
+      "id": "smoothie-banana-raspberry-saturday",
+      "name": "SMOOTHIE BANAN - MALINA",
+      "category": "śniadanie",
+      "description": "Smoothie z banana, malin i nasionami",
+      "ingredients": [
+        {
+          "product": "Napój migdałowy",
+          "weight": 125,
+          "quantity": "0.5 x Szklanka"
+        },
+        {
+          "product": "Maliny",
+          "weight": 120,
+          "quantity": "2 x Garść"
+        },
+        {
+          "product": "Ser twarogowy półtłusty",
+          "weight": 100,
+          "quantity": "0.5 x Opakowanie"
+        },
+        {
+          "product": "Banan",
+          "weight": 60,
+          "quantity": "0.5 x Sztuka"
+        },
+        {
+          "product": "Len nasiona",
+          "weight": 10,
+          "quantity": "2 x Łyżeczka"
+        },
+        {
+          "product": "Wiórki kokosowe",
+          "weight": 6,
+          "quantity": "1 x Łyżka"
+        }
+      ],
+      "instructions": [
+        "Zmiksuj wszystkie składniki na smoothie."
+      ],
+      "tips": [],
+      "macros": {
+        "K": 747.7,
+        "B": 34,
+        "T": 49.8,
+        "WP": 36,
+        "F": 16,
+        "WW": 3.6
+      },
+      "prepTimeMinutes": 5
+    },
+    {
+      "id": "walnuts-saturday",
+      "name": "ORZECHY WŁOSKIE",
+      "category": "śniadanie",
+      "description": "Surowe orzechy włoskie",
+      "ingredients": [
+        {
+          "product": "Orzechy włoskie",
+          "weight": 60,
+          "quantity": "4 x Łyżka"
+        }
+      ],
+      "instructions": [
+        "Orzechy zmiksuj lub podaj."
+      ],
+      "tips": [],
+      "macros": {
+        "K": 0,
+        "B": 0,
+        "T": 0,
+        "WP": 0,
+        "F": 0,
+        "WW": 0
+      },
+      "prepTimeMinutes": 0
+    },
+    {
+      "id": "shakshuka-saturday",
+      "name": "SZAKSZUKA Z WARZYWAMI, GRZANKI",
+      "category": "drugie-śniadanie",
+      "description": "Szakszuka - jaja w sosie pomidorowym z fasolą",
+      "ingredients": [
+        {
+          "product": "Pomidory z puszki krojone",
+          "weight": 200,
+          "quantity": "2 x Porcja"
+        },
+        {
+          "product": "Jaja kurze całe",
+          "weight": 112,
+          "quantity": "2 x Sztuka"
+        },
+        {
+          "product": "Fasola czerwona w zalewie konserwowa",
+          "weight": 80,
+          "quantity": "4 x Łyżka"
+        },
+        {
+          "product": "Papryka czerwona",
+          "weight": 70,
+          "quantity": "0.5 x Sztuka"
+        },
+        {
+          "product": "Chleb graham",
+          "weight": 60,
+          "quantity": "2 x Kromka"
+        },
+        {
+          "product": "Ser parmezan",
+          "weight": 16,
+          "quantity": "2 x Łyżka"
+        },
+        {
+          "product": "Szczypiorek",
+          "weight": 10,
+          "quantity": "2 x Łyżeczka"
+        },
+        {
+          "product": "Oliwa z oliwek",
+          "weight": 10,
+          "quantity": "1 x Łyżka"
+        },
+        {
+          "product": "Dynia pestki łuskane",
+          "weight": 10,
+          "quantity": "1 x Łyżka"
+        },
+        {
+          "product": "Kiełki brokuła",
+          "weight": 5,
+          "quantity": "0.6 x Łyżka"
+        }
+      ],
+      "instructions": [
+        "Na patelni rozgrzej oliwę i podsmaż paprykę. Dodaj fasolę i przyprawy (papryka, kumin).",
+        "Zalej pomidorami, wbij jajka, posyp parmezanem, przykryj i smaż do ścięcia białek.",
+        "Przełóż na talerz, posyp szczypiorkiem i pestkami, ozdób kiełkami i podaj z grzanką."
+      ],
+      "tips": [
+        "Do szakszuki dorzuć ulubione warzywa."
+      ],
+      "macros": {
+        "K": 640.5,
+        "B": 35.5,
+        "T": 32.8,
+        "WP": 44.3,
+        "F": 13.4,
+        "WW": 4.5
+      },
+      "prepTimeMinutes": 20
+    },
+    {
+      "id": "salmon-garlic-butter-saturday",
+      "name": "ŁOSOŚ Z MASŁEM CZOSNKOWYM, PIECZONYMI ZIEMNIAKAMI I SURÓWKĄ",
+      "category": "obiad",
+      "description": "Świeży łosoś z masłem czosnkowym i pieczonymi ziemniakami",
+      "ingredients": [
+        {
+          "product": "Łosoś świeży",
+          "weight": 200,
+          "quantity": "2 x Kawałek"
+        },
+        {
+          "product": "Ziemniaki",
+          "weight": 140,
+          "quantity": "2 x Sztuka"
+        },
+        {
+          "product": "Kapusta czerwona",
+          "weight": 100,
+          "quantity": "2 x Liść"
+        },
+        {
+          "product": "Marchew",
+          "weight": 45,
+          "quantity": "1 x Sztuka"
+        },
+        {
+          "product": "Cytryna",
+          "weight": 40,
+          "quantity": "0.5 x Sztuka"
+        },
+        {
+          "product": "Pietruszka liście",
+          "weight": 12,
+          "quantity": "2 x Łyżeczka"
+        },
+        {
+          "product": "Masło ekstra",
+          "weight": 10,
+          "quantity": "2 x Łyżeczka"
+        },
+        {
+          "product": "Olej lniany tłoczony na zimno",
+          "weight": 10,
+          "quantity": "1 x Łyżka"
+        },
+        {
+          "product": "Czosnek",
+          "weight": 5,
+          "quantity": "1 x Ząbek"
+        }
+      ],
+      "instructions": [
+        "Łososia rozmroź, osusz, przełóż do naczynia żaroodpornego, posmaruj masłem czosnkowym i dopraw.",
+        "Ziemniaki obierz, pokrój w łódeczki, opcjonalnie posyp papryką, przełóż na blaszkę.",
+        "Ziemniaki piecz 15-20 minut w 180°C. Włóż naczynie z rybą i piecz 15 minut.",
+        "Marchewkę zetrzyj, wymieszaj z kapustą, dopraw i skrop olejem lnianym.",
+        "Łososia podaj z ziemniakami, cytrusikiem i surówką."
+      ],
+      "tips": [
+        "Opcjonalnie przygotuj klasyczną rybę z ziemniakami i surówką."
+      ],
+      "macros": {
+        "K": 750.4,
+        "B": 46.2,
+        "T": 46,
+        "WP": 35.1,
+        "F": 8.5,
+        "WW": 3.5
+      },
+      "prepTimeMinutes": 40
+    },
+    {
+      "id": "pizza-pesto-saturday",
+      "name": "EKSPRESOWA PIZZA Z PESTO, MOZZARELLĄ, SZYNKĄ I OLIWKAMI",
+      "category": "kolacja",
+      "description": "Szybka pizza na tortilli z pesto, mozzarellą i szynką",
+      "ingredients": [
+        {
+          "product": "Tortilla pełnoziarnista",
+          "weight": 61,
+          "quantity": "1 x Sztuka"
+        },
+        {
+          "product": "Ser mozzarella bez tłuszczu",
+          "weight": 60,
+          "quantity": "4 x Plaster"
+        },
+        {
+          "product": "Szynka z indyka",
+          "weight": 60,
+          "quantity": "4 x Plasterek"
+        },
+        {
+          "product": "Oliwki czarne",
+          "weight": 45,
+          "quantity": "3 x Łyżka"
+        },
+        {
+          "product": "Pieczarka uprawna świeża",
+          "weight": 40,
+          "quantity": "2 x Sztuka"
+        },
+        {
+          "product": "Pesto zielone z bazylii",
+          "weight": 40,
+          "quantity": "2 x Łyżka"
+        },
+        {
+          "product": "Oliwa z oliwek",
+          "weight": 15,
+          "quantity": "1.5 x Łyżka"
+        },
+        {
+          "product": "Bazylia świeża",
+          "weight": 4,
+          "quantity": "4 x Listek"
+        }
+      ],
+      "instructions": [
+        "Tortillę rozłóż na blasze, posmaruj pesto, ułóż pieczarki, szynkę i mozzarellę.",
+        "Piecz 7 minut w 180°C. Udekoruj oliwkami, pomidorkami i skrop oliwą.",
+        "Opcjonalnie udekoruj świeżą bazylią."
+      ],
+      "tips": [],
+      "macros": {
+        "K": 668,
+        "B": 38.6,
+        "T": 41.5,
+        "WP": 33.1,
+        "F": 10.2,
+        "WW": 3.2
+      },
+      "prepTimeMinutes": 15
+    },
+    {
+      "id": "coffee-bulletproof-sunday",
+      "name": "KAWA KULOODPORNA",
+      "category": "kawa",
+      "description": "Kawa ze zdrowotnymi dodatkami",
+      "ingredients": [
+        {
+          "product": "Mleczko kokosowe (21%)",
+          "weight": 40,
+          "quantity": "2 x Łyżka"
+        },
+        {
+          "product": "Olej MCT (Olimp)",
+          "weight": 28,
+          "quantity": "2 x Łyżka"
+        },
+        {
+          "product": "Masło orzechowe",
+          "weight": 15,
+          "quantity": "1 x Łyżeczka"
+        }
+      ],
+      "instructions": [
+        "Przygotuj kawę."
+      ],
+      "tips": [],
+      "macros": {
+        "K": 400.9,
+        "B": 4.1,
+        "T": 44.2,
+        "WP": 2.8,
+        "F": 0.8,
+        "WW": 0.3
+      },
+      "prepTimeMinutes": 5
+    },
+    {
+      "id": "smoothie-banana-strawberry-sunday",
+      "name": "SMOOTHIE BANAN - TRUSKAWKA",
+      "category": "śniadanie",
+      "description": "Smoothie z banana, truskawkami i nasionami",
+      "ingredients": [
+        {
+          "product": "Napój migdałowy",
+          "weight": 250,
+          "quantity": "1 x Szklanka"
+        },
+        {
+          "product": "Ser twarogowy półtłusty",
+          "weight": 100,
+          "quantity": "0.5 x Opakowanie"
+        },
+        {
+          "product": "Truskawki mrożone",
+          "weight": 100,
+          "quantity": "1 x Szklanka"
+        },
+        {
+          "product": "Banan",
+          "weight": 60,
+          "quantity": "0.5 x Sztuka"
+        },
+        {
+          "product": "Wiórki kokosowe",
+          "weight": 12,
+          "quantity": "2 x Łyżka"
+        },
+        {
+          "product": "Len nasiona",
+          "weight": 5,
+          "quantity": "1 x Łyżeczka"
+        }
+      ],
+      "instructions": [
+        "Zmiksuj wszystkie składniki na smoothie."
+      ],
+      "tips": [],
+      "macros": {
+        "K": 663.3,
+        "B": 30.6,
+        "T": 44.4,
+        "WP": 36.9,
+        "F": 9.1,
+        "WW": 3.7
+      },
+      "prepTimeMinutes": 5
+    },
+    {
+      "id": "walnuts-sunday",
+      "name": "ORZECHY WŁOSKIE",
+      "category": "śniadanie",
+      "description": "Surowe orzechy włoskie",
+      "ingredients": [
+        {
+          "product": "Orzechy włoskie",
+          "weight": 45,
+          "quantity": "3 x Łyżka"
+        }
+      ],
+      "instructions": [
+        "Orzechy zmiksuj lub podaj."
+      ],
+      "tips": [],
+      "macros": {
+        "K": 0,
+        "B": 0,
+        "T": 0,
+        "WP": 0,
+        "F": 0,
+        "WW": 0
+      },
+      "prepTimeMinutes": 0
+    },
+    {
+      "id": "scrambled-eggs-sunday",
+      "name": "JAJECZNICA Z WARZYWAMI, GRZANKI",
+      "category": "drugie-śniadanie",
+      "description": "Jajecznica ze specjałami i pierniczkami",
+      "ingredients": [
+        {
+          "product": "Jaja kurze całe",
+          "weight": 112,
+          "quantity": "2 x Sztuka"
+        },
+        {
+          "product": "Chleb graham",
+          "weight": 60,
+          "quantity": "2 x Kromka"
+        },
+        {
+          "product": "Pomidor",
+          "weight": 60,
+          "quantity": "0.5 x Sztuka"
+        },
+        {
+          "product": "Szynka z indyka",
+          "weight": 60,
+          "quantity": "4 x Plasterek"
+        },
+        {
+          "product": "Hummus klasyczny",
+          "weight": 40,
+          "quantity": "4 x Łyżeczka"
+        },
+        {
+          "product": "Cebula dymka",
+          "weight": 20,
+          "quantity": "1 x Sztuka"
+        },
+        {
+          "product": "Dynia pestki łuskane",
+          "weight": 20,
+          "quantity": "2 x Łyżka"
+        },
+        {
+          "product": "Roszponka",
+          "weight": 20,
+          "quantity": "1 x Garść"
+        },
+        {
+          "product": "Oliwa z oliwek",
+          "weight": 10,
+          "quantity": "1 x Łyżka"
+        },
+        {
+          "product": "Szczypiorek",
+          "weight": 5,
+          "quantity": "1 x Łyżeczka"
+        }
+      ],
+      "instructions": [
+        "Cebulkę drobno posiekaj i zeszklij na oliwie. Wbij jajka, dopraw i smaż do konsystencji.",
+        "Przełóż na talerz, posyp szczypiorkiem i pestkami. Pieczywo opiecz, posmaruj hummusem.",
+        "Obłóż plasterkami szynki, warzywa pokrój według preferencji."
+      ],
+      "tips": [],
+      "macros": {
+        "K": 703.9,
+        "B": 38.1,
+        "T": 43.5,
+        "WP": 35.9,
+        "F": 8.7,
+        "WW": 3.6
+      },
+      "prepTimeMinutes": 10
+    },
+    {
+      "id": "noodles-shrimp-thai-sunday",
+      "name": "MAKARON Z KREWETKAMI PO TAJSKU",
+      "category": "obiad",
+      "description": "Makaron z krewetkami w sosie kokosowym",
+      "ingredients": [
+        {
+          "product": "Krewetki",
+          "weight": 150,
+          "quantity": "1.5 x Porcja"
+        },
+        {
+          "product": "Cukinia",
+          "weight": 150,
+          "quantity": "0.5 x Sztuka"
+        },
+        {
+          "product": "Szpinak",
+          "weight": 100,
+          "quantity": "4 x Garść"
+        },
+        {
+          "product": "Mleczko kokosowe 21%",
+          "weight": 100,
+          "quantity": "5 x Łyżka"
+        },
+        {
+          "product": "Makaron spaghetti pełnoziarnisty",
+          "weight": 50,
+          "quantity": "1 x Porcja"
+        },
+        {
+          "product": "Cebula dymka",
+          "weight": 20,
+          "quantity": "1 x Sztuka"
+        },
+        {
+          "product": "Pietruszka liście",
+          "weight": 12,
+          "quantity": "2 x Łyżeczka"
+        },
+        {
+          "product": "Oliwa z oliwek",
+          "weight": 10,
+          "quantity": "1 x Łyżka"
+        },
+        {
+          "product": "Sezam nasiona",
+          "weight": 10,
+          "quantity": "1 x Łyżka"
+        },
+        {
+          "product": "Czosnek",
+          "weight": 5,
+          "quantity": "1 x Ząbek"
+        }
+      ],
+      "instructions": [
+        "Makaron ugotuj al dente. Oliwę rozgrzej, dodaj dymkę, szpinak i krewetki.",
+        "Dodaj czosnek, plasterki cukinii, zioła i mleczko kokosowe. Duś na wolnym ogniu.",
+        "Wrzuć makaron, pietruskę i wymieszaj. Udekoruj sezamem."
+      ],
+      "tips": [
+        "Pozostałe mleczko kokosowe przelej do foremek na lód i zamroź."
+      ],
+      "macros": {
+        "K": 706.7,
+        "B": 36.9,
+        "T": 40.7,
+        "WP": 42.6,
+        "F": 11.3,
+        "WW": 4.3
+      },
+      "prepTimeMinutes": 30
+    },
+    {
+      "id": "tortilla-tuna-hummus-sunday",
+      "name": "TORTILLA Z HUMMUSEM, TUŃCZYKIEM I WARZYWAMI",
+      "category": "kolacja",
+      "description": "Tortilla z tuńczykiem, hummusem i warzywami",
+      "ingredients": [
+        {
+          "product": "Tuńczyk w oleju",
+          "weight": 80,
+          "quantity": "0.5 x Opakowanie"
+        },
+        {
+          "product": "Tortilla pełnoziarnista",
+          "weight": 61,
+          "quantity": "1 x Sztuka"
+        },
+        {
+          "product": "Hummus klasyczny",
+          "weight": 50,
+          "quantity": "5 x Łyżeczka"
+        },
+        {
+          "product": "Ogórek",
+          "weight": 40,
+          "quantity": "1 x Sztuka"
+        },
+        {
+          "product": "Rzodkiewka",
+          "weight": 30,
+          "quantity": "2 x Sztuka"
+        },
+        {
+          "product": "Suszone pomidory",
+          "weight": 21,
+          "quantity": "3 x Sztuka"
+        },
+        {
+          "product": "Sezam nasiona",
+          "weight": 10,
+          "quantity": "1 x Łyżka"
+        },
+        {
+          "product": "Oliwa z oliwek",
+          "weight": 10,
+          "quantity": "1 x Łyżka"
+        },
+        {
+          "product": "Kiełki brokuła",
+          "weight": 5,
+          "quantity": "0.6 x Łyżka"
+        }
+      ],
+      "instructions": [
+        "Przygotuj tortillę z hummusem, tuńczykiem i warzywami. Dopraw do smaku, posyp sezamem.",
+        "Skrop oliwą i zawiń."
+      ],
+      "tips": [
+        "Tortillę podaj na ciepło lub zimno."
+      ],
+      "macros": {
+        "K": 727.2,
+        "B": 36.9,
+        "T": 43.9,
+        "WP": 44.2,
+        "F": 13.3,
+        "WW": 4.4
+      },
+      "prepTimeMinutes": 6
+    }
+  ]
+}
