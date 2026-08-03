@@ -12,7 +12,9 @@ export function useRecipes(options?: UseRecipesOptions) {
     let filtered: Recipe[] = (recipesData.recipes as Recipe[]);
 
     if (options?.category) {
-      filtered = filtered.filter(recipe => recipe.category === options.category);
+      filtered = filtered.filter(recipe => 
+        (recipe.categories as MealCategory[]).includes(options.category!)
+      );
     }
 
     if (options?.search) {
@@ -26,7 +28,11 @@ export function useRecipes(options?: UseRecipesOptions) {
   }, [options?.category, options?.search]);
 
   const categories = useMemo(() => {
-    return Array.from(new Set(recipesData.recipes.map(r => r.category)));
+    const cats = new Set<MealCategory>();
+    recipesData.recipes.forEach((r: any) => {
+      (r.categories as MealCategory[]).forEach(c => cats.add(c));
+    });
+    return Array.from(cats).sort();
   }, []);
 
   return {

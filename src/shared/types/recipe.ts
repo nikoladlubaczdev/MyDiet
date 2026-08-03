@@ -1,4 +1,5 @@
-export type MealCategory = 'śniadanie' | 'drugie-śniadanie' | 'obiad' | 'kolacja' | 'kawa' | 'przekąska';
+export type MealCategory = 'ś' | 'o' | 'k' | 'p';
+
 export type WeightUnit = 'g' | 'ml';
 
 export interface Ingredient {
@@ -20,7 +21,7 @@ export interface Macros {
 export interface Recipe {
   id: string;
   name: string;
-  category: MealCategory;
+  categories: MealCategory[];
   ingredients: Ingredient[];
   instructions: string[]; // kroki przygotowania
   tips?: string[];

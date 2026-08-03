@@ -3,7 +3,9 @@
     {
       "id": "coffee-bulletproof-monday",
       "name": "KAWA KULOODPORNA",
-      "category": "kawa",
+      "categories": [
+        "ś"
+      ],
       "ingredients": [
         {
           "product": "Mleczko kokosowe (21%)",
@@ -41,7 +43,9 @@
     {
       "id": "smoothie-mango-raspberry-monday",
       "name": "SMOOTHIE MANGO - MALINA",
-      "category": "śniadanie",
+      "categories": [
+        "ś"
+      ],
       "ingredients": [
         {
           "product": "Napój migdałowy",
@@ -100,7 +104,9 @@
     {
       "id": "walnuts-monday",
       "name": "ORZECHY WŁOSKIE",
-      "category": "śniadanie",
+      "categories": [
+        "ś"
+      ],
       "ingredients": [
         {
           "product": "Orzechy włoskie",
@@ -126,7 +132,10 @@
     {
       "id": "mini-kopiec-kreta-monday",
       "name": "MINI KOPIEC KRETA",
-      "category": "drugie-śniadanie",
+      "categories": [
+        "ś",
+        "p"
+      ],
       "ingredients": [
         {
           "product": "Jaja kurze całe",
@@ -204,7 +213,9 @@
     {
       "id": "shrimp-chinese-monday",
       "name": "CHIŃSZCZYZNA Z KREWETKAMI W SOSIE ORZECHOWYM",
-      "category": "obiad",
+      "categories": [
+        "o"
+      ],
       "ingredients": [
         {
           "product": "Warzywa na patelnię chińskie",
@@ -289,7 +300,9 @@
     {
       "id": "salad-mozzarella-walnuts-monday",
       "name": "SAŁATKA Z MOZZARELLĄ I ORZECHAMI, GRZANKI",
-      "category": "kolacja",
+      "categories": [
+        "k"
+      ],
       "ingredients": [
         {
           "product": "Pomidory koktajlowe",
@@ -364,7 +377,9 @@
     {
       "id": "coffee-bulletproof-tuesday",
       "name": "KAWA KULOODPORNA",
-      "category": "kawa",
+      "categories": [
+        "ś"
+      ],
       "ingredients": [
         {
           "product": "Mleczko kokosowe (21%)",
@@ -402,7 +417,9 @@
     {
       "id": "smoothie-mango-raspberry-tuesday",
       "name": "SMOOTHIE MANGO - MALINA",
-      "category": "śniadanie",
+      "categories": [
+        "ś"
+      ],
       "ingredients": [
         {
           "product": "Napój migdałowy",
@@ -452,7 +469,9 @@
     {
       "id": "walnuts-tuesday",
       "name": "ORZECHY WŁOSKIE",
-      "category": "śniadanie",
+      "categories": [
+        "ś"
+      ],
       "ingredients": [
         {
           "product": "Orzechy włoskie",
@@ -478,7 +497,10 @@
     {
       "id": "waffles-hummus-salmon-tuesday",
       "name": "GOFRY Z HUMMUSEM, ŁOSOSIEM I WARZYWAMI",
-      "category": "drugie-śniadanie",
+      "categories": [
+        "ś",
+        "p"
+      ],
       "ingredients": [
         {
           "product": "Łosoś wędzony",
@@ -568,7 +590,9 @@
     {
       "id": "pasta-chicken-broccoli-tuesday",
       "name": "ZAPIEKANKA MAKARONOWA Z KURCZAKIEM, BROKUŁEM I PARMEZANEM",
-      "category": "obiad",
+      "categories": [
+        "o"
+      ],
       "ingredients": [
         {
           "product": "Brokuły mrożone",
@@ -641,7 +665,9 @@
     {
       "id": "avocado-pesto-toast-tuesday",
       "name": "GRZANKI Z PESTO, AWOKADO, MOZZARELLĄ I WARZYWAMI",
-      "category": "kolacja",
+      "categories": [
+        "k"
+      ],
       "ingredients": [
         {
           "product": "Awokado",
@@ -721,7 +747,9 @@
     {
       "id": "coffee-bulletproof-wednesday",
       "name": "KAWA KULOODPORNA",
-      "category": "kawa",
+      "categories": [
+        "ś"
+      ],
       "ingredients": [
         {
           "product": "Mleczko kokosowe (21%)",
@@ -759,7 +787,9 @@
     {
       "id": "smoothie-banana-strawberry-wednesday",
       "name": "SMOOTHIE BANAN - TRUSKAWKA",
-      "category": "śniadanie",
+      "categories": [
+        "ś"
+      ],
       "ingredients": [
         {
           "product": "Napój migdałowy",
@@ -817,7 +847,9 @@
     {
       "id": "walnuts-wednesday",
       "name": "ORZECHY WŁOSKIE",
-      "category": "śniadanie",
+      "categories": [
+        "ś"
+      ],
       "ingredients": [
         {
           "product": "Orzechy włoskie",
@@ -843,7 +875,10 @@
     {
       "id": "toasts-pesto-halloumi-wednesday",
       "name": "TOSTY Z PESTO, HALLOUMI I WARZYWAMI",
-      "category": "drugie-śniadanie",
+      "categories": [
+        "ś",
+        "p"
+      ],
       "ingredients": [
         {
           "product": "Pomidory koktajlowe",
@@ -913,7 +948,9 @@
     {
       "id": "bowl-chicken-peanut-wednesday",
       "name": "BOWL Z SZARPANYM KURCZAKIEM, SOSEM ORZECHOWYM I WARZYWAMI",
-      "category": "obiad",
+      "categories": [
+        "o"
+      ],
       "ingredients": [
         {
           "product": "Pomidory koktajlowe",
@@ -1003,7 +1040,9 @@
     {
       "id": "pasta-salmon-spinach-wednesday",
       "name": "PENNE ZE SZPINAKIEM, WĘDZONYM ŁOSOSIEM I POMIDORKAMI",
-      "category": "kolacja",
+      "categories": [
+        "k"
+      ],
       "ingredients": [
         {
           "product": "Szpinak",
@@ -1097,7 +1136,9 @@
     {
       "id": "coffee-bulletproof-thursday",
       "name": "KAWA KULOODPORNA",
-      "category": "kawa",
+      "categories": [
+        "ś"
+      ],
       "ingredients": [
         {
           "product": "Mleczko kokosowe (21%)",
@@ -1135,7 +1176,9 @@
     {
       "id": "smoothie-banana-raspberry-thursday",
       "name": "SMOOTHIE BANAN - MALINA",
-      "category": "śniadanie",
+      "categories": [
+        "ś"
+      ],
       "ingredients": [
         {
           "product": "Napój migdałowy",
@@ -1185,7 +1228,9 @@
     {
       "id": "walnuts-thursday",
       "name": "ORZECHY WŁOSKIE",
-      "category": "śniadanie",
+      "categories": [
+        "ś"
+      ],
       "ingredients": [
         {
           "product": "Orzechy włoskie",
@@ -1211,7 +1256,10 @@
     {
       "id": "tuna-egg-pasta-thursday",
       "name": "PASTA Z TUŃCZYKA I JAJKA, PIECZYWO",
-      "category": "drugie-śniadanie",
+      "categories": [
+        "ś",
+        "p"
+      ],
       "ingredients": [
         {
           "product": "Jaja kurze całe",
@@ -1293,7 +1341,9 @@
     {
       "id": "beef-goulash-thursday",
       "name": "GULASZ WOŁOWY Z ZIEMNIAKAMI",
-      "category": "obiad",
+      "categories": [
+        "o"
+      ],
       "ingredients": [
         {
           "product": "Ziemniaki",
@@ -1383,7 +1433,9 @@
     {
       "id": "salad-halloumi-thursday",
       "name": "SAŁATKA Z GRILLOWANYM HALLOUMI I WARZYWAMI, GRZANKI",
-      "category": "kolacja",
+      "categories": [
+        "k"
+      ],
       "ingredients": [
         {
           "product": "Pomidory koktajlowe",
@@ -1453,7 +1505,9 @@
     {
       "id": "coffee-bulletproof-friday",
       "name": "KAWA KULOODPORNA",
-      "category": "kawa",
+      "categories": [
+        "ś"
+      ],
       "ingredients": [
         {
           "product": "Mleczko kokosowe (21%)",
@@ -1491,7 +1545,9 @@
     {
       "id": "smoothie-mango-friday",
       "name": "SMOOTHIE MANGO - MALINA",
-      "category": "śniadanie",
+      "categories": [
+        "ś"
+      ],
       "ingredients": [
         {
           "product": "Mango mrożone",
@@ -1555,7 +1611,9 @@
     {
       "id": "walnuts-friday",
       "name": "ORZECHY WŁOSKIE",
-      "category": "śniadanie",
+      "categories": [
+        "ś"
+      ],
       "ingredients": [
         {
           "product": "Orzechy włoskie",
@@ -1581,7 +1639,10 @@
     {
       "id": "chicken-dried-tomato-pasta-friday",
       "name": "PASTA Z KURCZAKA I SUSZONYCH POMIDORÓW, PIECZYWO",
-      "category": "drugie-śniadanie",
+      "categories": [
+        "ś",
+        "p"
+      ],
       "ingredients": [
         {
           "product": "Mięso ud kurczaka bez skóry",
@@ -1656,7 +1717,9 @@
     {
       "id": "sushi-bowl-salmon-friday",
       "name": "SUSHI BOWL Z WĘDZONYM ŁOSOSIEM",
-      "category": "obiad",
+      "categories": [
+        "o"
+      ],
       "ingredients": [
         {
           "product": "Łosoś wędzony",
@@ -1739,7 +1802,9 @@
     {
       "id": "zucchini-soup-friday",
       "name": "ZUPA KREM Z CUKINII, GRZANKI",
-      "category": "kolacja",
+      "categories": [
+        "k"
+      ],
       "ingredients": [
         {
           "product": "Cukinia",
@@ -1835,7 +1900,9 @@
     {
       "id": "coffee-bulletproof-saturday",
       "name": "KAWA KULOODPORNA",
-      "category": "kawa",
+      "categories": [
+        "ś"
+      ],
       "ingredients": [
         {
           "product": "Mleczko kokosowe (21%)",
@@ -1873,7 +1940,9 @@
     {
       "id": "smoothie-banana-raspberry-saturday",
       "name": "SMOOTHIE BANAN - MALINA",
-      "category": "śniadanie",
+      "categories": [
+        "ś"
+      ],
       "ingredients": [
         {
           "product": "Napój migdałowy",
@@ -1929,7 +1998,9 @@
     {
       "id": "walnuts-saturday",
       "name": "ORZECHY WŁOSKIE",
-      "category": "śniadanie",
+      "categories": [
+        "ś"
+      ],
       "ingredients": [
         {
           "product": "Orzechy włoskie",
@@ -1955,7 +2026,10 @@
     {
       "id": "shakshuka-saturday",
       "name": "SZAKSZUKA Z WARZYWAMI, GRZANKI",
-      "category": "drugie-śniadanie",
+      "categories": [
+        "ś",
+        "p"
+      ],
       "ingredients": [
         {
           "product": "Pomidory z puszki krojone",
@@ -2039,7 +2113,9 @@
     {
       "id": "salmon-garlic-butter-saturday",
       "name": "ŁOSOŚ Z MASŁEM CZOSNKOWYM, PIECZONYMI ZIEMNIAKAMI I SURÓWKĄ",
-      "category": "obiad",
+      "categories": [
+        "o"
+      ],
       "ingredients": [
         {
           "product": "Łosoś świeży",
@@ -2119,7 +2195,9 @@
     {
       "id": "pizza-pesto-saturday",
       "name": "EKSPRESOWA PIZZA Z PESTO, MOZZARELLĄ, SZYNKĄ I OLIWKAMI",
-      "category": "kolacja",
+      "categories": [
+        "k"
+      ],
       "ingredients": [
         {
           "product": "Tortilla pełnoziarnista",
@@ -2189,7 +2267,9 @@
     {
       "id": "coffee-bulletproof-sunday",
       "name": "KAWA KULOODPORNA",
-      "category": "kawa",
+      "categories": [
+        "ś"
+      ],
       "ingredients": [
         {
           "product": "Mleczko kokosowe (21%)",
@@ -2227,7 +2307,9 @@
     {
       "id": "smoothie-banana-strawberry-sunday",
       "name": "SMOOTHIE BANAN - TRUSKAWKA",
-      "category": "śniadanie",
+      "categories": [
+        "ś"
+      ],
       "ingredients": [
         {
           "product": "Napój migdałowy",
@@ -2283,7 +2365,9 @@
     {
       "id": "walnuts-sunday",
       "name": "ORZECHY WŁOSKIE",
-      "category": "śniadanie",
+      "categories": [
+        "ś"
+      ],
       "ingredients": [
         {
           "product": "Orzechy włoskie",
@@ -2309,7 +2393,10 @@
     {
       "id": "scrambled-eggs-sunday",
       "name": "JAJECZNICA Z WARZYWAMI, GRZANKI",
-      "category": "drugie-śniadanie",
+      "categories": [
+        "ś",
+        "p"
+      ],
       "ingredients": [
         {
           "product": "Jaja kurze całe",
@@ -2391,7 +2478,9 @@
     {
       "id": "noodles-shrimp-thai-sunday",
       "name": "MAKARON Z KREWETKAMI PO TAJSKU",
-      "category": "obiad",
+      "categories": [
+        "o"
+      ],
       "ingredients": [
         {
           "product": "Krewetki",
@@ -2475,7 +2564,9 @@
     {
       "id": "tortilla-tuna-hummus-sunday",
       "name": "TORTILLA Z HUMMUSEM, TUŃCZYKIEM I WARZYWAMI",
-      "category": "kolacja",
+      "categories": [
+        "k"
+      ],
       "ingredients": [
         {
           "product": "Tuńczyk w oleju",
