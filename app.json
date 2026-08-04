@@ -1,11 +1,12 @@
 {
   "expo": {
-    "name": "MyDietMobileApp",
+    "name": "My Diet",
+    "displayName": "My Diet",
     "slug": "my-diet-mobile-app",
     "scheme": "mydiet",
     "version": "1.0.0",
     "orientation": "portrait",
-    "icon": "./assets/icon.png",
+    "icon": "./assets/app-icon.png",
     "userInterfaceStyle": "light",
     "newArchEnabled": true,
     "splash": {
