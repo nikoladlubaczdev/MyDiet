@@ -303,12 +303,12 @@ Stałe, predefiniowane nazwy:
 2. Tap na pusty slot LUB przycisk "+" w karcie
 3. → Otwiera się modal/nawigacja do ekranu **Przepisy** (pełny ekran)
 4. Użytkownik przegląda przepisy, używa search lub filtrów
-5. Tap na kartę przepisu → Otwiera się **modal szczegółów przepisu**
-6. Modal zawiera:
+5. Tap na kartę przepisu → Otwiera się **bottom sheet szczegółów przepisu**
+6. Bottom sheet zawiera:
    - Pełny opis przepisu (składniki, instrukcje, makros)
    - **"Liczba porcji:"** Stepper/input (domyślnie wartość bazowa z przepisu, np. "2")
    - Przycisk **"Dodaj do planu"**
-7. Tap "Dodaj do planu" → Modal zamyka się, przepis pojawia się w wybranym slocie
+7. Tap "Dodaj do planu" → Bottom sheet zamyka się, przepis pojawia się w wybranym slocie
 8. Użytkownik wraca do ekranu Plan automatycznie
 
 **Automatyczne przypisanie:** Przepis jest dodawany dla aktualnie wybranej osoby (tryb "Ty" = dla Ciebie, tryb "Partner" = dla partnera)
@@ -388,9 +388,9 @@ Stałe, predefiniowane nazwy:
 - Opcjonalne zdjęcie (jeśli brak, placeholder ikona/emoji)
 - Nazwa przepisu (max 2 linie)
 - Mini info: Kalorie | Czas | Liczba porcji
-- Tap → Otwiera modal szczegółów przepisu
+- Tap → Otwiera bottom sheet szczegółów przepisu
 
-**Modal szczegółów przepisu:**
+**Bottom sheet szczegółów przepisu:**
 (Ten sam co w flow dodawania do planu)
 
 - Scroll view z pełnymi szczegółami

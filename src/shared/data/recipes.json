@@ -3,9 +3,7 @@
     {
       "id": "coffee-bulletproof-monday",
       "name": "KAWA KULOODPORNA",
-      "categories": [
-        "ś"
-      ],
+      "categories": ["p"],
       "ingredients": [
         {
           "product": "Mleczko kokosowe (21%)",
@@ -26,9 +24,7 @@
           "hint": "1 x Łyżeczka"
         }
       ],
-      "instructions": [
-        "Przygotuj kawę, z ulubionymi dodatkami."
-      ],
+      "instructions": ["Przygotuj kawę, z ulubionymi dodatkami."],
       "tips": [],
       "macros": {
         "K": 400.9,
@@ -38,14 +34,12 @@
         "F": 0.8,
         "WW": 0.3
       },
-      "prepTimeMinutes": 5
+      "prepTimeMinutes": 2
     },
     {
       "id": "smoothie-mango-raspberry-monday",
-      "name": "SMOOTHIE MANGO - MALINA",
-      "categories": [
-        "ś"
-      ],
+      "name": "SMOOTHIE MANGO - MALINA TWARÓG",
+      "categories": ["sm"],
       "ingredients": [
         {
           "product": "Napój migdałowy",
@@ -99,14 +93,12 @@
         "F": 16.4,
         "WW": 3.7
       },
-      "prepTimeMinutes": 8
+      "prepTimeMinutes": 5
     },
     {
       "id": "walnuts-monday",
       "name": "ORZECHY WŁOSKIE",
-      "categories": [
-        "ś"
-      ],
+      "categories": ["p"],
       "ingredients": [
         {
           "product": "Orzechy włoskie",
@@ -115,9 +107,7 @@
           "hint": "4 x Łyżka"
         }
       ],
-      "instructions": [
-        "Orzechy zmiksuj w smoothie lub podaj do posiłku."
-      ],
+      "instructions": ["Orzechy zmiksuj w smoothie lub podaj do posiłku."],
       "tips": [],
       "macros": {
         "K": 0,
@@ -132,10 +122,7 @@
     {
       "id": "mini-kopiec-kreta-monday",
       "name": "MINI KOPIEC KRETA",
-      "categories": [
-        "ś",
-        "p"
-      ],
+      "categories": ["ś", "p"],
       "ingredients": [
         {
           "product": "Jaja kurze całe",
@@ -213,9 +200,7 @@
     {
       "id": "shrimp-chinese-monday",
       "name": "CHIŃSZCZYZNA Z KREWETKAMI W SOSIE ORZECHOWYM",
-      "categories": [
-        "o"
-      ],
+      "categories": ["o"],
       "ingredients": [
         {
           "product": "Warzywa na patelnię chińskie",
@@ -300,9 +285,7 @@
     {
       "id": "salad-mozzarella-walnuts-monday",
       "name": "SAŁATKA Z MOZZARELLĄ I ORZECHAMI, GRZANKI",
-      "categories": [
-        "k"
-      ],
+      "categories": ["k", "p"],
       "ingredients": [
         {
           "product": "Pomidory koktajlowe",
@@ -375,51 +358,9 @@
       "prepTimeMinutes": 10
     },
     {
-      "id": "coffee-bulletproof-tuesday",
-      "name": "KAWA KULOODPORNA",
-      "categories": [
-        "ś"
-      ],
-      "ingredients": [
-        {
-          "product": "Mleczko kokosowe (21%)",
-          "weight": 40,
-          "unit": "ml",
-          "hint": "2 x Łyżka"
-        },
-        {
-          "product": "Olej MCT (Olimp)",
-          "weight": 28,
-          "unit": "ml",
-          "hint": "2 x Łyżka"
-        },
-        {
-          "product": "Masło orzechowe",
-          "weight": 15,
-          "unit": "ml",
-          "hint": "1 x Łyżeczka"
-        }
-      ],
-      "instructions": [
-        "Przygotuj kawę, z ulubionymi dodatkami."
-      ],
-      "tips": [],
-      "macros": {
-        "K": 400.9,
-        "B": 4.1,
-        "T": 44.2,
-        "WP": 2.8,
-        "F": 0.8,
-        "WW": 0.3
-      },
-      "prepTimeMinutes": 5
-    },
-    {
       "id": "smoothie-mango-raspberry-tuesday",
       "name": "SMOOTHIE MANGO - MALINA",
-      "categories": [
-        "ś"
-      ],
+      "categories": ["sm"],
       "ingredients": [
         {
           "product": "Napój migdałowy",
@@ -467,40 +408,9 @@
       "prepTimeMinutes": 5
     },
     {
-      "id": "walnuts-tuesday",
-      "name": "ORZECHY WŁOSKIE",
-      "categories": [
-        "ś"
-      ],
-      "ingredients": [
-        {
-          "product": "Orzechy włoskie",
-          "weight": 60,
-          "unit": "ml",
-          "hint": "4 x Łyżka"
-        }
-      ],
-      "instructions": [
-        "Orzechy zmiksuj w smoothie lub podaj do posiłku."
-      ],
-      "tips": [],
-      "macros": {
-        "K": 0,
-        "B": 0,
-        "T": 0,
-        "WP": 0,
-        "F": 0,
-        "WW": 0
-      },
-      "prepTimeMinutes": 0
-    },
-    {
       "id": "waffles-hummus-salmon-tuesday",
       "name": "GOFRY Z HUMMUSEM, ŁOSOSIEM I WARZYWAMI",
-      "categories": [
-        "ś",
-        "p"
-      ],
+      "categories": ["ś", "p", "k"],
       "ingredients": [
         {
           "product": "Łosoś wędzony",
@@ -574,9 +484,7 @@
         "Gofrownicę natłuść oliwą, wylej masę i smaż przez 7 minut.",
         "Gofry podaj z hummusem, roszponką, łososiem i warzywami."
       ],
-      "tips": [
-        "Gofry podaj z ulubionymi dodatkami."
-      ],
+      "tips": ["Gofry podaj z ulubionymi dodatkami."],
       "macros": {
         "K": 711.5,
         "B": 37.5,
@@ -590,9 +498,7 @@
     {
       "id": "pasta-chicken-broccoli-tuesday",
       "name": "ZAPIEKANKA MAKARONOWA Z KURCZAKIEM, BROKUŁEM I PARMEZANEM",
-      "categories": [
-        "o"
-      ],
+      "categories": ["o"],
       "ingredients": [
         {
           "product": "Brokuły mrożone",
@@ -665,9 +571,7 @@
     {
       "id": "avocado-pesto-toast-tuesday",
       "name": "GRZANKI Z PESTO, AWOKADO, MOZZARELLĄ I WARZYWAMI",
-      "categories": [
-        "k"
-      ],
+      "categories": ["k", "p"],
       "ingredients": [
         {
           "product": "Awokado",
@@ -745,51 +649,9 @@
       "prepTimeMinutes": 10
     },
     {
-      "id": "coffee-bulletproof-wednesday",
-      "name": "KAWA KULOODPORNA",
-      "categories": [
-        "ś"
-      ],
-      "ingredients": [
-        {
-          "product": "Mleczko kokosowe (21%)",
-          "weight": 40,
-          "unit": "ml",
-          "hint": "2 x Łyżka"
-        },
-        {
-          "product": "Olej MCT (Olimp)",
-          "weight": 28,
-          "unit": "ml",
-          "hint": "2 x Łyżka"
-        },
-        {
-          "product": "Masło orzechowe",
-          "weight": 15,
-          "unit": "ml",
-          "hint": "1 x Łyżeczka"
-        }
-      ],
-      "instructions": [
-        "Przygotuj kawę, z ulubionymi dodatkami."
-      ],
-      "tips": [],
-      "macros": {
-        "K": 400.9,
-        "B": 4.1,
-        "T": 44.2,
-        "WP": 2.8,
-        "F": 0.8,
-        "WW": 0.3
-      },
-      "prepTimeMinutes": 5
-    },
-    {
       "id": "smoothie-banana-strawberry-wednesday",
       "name": "SMOOTHIE BANAN - TRUSKAWKA",
-      "categories": [
-        "ś"
-      ],
+      "categories": ["sm"],
       "ingredients": [
         {
           "product": "Napój migdałowy",
@@ -828,9 +690,7 @@
           "hint": "2 x Łyżeczka"
         }
       ],
-      "instructions": [
-        "Wszystkie składniki zmiksuj na smoothie."
-      ],
+      "instructions": ["Wszystkie składniki zmiksuj na smoothie."],
       "tips": [
         "Wybieraj mniej dojrzałe banany. Polecam mrożone owoce jagodowe."
       ],
@@ -845,40 +705,9 @@
       "prepTimeMinutes": 5
     },
     {
-      "id": "walnuts-wednesday",
-      "name": "ORZECHY WŁOSKIE",
-      "categories": [
-        "ś"
-      ],
-      "ingredients": [
-        {
-          "product": "Orzechy włoskie",
-          "weight": 60,
-          "unit": "ml",
-          "hint": "4 x Łyżka"
-        }
-      ],
-      "instructions": [
-        "Orzechy zmiksuj w smoothie."
-      ],
-      "tips": [],
-      "macros": {
-        "K": 0,
-        "B": 0,
-        "T": 0,
-        "WP": 0,
-        "F": 0,
-        "WW": 0
-      },
-      "prepTimeMinutes": 0
-    },
-    {
       "id": "toasts-pesto-halloumi-wednesday",
       "name": "TOSTY Z PESTO, HALLOUMI I WARZYWAMI",
-      "categories": [
-        "ś",
-        "p"
-      ],
+      "categories": ["ś", "p", "k"],
       "ingredients": [
         {
           "product": "Pomidory koktajlowe",
@@ -929,9 +758,7 @@
           "hint": "0.6 x Łyżka"
         }
       ],
-      "instructions": [
-        "Przygotuj tosty z pesto, halloumi i warzywami."
-      ],
+      "instructions": ["Przygotuj tosty z pesto, halloumi i warzywami."],
       "tips": [
         "Pesto możesz zamienić na awokado. Na wynos przygotuj klasyczne kanapki."
       ],
@@ -948,9 +775,7 @@
     {
       "id": "bowl-chicken-peanut-wednesday",
       "name": "BOWL Z SZARPANYM KURCZAKIEM, SOSEM ORZECHOWYM I WARZYWAMI",
-      "categories": [
-        "o"
-      ],
+      "categories": ["o"],
       "ingredients": [
         {
           "product": "Pomidory koktajlowe",
@@ -1024,9 +849,7 @@
         "Warzywa pokrój, przygotuj dressing: masło orzechowe + wrzątek 1:1.",
         "Ryż ugotuj do miękkości. Ułóż wszystko w miseczce, polej dressingiem i posyp sezamem."
       ],
-      "tips": [
-        "Szarpanego kurczaka możesz zamrozić na później."
-      ],
+      "tips": ["Szarpanego kurczaka możesz zamrozić na później."],
       "macros": {
         "K": 611.7,
         "B": 31,
@@ -1040,9 +863,7 @@
     {
       "id": "pasta-salmon-spinach-wednesday",
       "name": "PENNE ZE SZPINAKIEM, WĘDZONYM ŁOSOSIEM I POMIDORKAMI",
-      "categories": [
-        "k"
-      ],
+      "categories": ["k", "o"],
       "ingredients": [
         {
           "product": "Szpinak",
@@ -1134,51 +955,9 @@
       "prepTimeMinutes": 22
     },
     {
-      "id": "coffee-bulletproof-thursday",
-      "name": "KAWA KULOODPORNA",
-      "categories": [
-        "ś"
-      ],
-      "ingredients": [
-        {
-          "product": "Mleczko kokosowe (21%)",
-          "weight": 40,
-          "unit": "ml",
-          "hint": "2 x Łyżka"
-        },
-        {
-          "product": "Olej MCT (Olimp)",
-          "weight": 28,
-          "unit": "ml",
-          "hint": "2 x Łyżka"
-        },
-        {
-          "product": "Masło orzechowe",
-          "weight": 15,
-          "unit": "ml",
-          "hint": "1 x Łyżeczka"
-        }
-      ],
-      "instructions": [
-        "Przygotuj kawę."
-      ],
-      "tips": [],
-      "macros": {
-        "K": 400.9,
-        "B": 4.1,
-        "T": 44.2,
-        "WP": 2.8,
-        "F": 0.8,
-        "WW": 0.3
-      },
-      "prepTimeMinutes": 5
-    },
-    {
       "id": "smoothie-banana-raspberry-thursday",
-      "name": "SMOOTHIE BANAN - MALINA",
-      "categories": [
-        "ś"
-      ],
+      "name": "SMOOTHIE BANAN - MALINA TWARÓG",
+      "categories": ["sm"],
       "ingredients": [
         {
           "product": "Napój migdałowy",
@@ -1211,9 +990,7 @@
           "hint": "2 x Łyżeczka"
         }
       ],
-      "instructions": [
-        "Zmiksuj wszystkie składniki."
-      ],
+      "instructions": ["Zmiksuj wszystkie składniki."],
       "tips": [],
       "macros": {
         "K": 708.3,
@@ -1226,40 +1003,9 @@
       "prepTimeMinutes": 5
     },
     {
-      "id": "walnuts-thursday",
-      "name": "ORZECHY WŁOSKIE",
-      "categories": [
-        "ś"
-      ],
-      "ingredients": [
-        {
-          "product": "Orzechy włoskie",
-          "weight": 60,
-          "unit": "ml",
-          "hint": "4 x Łyżka"
-        }
-      ],
-      "instructions": [
-        "Orzechy zmiksuj lub podaj."
-      ],
-      "tips": [],
-      "macros": {
-        "K": 0,
-        "B": 0,
-        "T": 0,
-        "WP": 0,
-        "F": 0,
-        "WW": 0
-      },
-      "prepTimeMinutes": 0
-    },
-    {
       "id": "tuna-egg-pasta-thursday",
       "name": "PASTA Z TUŃCZYKA I JAJKA, PIECZYWO",
-      "categories": [
-        "ś",
-        "p"
-      ],
+      "categories": ["ś", "p", "k"],
       "ingredients": [
         {
           "product": "Jaja kurze całe",
@@ -1341,9 +1087,7 @@
     {
       "id": "beef-goulash-thursday",
       "name": "GULASZ WOŁOWY Z ZIEMNIAKAMI",
-      "categories": [
-        "o"
-      ],
+      "categories": ["o"],
       "ingredients": [
         {
           "product": "Ziemniaki",
@@ -1417,9 +1161,7 @@
         "Zalej pomidorami, dopraw ziołami i duś na wolnym ogniu.",
         "Ziemniaki ugotuj. Gulasz podaj z ziemniakami, pietruszką i sezamem."
       ],
-      "tips": [
-        "Do sosu dodaj ulubione warzywa."
-      ],
+      "tips": ["Do sosu dodaj ulubione warzywa."],
       "macros": {
         "K": 588.7,
         "B": 34,
@@ -1433,9 +1175,7 @@
     {
       "id": "salad-halloumi-thursday",
       "name": "SAŁATKA Z GRILLOWANYM HALLOUMI I WARZYWAMI, GRZANKI",
-      "categories": [
-        "k"
-      ],
+      "categories": ["k"],
       "ingredients": [
         {
           "product": "Pomidory koktajlowe",
@@ -1503,146 +1243,9 @@
       "prepTimeMinutes": 15
     },
     {
-      "id": "coffee-bulletproof-friday",
-      "name": "KAWA KULOODPORNA",
-      "categories": [
-        "ś"
-      ],
-      "ingredients": [
-        {
-          "product": "Mleczko kokosowe (21%)",
-          "weight": 40,
-          "unit": "ml",
-          "hint": "2 x Łyżka"
-        },
-        {
-          "product": "Olej MCT (Olimp)",
-          "weight": 28,
-          "unit": "ml",
-          "hint": "2 x Łyżka"
-        },
-        {
-          "product": "Masło orzechowe",
-          "weight": 15,
-          "unit": "ml",
-          "hint": "1 x Łyżeczka"
-        }
-      ],
-      "instructions": [
-        "Przygotuj kawę."
-      ],
-      "tips": [],
-      "macros": {
-        "K": 400.9,
-        "B": 4.1,
-        "T": 44.2,
-        "WP": 2.8,
-        "F": 0.8,
-        "WW": 0.3
-      },
-      "prepTimeMinutes": 5
-    },
-    {
-      "id": "smoothie-mango-friday",
-      "name": "SMOOTHIE MANGO - MALINA",
-      "categories": [
-        "ś"
-      ],
-      "ingredients": [
-        {
-          "product": "Mango mrożone",
-          "weight": 140,
-          "unit": "g",
-          "hint": "2 x Garść"
-        },
-        {
-          "product": "Napój migdałowy",
-          "weight": 125,
-          "unit": "ml",
-          "hint": "0.5 x Szklanka"
-        },
-        {
-          "product": "Maliny",
-          "weight": 120,
-          "unit": "g",
-          "hint": "2 x Garść"
-        },
-        {
-          "product": "Odżywka białkowa izolat",
-          "weight": 30,
-          "unit": "g",
-          "hint": "1 x Miarka"
-        },
-        {
-          "product": "Masło orzechowe",
-          "weight": 15,
-          "unit": "ml",
-          "hint": "1 x Łyżeczka"
-        },
-        {
-          "product": "Len nasiona",
-          "weight": 10,
-          "unit": "ml",
-          "hint": "2 x Łyżeczka"
-        },
-        {
-          "product": "Cynamon",
-          "weight": 1,
-          "unit": "ml",
-          "hint": "0.2 x Łyżeczka"
-        }
-      ],
-      "instructions": [
-        "Zmiksuj wszystkie składniki na smoothie."
-      ],
-      "tips": [
-        "Odżywkę możesz zamienić na twaróg/jogurt."
-      ],
-      "macros": {
-        "K": 712.3,
-        "B": 40.6,
-        "T": 40.4,
-        "WP": 41,
-        "F": 17.1,
-        "WW": 4.1
-      },
-      "prepTimeMinutes": 5
-    },
-    {
-      "id": "walnuts-friday",
-      "name": "ORZECHY WŁOSKIE",
-      "categories": [
-        "ś"
-      ],
-      "ingredients": [
-        {
-          "product": "Orzechy włoskie",
-          "weight": 45,
-          "unit": "ml",
-          "hint": "3 x Łyżka"
-        }
-      ],
-      "instructions": [
-        "Orzechy zmiksuj lub podaj."
-      ],
-      "tips": [],
-      "macros": {
-        "K": 0,
-        "B": 0,
-        "T": 0,
-        "WP": 0,
-        "F": 0,
-        "WW": 0
-      },
-      "prepTimeMinutes": 0
-    },
-    {
       "id": "chicken-dried-tomato-pasta-friday",
       "name": "PASTA Z KURCZAKA I SUSZONYCH POMIDORÓW, PIECZYWO",
-      "categories": [
-        "ś",
-        "p"
-      ],
+      "categories": ["ś", "p", "k"],
       "ingredients": [
         {
           "product": "Mięso ud kurczaka bez skóry",
@@ -1717,9 +1320,7 @@
     {
       "id": "sushi-bowl-salmon-friday",
       "name": "SUSHI BOWL Z WĘDZONYM ŁOSOSIEM",
-      "categories": [
-        "o"
-      ],
+      "categories": ["o", "k"],
       "ingredients": [
         {
           "product": "Łosoś wędzony",
@@ -1802,9 +1403,7 @@
     {
       "id": "zucchini-soup-friday",
       "name": "ZUPA KREM Z CUKINII, GRZANKI",
-      "categories": [
-        "k"
-      ],
+      "categories": ["k", "p"],
       "ingredients": [
         {
           "product": "Cukinia",
@@ -1884,9 +1483,7 @@
         "Dodaj bulion, mleczko kokosowe i zioła, gotuj 10 minut. Dodaj soczewicę i zmiksuj na krem.",
         "Podaj z mozzarellą, pietruszką, pestkami i grzanką."
       ],
-      "tips": [
-        "Soczewica dostępna w puszkach po 75g. Użyj gotowego bulionu."
-      ],
+      "tips": ["Soczewica dostępna w puszkach po 75g. Użyj gotowego bulionu."],
       "macros": {
         "K": 711.4,
         "B": 39.1,
@@ -1898,51 +1495,9 @@
       "prepTimeMinutes": 25
     },
     {
-      "id": "coffee-bulletproof-saturday",
-      "name": "KAWA KULOODPORNA",
-      "categories": [
-        "ś"
-      ],
-      "ingredients": [
-        {
-          "product": "Mleczko kokosowe (21%)",
-          "weight": 40,
-          "unit": "ml",
-          "hint": "2 x Łyżka"
-        },
-        {
-          "product": "Olej MCT (Olimp)",
-          "weight": 28,
-          "unit": "ml",
-          "hint": "2 x Łyżka"
-        },
-        {
-          "product": "Masło orzechowe",
-          "weight": 15,
-          "unit": "ml",
-          "hint": "1 x Łyżeczka"
-        }
-      ],
-      "instructions": [
-        "Przygotuj kawę."
-      ],
-      "tips": [],
-      "macros": {
-        "K": 400.9,
-        "B": 4.1,
-        "T": 44.2,
-        "WP": 2.8,
-        "F": 0.8,
-        "WW": 0.3
-      },
-      "prepTimeMinutes": 5
-    },
-    {
       "id": "smoothie-banana-raspberry-saturday",
       "name": "SMOOTHIE BANAN - MALINA",
-      "categories": [
-        "ś"
-      ],
+      "categories": ["sm"],
       "ingredients": [
         {
           "product": "Napój migdałowy",
@@ -1981,9 +1536,7 @@
           "hint": "1 x Łyżka"
         }
       ],
-      "instructions": [
-        "Zmiksuj wszystkie składniki na smoothie."
-      ],
+      "instructions": ["Zmiksuj wszystkie składniki na smoothie."],
       "tips": [],
       "macros": {
         "K": 747.7,
@@ -1996,40 +1549,9 @@
       "prepTimeMinutes": 5
     },
     {
-      "id": "walnuts-saturday",
-      "name": "ORZECHY WŁOSKIE",
-      "categories": [
-        "ś"
-      ],
-      "ingredients": [
-        {
-          "product": "Orzechy włoskie",
-          "weight": 60,
-          "unit": "ml",
-          "hint": "4 x Łyżka"
-        }
-      ],
-      "instructions": [
-        "Orzechy zmiksuj lub podaj."
-      ],
-      "tips": [],
-      "macros": {
-        "K": 0,
-        "B": 0,
-        "T": 0,
-        "WP": 0,
-        "F": 0,
-        "WW": 0
-      },
-      "prepTimeMinutes": 0
-    },
-    {
       "id": "shakshuka-saturday",
       "name": "SZAKSZUKA Z WARZYWAMI, GRZANKI",
-      "categories": [
-        "ś",
-        "p"
-      ],
+      "categories": ["ś", "p"],
       "ingredients": [
         {
           "product": "Pomidory z puszki krojone",
@@ -2097,9 +1619,7 @@
         "Zalej pomidorami, wbij jajka, posyp parmezanem, przykryj i smaż do ścięcia białek.",
         "Przełóż na talerz, posyp szczypiorkiem i pestkami, ozdób kiełkami i podaj z grzanką."
       ],
-      "tips": [
-        "Do szakszuki dorzuć ulubione warzywa."
-      ],
+      "tips": ["Do szakszuki dorzuć ulubione warzywa."],
       "macros": {
         "K": 640.5,
         "B": 35.5,
@@ -2113,9 +1633,7 @@
     {
       "id": "salmon-garlic-butter-saturday",
       "name": "ŁOSOŚ Z MASŁEM CZOSNKOWYM, PIECZONYMI ZIEMNIAKAMI I SURÓWKĄ",
-      "categories": [
-        "o"
-      ],
+      "categories": ["o"],
       "ingredients": [
         {
           "product": "Łosoś świeży",
@@ -2179,9 +1697,7 @@
         "Marchewkę zetrzyj, wymieszaj z kapustą, dopraw i skrop olejem lnianym.",
         "Łososia podaj z ziemniakami, cytrusikiem i surówką."
       ],
-      "tips": [
-        "Opcjonalnie przygotuj klasyczną rybę z ziemniakami i surówką."
-      ],
+      "tips": ["Opcjonalnie przygotuj klasyczną rybę z ziemniakami i surówką."],
       "macros": {
         "K": 750.4,
         "B": 46.2,
@@ -2195,9 +1711,7 @@
     {
       "id": "pizza-pesto-saturday",
       "name": "EKSPRESOWA PIZZA Z PESTO, MOZZARELLĄ, SZYNKĄ I OLIWKAMI",
-      "categories": [
-        "k"
-      ],
+      "categories": ["k"],
       "ingredients": [
         {
           "product": "Tortilla pełnoziarnista",
@@ -2265,138 +1779,9 @@
       "prepTimeMinutes": 15
     },
     {
-      "id": "coffee-bulletproof-sunday",
-      "name": "KAWA KULOODPORNA",
-      "categories": [
-        "ś"
-      ],
-      "ingredients": [
-        {
-          "product": "Mleczko kokosowe (21%)",
-          "weight": 40,
-          "unit": "ml",
-          "hint": "2 x Łyżka"
-        },
-        {
-          "product": "Olej MCT (Olimp)",
-          "weight": 28,
-          "unit": "ml",
-          "hint": "2 x Łyżka"
-        },
-        {
-          "product": "Masło orzechowe",
-          "weight": 15,
-          "unit": "ml",
-          "hint": "1 x Łyżeczka"
-        }
-      ],
-      "instructions": [
-        "Przygotuj kawę."
-      ],
-      "tips": [],
-      "macros": {
-        "K": 400.9,
-        "B": 4.1,
-        "T": 44.2,
-        "WP": 2.8,
-        "F": 0.8,
-        "WW": 0.3
-      },
-      "prepTimeMinutes": 5
-    },
-    {
-      "id": "smoothie-banana-strawberry-sunday",
-      "name": "SMOOTHIE BANAN - TRUSKAWKA",
-      "categories": [
-        "ś"
-      ],
-      "ingredients": [
-        {
-          "product": "Napój migdałowy",
-          "weight": 250,
-          "unit": "ml",
-          "hint": "1 x Szklanka"
-        },
-        {
-          "product": "Ser twarogowy półtłusty",
-          "weight": 100,
-          "unit": "g",
-          "hint": "0.5 x Opakowanie"
-        },
-        {
-          "product": "Truskawki mrożone",
-          "weight": 100,
-          "unit": "ml",
-          "hint": "1 x Szklanka"
-        },
-        {
-          "product": "Banan",
-          "weight": 60,
-          "unit": "g",
-          "hint": "0.5 x Sztuka"
-        },
-        {
-          "product": "Wiórki kokosowe",
-          "weight": 12,
-          "unit": "ml",
-          "hint": "2 x Łyżka"
-        },
-        {
-          "product": "Len nasiona",
-          "weight": 5,
-          "unit": "ml",
-          "hint": "1 x Łyżeczka"
-        }
-      ],
-      "instructions": [
-        "Zmiksuj wszystkie składniki na smoothie."
-      ],
-      "tips": [],
-      "macros": {
-        "K": 663.3,
-        "B": 30.6,
-        "T": 44.4,
-        "WP": 36.9,
-        "F": 9.1,
-        "WW": 3.7
-      },
-      "prepTimeMinutes": 5
-    },
-    {
-      "id": "walnuts-sunday",
-      "name": "ORZECHY WŁOSKIE",
-      "categories": [
-        "ś"
-      ],
-      "ingredients": [
-        {
-          "product": "Orzechy włoskie",
-          "weight": 45,
-          "unit": "ml",
-          "hint": "3 x Łyżka"
-        }
-      ],
-      "instructions": [
-        "Orzechy zmiksuj lub podaj."
-      ],
-      "tips": [],
-      "macros": {
-        "K": 0,
-        "B": 0,
-        "T": 0,
-        "WP": 0,
-        "F": 0,
-        "WW": 0
-      },
-      "prepTimeMinutes": 0
-    },
-    {
       "id": "scrambled-eggs-sunday",
       "name": "JAJECZNICA Z WARZYWAMI, GRZANKI",
-      "categories": [
-        "ś",
-        "p"
-      ],
+      "categories": ["ś", "p"],
       "ingredients": [
         {
           "product": "Jaja kurze całe",
@@ -2478,9 +1863,7 @@
     {
       "id": "noodles-shrimp-thai-sunday",
       "name": "MAKARON Z KREWETKAMI PO TAJSKU",
-      "categories": [
-        "o"
-      ],
+      "categories": ["o"],
       "ingredients": [
         {
           "product": "Krewetki",
@@ -2564,9 +1947,7 @@
     {
       "id": "tortilla-tuna-hummus-sunday",
       "name": "TORTILLA Z HUMMUSEM, TUŃCZYKIEM I WARZYWAMI",
-      "categories": [
-        "k"
-      ],
+      "categories": ["k"],
       "ingredients": [
         {
           "product": "Tuńczyk w oleju",
@@ -2627,9 +2008,7 @@
         "Przygotuj tortillę z hummusem, tuńczykiem i warzywami. Dopraw do smaku, posyp sezamem.",
         "Skrop oliwą i zawiń."
       ],
-      "tips": [
-        "Tortillę podaj na ciepło lub zimno."
-      ],
+      "tips": ["Tortillę podaj na ciepło lub zimno."],
       "macros": {
         "K": 727.2,
         "B": 36.9,

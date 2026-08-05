@@ -1,4 +1,4 @@
-export type MealCategory = 'ś' | 'o' | 'k' | 'p';
+export type MealCategory = 'ś' | 'o' | 'k' | 'p' | 'sm';
 
 export type WeightUnit = 'g' | 'ml';
 
