@@ -1,7 +1,7 @@
 import { FlatList, Text, View, Pressable, ScrollView } from 'react-native';
 import { useRecipes } from '@/features/recipes/hooks/useRecipes';
 import { Recipe, MealCategory } from '@/shared/types/recipe';
-import { RecipeDetailsModal } from '@/features/recipes/components/RecipeDetailsModal';
+import { RecipeDetailsBottomSheet } from '@/features/recipes/components/RecipeDetailsBottomSheet';
 import { useState } from 'react';
 
 const categoryLabels: Record<MealCategory, string> = {
@@ -69,7 +69,7 @@ export default function RecipesScreen() {
                 contentContainerStyle={{ paddingBottom: 100 }}
                 showsVerticalScrollIndicator={false}
             />
-            <RecipeDetailsModal 
+            <RecipeDetailsBottomSheet 
                 recipe={selectedRecipe}
                 isVisible={selectedRecipe !== null}
                 onClose={() => setSelectedRecipe(null)}
