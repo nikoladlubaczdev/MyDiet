@@ -1,6 +1,7 @@
-import { FlatList, Text, View, Pressable } from 'react-native';
+import { FlatList, Text, View, Pressable, ScrollView } from 'react-native';
 import { useRecipes } from '@/features/recipes/hooks/useRecipes';
 import { Recipe, MealCategory } from '@/shared/types/recipe';
+import { RecipeDetailsBottomSheet } from '@/features/recipes/components/RecipeDetailsBottomSheet';
 import { useState } from 'react';
 
 const categoryLabels: Record<MealCategory, string> = {
@@ -8,14 +9,17 @@ const categoryLabels: Record<MealCategory, string> = {
   'o': 'Obiad',
   'k': 'Kolacja',
   'p': 'Przekąska',
+  'sm': 'Smoothie',
 };
 
 export default function RecipesScreen() {
     const [selectedCategory, setSelectedCategory] = useState<MealCategory | undefined>();
+    const [selectedRecipe, setSelectedRecipe] = useState<Recipe | null>(null);
     const { recipes, categories } = useRecipes({ category: selectedCategory });
 
     const renderRecipeItem = ({ item }: { item: Recipe }) => (
         <Pressable 
+            onPress={() => setSelectedRecipe(item)}
             className="mb-3 rounded-2xl bg-white p-4 shadow-sm"
             accessible={true}
             accessibilityRole="button"
@@ -42,31 +46,21 @@ export default function RecipesScreen() {
 
     return (
         <View className="flex-1 bg-amber-50 px-4 py-6">
-            <Text className="mb-2 text-3xl font-bold text-amber-900">📖 Przepisy</Text>
-            <Text className="mb-4 text-sm text-slate-600">
-                {recipes.length} przepisów
-            </Text>
-            <View className="mb-4 flex-row gap-2">
-                <Pressable 
-                    onPress={() => setSelectedCategory(undefined)}
-                    className={`rounded-full px-4 py-2 ${selectedCategory === undefined ? 'bg-amber-200' : 'bg-white'}`}
-                >
-                    <Text className={`text-xs font-semibold ${selectedCategory === undefined ? 'text-amber-900' : 'text-slate-700'}`}>
-                        Wszystkie
-                    </Text>
-                </Pressable>
-                {categories.map((cat) => (
-                    <Pressable
-                        key={cat}
-                        onPress={() => setSelectedCategory(cat)}
-                        className={`rounded-full px-4 py-2 ${selectedCategory === cat ? 'bg-amber-200' : 'bg-white'}`}
-                    >
-                        <Text className={`text-xs font-semibold ${selectedCategory === cat ? 'text-amber-900' : 'text-slate-700'}`}>
-                            {categoryLabels[cat]}
-                        </Text>
-                    </Pressable>
-                ))}
-            </View>
+            <ScrollView horizontal showsHorizontalScrollIndicator={false} className="mb-4">
+                <View className="flex-row gap-2">
+                    {categories.map((cat) => (
+                        <Pressable
+                            key={cat}
+                            onPress={() => setSelectedCategory(cat)}
+                            className={`rounded-full px-4 py-2 ${selectedCategory === cat ? 'bg-amber-200' : 'bg-white'}`}
+                        >
+                            <Text className={`text-xs font-semibold ${selectedCategory === cat ? 'text-amber-900' : 'text-slate-700'}`}>
+                                {categoryLabels[cat]}
+                            </Text>
+                        </Pressable>
+                    ))}
+                </View>
+            </ScrollView>
             <FlatList
                 data={recipes}
                 renderItem={renderRecipeItem}
@@ -74,6 +68,11 @@ export default function RecipesScreen() {
                 scrollEnabled={true}
                 contentContainerStyle={{ paddingBottom: 100 }}
                 showsVerticalScrollIndicator={false}
+            />
+            <RecipeDetailsBottomSheet 
+                recipe={selectedRecipe}
+                isVisible={selectedRecipe !== null}
+                onClose={() => setSelectedRecipe(null)}
             />
         </View>
     );
