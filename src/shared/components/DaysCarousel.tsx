@@ -7,17 +7,18 @@ interface DaysCarouselProps {
 
 export function DaysCarousel({ selectedDate, onSelectDate }: DaysCarouselProps) {
   const today = new Date();
-  const days = Array.from({ length: 7 }, (_, i) => {
+  const days = Array.from({ length: 21 }, (_, i) => {
     const date = new Date(today);
-    date.setDate(date.getDate() + i - 3);
+    date.setDate(date.getDate() + i - 10);
     return date;
   });
 
   const formatDay = (date: Date) => {
-    const dayName = ['Pon', 'Wt', 'Śr', 'Czw', 'Pt', 'Sob', 'Nd'][date.getDay()];
+    const dayName = ['Nd', 'Pon', 'Wt', 'Śr', 'Czw', 'Pt', 'Sob'][date.getDay()];
     const dayNum = date.getDate();
     const dateStr = date.toISOString().split('T')[0];
-    const isToday = dateStr === selectedDate;
+    const todayStr = today.toISOString().split('T')[0];
+    const isToday = dateStr === todayStr;
     return { dayName, dayNum, isToday, dateStr };
   };
 
@@ -28,13 +29,20 @@ export function DaysCarousel({ selectedDate, onSelectDate }: DaysCarouselProps) 
         showsHorizontalScrollIndicator={false}
         data={days}
         keyExtractor={(_, i) => i.toString()}
+        initialScrollIndex={10}
+        getItemLayout={(_, index) => ({
+          length: 80,
+          offset: 80 * index,
+          index,
+        })}
         renderItem={({ item }) => {
           const { dayName, dayNum, isToday, dateStr } = formatDay(item);
+          const isSelected = dateStr === selectedDate;
           return (
             <Pressable
               onPress={() => onSelectDate(dateStr)}
               className={`mr-3 rounded-lg px-3 py-2 ${
-                isToday ? 'bg-amber-200' : 'bg-amber-100'
+                isSelected ? 'bg-amber-200' : 'bg-amber-100'
               }`}
               accessible={true}
               accessibilityRole="button"
@@ -42,14 +50,14 @@ export function DaysCarousel({ selectedDate, onSelectDate }: DaysCarouselProps) 
             >
               <Text
                 className={`text-center text-xs font-semibold ${
-                  isToday ? 'text-amber-900' : 'text-amber-800'
+                  isSelected ? 'text-amber-900' : 'text-amber-800'
                 }`}
               >
                 {dayName}
               </Text>
               <Text
                 className={`text-center text-sm font-bold ${
-                  isToday ? 'text-amber-900' : 'text-amber-800'
+                  isSelected ? 'text-amber-900' : 'text-amber-800'
                 }`}
               >
                 {dayNum}
