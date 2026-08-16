@@ -37,32 +37,22 @@ export function PlanScreen() {
               <Pressable
                 key={value}
                 onPress={() => setUserType(value)}
-                className={`flex-1 rounded-md py-2 ${
-                  userType === value ? 'bg-white' : 'bg-transparent'
-                }`}
+                className={`flex-1 rounded-md py-2 ${userType === value ? 'bg-white' : 'bg-transparent'
+                  }`}
                 accessible={true}
                 accessibilityRole="button"
                 accessibilityLabel={label}
                 accessibilityState={{ selected: userType === value }}
               >
                 <Text
-                  className={`text-center text-sm font-semibold ${
-                    userType === value ? 'text-amber-900' : 'text-amber-700'
-                  }`}
+                  className={`text-center text-sm font-semibold ${userType === value ? 'text-amber-900' : 'text-amber-700'
+                    }`}
                 >
                   {label}
                 </Text>
               </Pressable>
             ))}
           </View>
-          <Pressable
-            className="p-2"
-            accessible={true}
-            accessibilityRole="button"
-            accessibilityLabel="Ustawienia"
-          >
-            <Text className="text-xl">⚙️</Text>
-          </Pressable>
         </View>
       </View>
 
