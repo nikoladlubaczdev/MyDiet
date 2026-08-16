@@ -9,6 +9,7 @@
     "ios": "expo run:ios"
   },
   "dependencies": {
+    "@expo/ui": "55",
     "@expo/vector-icons": "^15.1.1",
     "expo": "~57.0.13",
     "expo-constants": "~57.0.11",
