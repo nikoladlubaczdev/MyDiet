@@ -950,14 +950,7 @@
   resolved "https://registry.yarnpkg.com/@expo/sudo-prompt/-/sudo-prompt-9.3.2.tgz#0fd2813402a42988e49145cab220e25bea74b308"
   integrity sha512-HHQigo3rQWKMDzYDLkubN5WQOYXJJE2eNqIQC2axC2iO3mHdwnIR7FgZVvHWtBwAdzBgAP0ECp8KqS8TiMKvgw==
 
-"@expo/ui@55":
-  version "55.0.17"
-  resolved "https://registry.yarnpkg.com/@expo/ui/-/ui-55.0.17.tgz#e0b726212d44b21e4aea53a4561b15263a5073d2"
-  integrity sha512-NW/wFs+mhQeA/5W0yUNn6qKRNJBGiuF7NjCLZDFvg5Tyd+hDUEDEhBsLvI9MJ8B2aYuGcbuH9XZBIPF22LMrfQ==
-  dependencies:
-    sf-symbols-typescript "^2.1.0"
-
-"@expo/ui@^57.0.11":
+"@expo/ui@^57.0.11", "@expo/ui@~57.0.0":
   version "57.0.11"
   resolved "https://registry.yarnpkg.com/@expo/ui/-/ui-57.0.11.tgz#a83c88cbd9033d31a8783a0fc6384179f7acd00b"
   integrity sha512-m1BSq15sg4sCmoFwOsMxBpETgyFhGlCbVPUyjdJ6Y00Ve0Fb4sueaFLRyeYRbZ8DC1z3Hgp5LNCYzBBBdMhxMg==
