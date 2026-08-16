@@ -3,19 +3,17 @@ import { Pressable, ScrollView, Text, View } from 'react-native';
 import { AddRecipeBottomSheet } from '../components/AddRecipeBottomSheet';
 import { DaysCarousel } from '../components/DaysCarousel';
 import { MealSlots } from '../components/MealSlots';
-import { SplitView } from '../components/SplitView';
 import { usePlanStore } from '../stores/usePlanStore';
 
-type ViewMode = 'you' | 'both' | 'partner';
+type UserType = 'you' | 'partner';
 
-const VIEW_MODES: { label: string; value: ViewMode }[] = [
+const VIEW_MODES: { label: string; value: UserType }[] = [
   { label: 'Ty', value: 'you' },
-  { label: 'Oboje', value: 'both' },
   { label: 'Partner', value: 'partner' },
 ];
 
 export function PlanScreen() {
-  const [viewMode, setViewMode] = useState<ViewMode>('both');
+  const [userType, setUserType] = useState<UserType>('you');
   const [isAddRecipeVisible, setIsAddRecipeVisible] = useState(false);
   const [selectedMealSlot, setSelectedMealSlot] = useState<string>('');
   const [selectedDate, setSelectedDate] = useState(() => {
@@ -26,11 +24,9 @@ export function PlanScreen() {
   const addMeal = usePlanStore((state) => state.addMeal);
 
   const handleAddRecipe = (recipeId: string, servings: number) => {
-    addMeal(selectedDate, viewMode === 'both' ? selectedPerson : viewMode, selectedMealSlot, recipeId, servings);
+    addMeal(selectedDate, userType, selectedMealSlot, recipeId, servings);
     setIsAddRecipeVisible(false);
   };
-
-  const [selectedPerson, setSelectedPerson] = useState<'you' | 'partner'>('you');
 
   return (
     <View className="flex-1 bg-amber-50">
@@ -40,17 +36,19 @@ export function PlanScreen() {
             {VIEW_MODES.map(({ label, value }) => (
               <Pressable
                 key={value}
-                onPress={() => setViewMode(value)}
-                className={`flex-1 rounded-md py-2 ${viewMode === value ? 'bg-white' : 'bg-transparent'
-                  }`}
+                onPress={() => setUserType(value)}
+                className={`flex-1 rounded-md py-2 ${
+                  userType === value ? 'bg-white' : 'bg-transparent'
+                }`}
                 accessible={true}
                 accessibilityRole="button"
                 accessibilityLabel={label}
-                accessibilityState={{ selected: viewMode === value }}
+                accessibilityState={{ selected: userType === value }}
               >
                 <Text
-                  className={`text-center text-sm font-semibold ${viewMode === value ? 'text-amber-900' : 'text-amber-700'
-                    }`}
+                  className={`text-center text-sm font-semibold ${
+                    userType === value ? 'text-amber-900' : 'text-amber-700'
+                  }`}
                 >
                   {label}
                 </Text>
@@ -71,25 +69,14 @@ export function PlanScreen() {
       <DaysCarousel selectedDate={selectedDate} onSelectDate={setSelectedDate} />
 
       <ScrollView className="flex-1">
-        {viewMode === 'both' ? (
-          <SplitView
-            selectedDate={selectedDate}
-            onAddRecipe={(slot, person) => {
-              setSelectedMealSlot(slot);
-              setSelectedPerson(person);
-              setIsAddRecipeVisible(true);
-            }}
-            onOpenAddRecipe={() => setIsAddRecipeVisible(true)}
-          />
-        ) : (
-          <MealSlots
-            selectedDate={selectedDate}
-            userType={viewMode}
-            onAddRecipe={setSelectedMealSlot}
-            onOpenAddRecipe={() => setIsAddRecipeVisible(true)}
-          />
-        )}
+        <MealSlots
+          selectedDate={selectedDate}
+          userType={userType}
+          onAddRecipe={setSelectedMealSlot}
+          onOpenAddRecipe={() => setIsAddRecipeVisible(true)}
+        />
       </ScrollView>
+
       <AddRecipeBottomSheet
         isVisible={isAddRecipeVisible}
         onClose={() => setIsAddRecipeVisible(false)}

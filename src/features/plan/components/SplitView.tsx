@@ -5,8 +5,8 @@ const MEAL_TYPES = ['Śniadanie', 'II Śniadanie', 'Obiad', 'Podwieczorek', 'Kol
 
 interface SplitViewProps {
   selectedDate: string;
-  onAddRecipe: (slot: string, person: 'you' | 'partner') => void;
-  onOpenAddRecipe: () => void;
+  onAddRecipe?: (slot: string, person: 'you' | 'partner') => void;
+  onOpenAddRecipe?: () => void;
 }
 
 export function SplitView({ selectedDate, onAddRecipe, onOpenAddRecipe }: SplitViewProps) {
@@ -25,11 +25,11 @@ export function SplitView({ selectedDate, onAddRecipe, onOpenAddRecipe }: SplitV
                 date={selectedDate} 
                 person="you" 
                 mealSlot={mealType} 
-                readonly={false}
-                onAddRecipe={() => {
+                readonly={!onAddRecipe}
+                onAddRecipe={onAddRecipe ? () => {
                   onAddRecipe(mealType, 'you');
-                  onOpenAddRecipe();
-                }}
+                  onOpenAddRecipe?.();
+                } : undefined}
               />
             </View>
           ))}
@@ -49,11 +49,11 @@ export function SplitView({ selectedDate, onAddRecipe, onOpenAddRecipe }: SplitV
                 date={selectedDate} 
                 person="partner" 
                 mealSlot={mealType} 
-                readonly={false}
-                onAddRecipe={() => {
+                readonly={!onAddRecipe}
+                onAddRecipe={onAddRecipe ? () => {
                   onAddRecipe(mealType, 'partner');
-                  onOpenAddRecipe();
-                }}
+                  onOpenAddRecipe?.();
+                } : undefined}
               />
             </View>
           ))}

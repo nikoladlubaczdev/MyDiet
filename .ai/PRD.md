@@ -104,11 +104,12 @@ Aplikacja jest uznana za sukces gdy użytkownicy mogą:
 
 ### 5.2 Nawigacja główna
 
-**Bottom Navigation Bar (3 główne ekrany):**
+**Bottom Navigation Bar (4 główne ekrany):**
 
-1. **📅 Plan** - Tygodniowy plan posiłków
-2. **📖 Przepisy** - Przeglądanie i wyszukiwanie przepisów
-3. **🛒 Lista zakupów** - Checklist do zakupów
+1. **✏️ Planuj** - Edycja planu posiłków (Ty / Partner)
+2. **👀 Gotuj** - Przeglądanie planu dla obojga (read-only, split view)
+3. **📖 Przepisy** - Przeglądanie i wyszukiwanie przepisów
+4. **🛒 Lista zakupów** - Checklist do zakupów
 
 **⚙️ Ustawienia** - Ikona w prawym górnym rogu (dostępna z każdego ekranu), zawiera:
 
@@ -117,14 +118,14 @@ Aplikacja jest uznana za sukces gdy użytkownicy mogą:
 
 ---
 
-### 5.3 Ekran "Plan" - Szczegółowa specyfikacja
+### 5.3 Ekran "Planuj" - Szczegółowa specyfikacja (edycja)
 
 #### Layout strukturalny
 
 ```
 ┌─────────────────────────────────────────┐
 │ ┌────────────────────────────────────┐  │
-│ │ [ Ty | Oboje | Partner ]      ⚙️  │  │ ← Segmented control + settings
+│ │ [ Ty | Partner ]              ⚙️  │  │ ← Segmented control + settings
 │ └────────────────────────────────────┘  │
 ├─────────────────────────────────────────┤
 │ ┌────────────────────────────────────┐  │
@@ -133,30 +134,22 @@ Aplikacja jest uznana za sukces gdy użytkownicy mogą:
 ├─────────────────────────────────────────┤
 │                                         │
 │         [Główny obszar treści]          │
-│                                         │
+│         (5 slotów posiłków)             │
 │                                         │
 └─────────────────────────────────────────┘
-│ [ 📅 Plan | 📖 Przepisy | 🛒 Lista ]   │ ← Bottom nav
+│ [ ✏️ Planuj | 👀 Gotuj | 📖 Przepisy | 🛒 Lista ]   │ ← Bottom nav
 └─────────────────────────────────────────┘
 ```
 
 #### Tryby widoku (Segmented Control)
 
-**1. Widok "Ty"**
+**1. Widok "Ty" (domyślny)**
 
 - Pokazuje tylko posiłki zaplanowane dla User A
 - Pełna funkcjonalność edycji (dodawanie, usuwanie, edycja)
 - Layout: Pionowa lista 5 slotów na wybrany dzień
 
-**2. Widok "Oboje" (domyślny)**
-
-- Ekran podzielony pionowo na pół
-- Lewa połowa: "TY" (nagłówek + posiłki User A)
-- Prawa połowa: "PARTNER" (nagłówek + posiłki User B)
-- **Read-only mode** - brak edycji, tylko podgląd
-- Cel: Szybkie zobaczenie co każdy ma zaplanowane na dany dzień
-
-**3. Widok "Partner"**
+**2. Widok "Partner"**
 
 - Pokazuje tylko posiłki zaplanowane dla User B
 - Pełna funkcjonalność edycji
@@ -250,56 +243,72 @@ Stałe, predefiniowane nazwy:
 - "Edytuj porcje" → modal z stepper/input
 - "Usuń" → confirmation + usunięcie z planu
 
-#### Widok "Oboje" - szczegóły podzielonego ekranu
-
-```
-┌──────────────────┬──────────────────┐
-│       TY         │     PARTNER      │ ← Nagłówki
-├──────────────────┼──────────────────┤
-│ Śniadanie        │ Śniadanie        │
-│ ┌──────────────┐ │ ┌──────────────┐ │
-│ │ Jajecznica   │ │ │ Owsianka     │ │
-│ │ • Jajka 3szt │ │ │ • Płatki 60g │ │
-│ │ • Masło 10g  │ │ │ • Mleko 200ml│ │
-│ │ 320 kcal     │ │ │ 280 kcal     │ │
-│ └──────────────┘ │ └──────────────┘ │
-│                  │                  │
-│ II Śniadanie     │ II Śniadanie     │
-│ [+ Dodaj]        │ [+ Dodaj]        │
-│                  │                  │
-│ Obiad            │ Obiad            │
-│ ┌──────────────┐ │ ┌──────────────┐ │
-│ │ Kurczak 200g │ │ │ Kurczak 120g │ │ ← Ten sam przepis
-│ │ • Ryż 100g   │ │ │ • Ryż 60g    │ │   różne porcje
-│ │ ...          │ │ │ ...          │ │
-│ └──────────────┘ │ └──────────────┘ │
-│                  │                  │
-│ ... (pozostałe sloty)              │
-└──────────────────┴──────────────────┘
-```
+#### Widok "Ty" i "Partner" - szczegóły
 
 **Funkcjonalność:**
 
-- **Read-only:** Tap na kartę → rozwija/zwija, ale brak przycisków edycji/usuwania
-- Wzualne rozróżnienie: jeśli obie osoby mają ten sam przepis, można użyć tej samej kolorystyki/borderu (nice to have)
-- Jeśli różne porcje tego samego przepisu, składniki pokazują różne ilości
+- Tap na kartę → rozwija/zwija z pełną edycją
+- Przycisk "Edytuj porcje" / "Usuń"
+- Full CRUD operacje
 
-**Acceptance Criteria:**
+**Acceptance Criteria (ekran Planuj):**
 
-- ✅ Przełączanie między 3 trybami jest płynne (<200ms)
+- ✅ Przełączanie między trybami "Ty" i "Partner" jest płynne (<200ms)
 - ✅ Karuzela dni działa swipe i tap
 - ✅ Puste sloty mają CTA "Dodaj posiłek"
 - ✅ Karta rozwija się/zwija płynnie z animacją
-- ✅ W widoku "Oboje" nie ma przycisków edycji
 - ✅ Wszystkie zmiany synchronizują się między urządzeniami <2s
 
 ---
 
-### 5.4 Dodawanie przepisu do planu - User Flow
+### 5.4 Ekran "Gotuj" - Przeglądanie planu dla obojga (read-only)
+
+#### Layout strukturalny
+
+```
+┌─────────────────────────────────────────┐
+│ ┌────────────────────────────────────┐  │
+│ │[Pon 12][Wt 13][Śr 14: Dziś][Czw 15]│  │ ← Karuzela dni
+│ └────────────────────────────────────┘  │
+├──────────────────┬──────────────────────┤
+│       TY         │     PARTNER          │ ← Split view
+├──────────────────┼──────────────────────┤
+│ Śniadanie        │ Śniadanie            │
+│ ┌──────────────┐ │ ┌──────────────────┐ │
+│ │ Jajecznica   │ │ │ Owsianka         │ │
+│ │ • Jajka 3szt │ │ │ • Płatki 60g     │ │
+│ │ • Masło 10g  │ │ │ • Mleko 200ml    │ │
+│ │ 320 kcal     │ │ │ 280 kcal         │ │
+│ └──────────────┘ │ └──────────────────┘ │
+│                  │                      │
+│ ... (pozostałe sloty)                   │
+└──────────────────┴──────────────────────┘
+│ [ ✏️ Planuj | 👀 Gotuj | 📖 Przepisy | 🛒 Lista ]   │ ← Bottom nav
+└─────────────────────────────────────────────────────┘
+```
+
+**Funkcjonalność:**
+
+- **Read-only mode:** Tap na kartę → rozwija/zwija, brak przycisków edycji/usuwania
+- Wizualne rozróżnienie: jeśli obie osoby mają ten sam przepis, ta sama kolorystyka/border
+- Jeśli różne porcje tego samego przepisu, składniki pokazują różne ilości
+- Dobrze do szybkiego przeglądu wspólnego planu posiłków
+
+**Acceptance Criteria (ekran Gotuj):**
+
+- ✅ Karuzela dni działa swipe i tap
+- ✅ Karta rozwija się/zwija płynnie z animacją
+- ✅ Brak przycisków edycji - pure read-only
+- ✅ Split view wyświetla obie osoby obok siebie
+- ✅ Wszystkie zmiany z ekranu "Planuj" widoczne po powrocie <2s
+
+---
+
+### 5.5 Dodawanie przepisu do planu - User Flow
 
 **Flow:**
 
-1. Użytkownik w trybie "Ty" lub "Partner" (nie w "Oboje")
+1. Użytkownik w ekranie **Planuj** w trybie "Ty" lub "Partner"
 2. Tap na pusty slot LUB przycisk "+" w karcie
 3. → Otwiera się modal/nawigacja do ekranu **Przepisy** (pełny ekran)
 4. Użytkownik przegląda przepisy, używa search lub filtrów
@@ -309,7 +318,7 @@ Stałe, predefiniowane nazwy:
    - **"Liczba porcji:"** Stepper/input (domyślnie wartość bazowa z przepisu, np. "2")
    - Przycisk **"Dodaj do planu"**
 7. Tap "Dodaj do planu" → Bottom sheet zamyka się, przepis pojawia się w wybranym slocie
-8. Użytkownik wraca do ekranu Plan automatycznie
+8. Użytkownik wraca do ekranu Planuj automatycznie
 
 **Automatyczne przypisanie:** Przepis jest dodawany dla aktualnie wybranej osoby (tryb "Ty" = dla Ciebie, tryb "Partner" = dla partnera)
 
@@ -902,9 +911,10 @@ function generateShoppingList(
 
 **US-2.2:** Jako użytkownik, chcę zobaczyć co mój partner ma zaplanowane
 
-- **AC:** Mogę przełączyć widok na "Oboje"
+- **AC:** Przechodzę do ekranu "Gotuj"
 - **AC:** Widzę ekran podzielony na pół z planami obu osób
 - **AC:** Mogę rozwijać karty aby zobaczyć szczegóły przepisów
+- **AC:** Nie mogę edytować posiłków w tym widoku (read-only)
 
 **US-2.3:** Jako użytkownik, chcę edytować liczbę porcji zaplanowanego posiłku
 
@@ -1120,12 +1130,20 @@ Następujące funkcjonalności **nie są** wliczone w MVP i zostaną rozważone 
 
 ### Phase 2: Planowanie posiłków (Week 4-6)
 
-- Ekran "Plan" - layout z karuzelą dni
-- Segmented control [Ty | Oboje | Partner]
+**Ekran "Planuj":**
+- Layout z karuzelą dni
+- Segmented control [Ty | Partner]
 - Component: `MealCard` (zwinięta/rozwinięta)
 - Flow dodawania przepisu do slotu
 - Edycja liczby porcji
 - Usuwanie przepisu z planu
+
+**Ekran "Gotuj":**
+- Layout split-view dla obojga
+- Karuzela dni
+- Read-only mode (brak edycji)
+
+**Wspólne:**
 - Zapisywanie planu do Firestore
 - Synchronizacja realtime między urządzeniami
 
@@ -1273,7 +1291,8 @@ MVP jest gotowe do użycia gdy spełnia następujące warunki:
 - [ ] Użytkownik może dodać przepis do dowolnego slotu w ciągu <15s
 - [ ] Użytkownik może edytować liczbę porcji i składniki przeliczają się poprawnie
 - [ ] Użytkownik może usunąć przepis z planu
-- [ ] Użytkownik może przełączać między widokami [Ty | Oboje | Partner]
+- [ ] Użytkownik może przełączać między widokami [Ty | Partner] w ekranie "Planuj"
+- [ ] Użytkownik może przejrzeć plan dla obojga w ekranie "Gotuj" (read-only)
 - [ ] Karuzela dni działa swipe i tap
 - [ ] Użytkownik może wyszukać przepis po nazwie
 - [ ] Użytkownik może filtrować przepisy po kategorii
