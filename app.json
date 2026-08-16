@@ -25,7 +25,9 @@
       "package": "com.nikoladlubacz.mydietmobileapp"
     },
     "plugins": [
-      "expo-router"
+      "expo-router",
+      "expo-font",
+      "expo-status-bar"
     ],
     "experiments": {
       "typedRoutes": true
