@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import { Pressable, ScrollView, Text, View } from 'react-native';
 import { AddRecipeBottomSheet } from '../components/AddRecipeBottomSheet';
-import { DaysCarousel } from '../components/DaysCarousel';
+import { DaysCarousel } from '@/shared/components/DaysCarousel';
 import { MealSlots } from '../components/MealSlots';
 import { usePlanStore } from '../stores/usePlanStore';
 

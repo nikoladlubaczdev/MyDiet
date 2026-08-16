@@ -1,5 +1,5 @@
 import { Text, View } from 'react-native';
-import { MealCard } from './MealCard';
+import { MealCard } from '../../plan/components/MealCard';
 
 const MEAL_TYPES = ['Śniadanie', 'II Śniadanie', 'Obiad', 'Podwieczorek', 'Kolacja'];
 

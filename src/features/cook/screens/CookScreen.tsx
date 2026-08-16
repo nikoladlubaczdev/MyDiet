@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import { ScrollView, View } from 'react-native';
-import { DaysCarousel } from '../components/DaysCarousel';
+import { DaysCarousel } from '@/shared/components/DaysCarousel';
 import { SplitView } from '../components/SplitView';
 
 export function CookScreen() {

@@ -1,4 +1,4 @@
-import { CookScreen } from '@/features/plan/screens/CookScreen';
+import { CookScreen } from '@/features/cook/screens/CookScreen';
 
 export default function CookTab() {
   return <CookScreen />;
