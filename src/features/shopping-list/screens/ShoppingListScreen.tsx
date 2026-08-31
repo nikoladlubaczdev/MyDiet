@@ -1,4 +1,4 @@
-import { useMemo, useState } from 'react';
+import { useMemo, useRef, useState } from 'react';
 import { Modal, Pressable, ScrollView, Text, View } from 'react-native';
 import { useRecipes } from '@/features/recipes/hooks/useRecipes';
 import { usePlanStore } from '@/features/plan/stores/usePlanStore';
@@ -58,6 +58,8 @@ export function ShoppingListScreen() {
   const [selectedDates, setSelectedDates] = useState<string[]>([]);
   const [selectedListId, setSelectedListId] = useState<string | null>(null);
   const [editingListId, setEditingListId] = useState<string | null>(null);
+  const [listToDeleteId, setListToDeleteId] = useState<string | null>(null);
+  const didLongPressList = useRef(false);
   const [visibleMonth, setVisibleMonth] = useState(
     () => new Date(new Date().getFullYear(), new Date().getMonth(), 1)
   );
@@ -65,10 +67,12 @@ export function ShoppingListScreen() {
   const lists = useShoppingListStore((state) => state.lists);
   const addList = useShoppingListStore((state) => state.addList);
   const updateList = useShoppingListStore((state) => state.updateList);
+  const removeList = useShoppingListStore((state) => state.removeList);
   const toggleItem = useShoppingListStore((state) => state.toggleItem);
   const { recipes } = useRecipes();
   const calendarDays = useMemo(() => getCalendarDays(visibleMonth), [visibleMonth]);
   const selectedList = lists.find((list) => list.id === selectedListId);
+  const listToDelete = lists.find((list) => list.id === listToDeleteId);
 
   const handleToggleDate = (date: Date) => {
     const dateKey = toDateKey(date);
@@ -127,6 +131,29 @@ export function ShoppingListScreen() {
       (currentMonth) =>
         new Date(currentMonth.getFullYear(), currentMonth.getMonth() + offset, 1)
     );
+  };
+
+  const handleOpenList = (listId: string) => {
+    if (didLongPressList.current) {
+      didLongPressList.current = false;
+      return;
+    }
+
+    setSelectedListId(listId);
+  };
+
+  const handleOpenDeleteList = (listId: string) => {
+    didLongPressList.current = true;
+    setListToDeleteId(listId);
+  };
+
+  const handleDeleteList = () => {
+    if (!listToDeleteId) {
+      return;
+    }
+
+    removeList(listToDeleteId);
+    setListToDeleteId(null);
   };
 
   if (selectedList) {
@@ -239,11 +266,17 @@ export function ShoppingListScreen() {
               return (
                 <Pressable
                   key={list.id}
-                  onPress={() => setSelectedListId(list.id)}
+                  onPressIn={() => {
+                    didLongPressList.current = false;
+                  }}
+                  onPress={() => handleOpenList(list.id)}
+                  onLongPress={() => handleOpenDeleteList(list.id)}
+                  delayLongPress={500}
                   className="rounded-2xl border border-emerald-100 bg-white p-4"
                   accessible={true}
                   accessibilityRole="button"
                   accessibilityLabel={`Otwórz listę zakupów ${list.name}`}
+                  accessibilityHint="Przytrzymaj, aby usunąć listę"
                 >
                   <View className="flex-row items-center justify-between">
                     <View>
@@ -376,6 +409,43 @@ export function ShoppingListScreen() {
                 {editingListId ? 'Zapisz zmiany' : `Utwórz listę (${selectedDates.length})`}
               </Text>
             </Pressable>
+          </View>
+        </View>
+      </Modal>
+
+      <Modal
+        visible={Boolean(listToDelete)}
+        transparent={true}
+        animationType="fade"
+        presentationStyle="overFullScreen"
+        onRequestClose={() => setListToDeleteId(null)}
+      >
+        <View className="flex-1 items-center justify-center bg-black/40 px-6">
+          <View className="w-full rounded-3xl bg-white p-6">
+            <Text className="text-xl font-bold text-slate-900">Usunąć listę?</Text>
+            <Text className="mt-2 text-base text-slate-600">
+              Lista {listToDelete?.name} zostanie trwale usunięta.
+            </Text>
+            <View className="mt-6 flex-row gap-3">
+              <Pressable
+                onPress={() => setListToDeleteId(null)}
+                className="flex-1 items-center rounded-xl bg-slate-100 py-3"
+                accessible={true}
+                accessibilityRole="button"
+                accessibilityLabel="Anuluj usuwanie listy"
+              >
+                <Text className="font-semibold text-slate-700">Anuluj</Text>
+              </Pressable>
+              <Pressable
+                onPress={handleDeleteList}
+                className="flex-1 items-center rounded-xl bg-red-600 py-3"
+                accessible={true}
+                accessibilityRole="button"
+                accessibilityLabel="Usuń listę zakupów"
+              >
+                <Text className="font-semibold text-white">Usuń listę</Text>
+              </Pressable>
+            </View>
           </View>
         </View>
       </Modal>

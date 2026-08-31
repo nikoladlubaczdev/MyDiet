@@ -7,6 +7,7 @@ interface ShoppingListStore {
   lists: ShoppingList[];
   addList: (name: string, dates: string[], items: ShoppingListItem[]) => string;
   updateList: (listId: string, name: string, dates: string[], items: ShoppingListItem[]) => void;
+  removeList: (listId: string) => void;
   toggleItem: (listId: string, itemId: string) => void;
 }
 
@@ -48,6 +49,11 @@ export const useShoppingListStore = create<ShoppingListStore>()(
               })),
             };
           }),
+        }));
+      },
+      removeList: (listId) => {
+        set((state) => ({
+          lists: state.lists.filter((list) => list.id !== listId),
         }));
       },
       toggleItem: (listId, itemId) => {
