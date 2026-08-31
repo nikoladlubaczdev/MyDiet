@@ -10,6 +10,9 @@ interface MealCardProps {
   person: 'you' | 'partner';
   mealSlot: string;
   readonly?: boolean;
+  isSharedRecipe?: boolean;
+  isSimilarRecipe?: boolean;
+  ingredientDifferences?: Record<string, 'product' | 'amount'>;
   onAddRecipe?: () => void;
 }
 
@@ -18,6 +21,9 @@ export function MealCard({
   person,
   mealSlot,
   readonly = false,
+  isSharedRecipe = false,
+  isSimilarRecipe = false,
+  ingredientDifferences = {},
   onAddRecipe,
 }: MealCardProps) {
   const [isExpanded, setIsExpanded] = useState(false);
@@ -45,12 +51,24 @@ export function MealCard({
   return (
     <Pressable
       onPress={() => setIsExpanded(!isExpanded)}
-      className={`rounded-lg border border-amber-200 bg-white p-3 ${
+      className={`rounded-lg border bg-white p-3 ${
+        isSharedRecipe
+          ? 'border-2 border-emerald-400'
+          : isSimilarRecipe
+            ? 'border-2 border-amber-400'
+            : 'border-amber-200'
+      } ${
         readonly ? 'opacity-90' : ''
       }`}
       accessible={true}
       accessibilityRole="button"
-      accessibilityLabel="Karta przepisu"
+      accessibilityLabel={
+        isSharedRecipe
+          ? 'Karta wspólnego przepisu'
+          : isSimilarRecipe
+            ? 'Karta podobnego posiłku'
+            : 'Karta przepisu'
+      }
     >
       {/* Collapsed View */}
       {!isExpanded && (
@@ -79,11 +97,35 @@ export function MealCard({
           <Text className="mt-3 text-xs font-semibold text-slate-800">
             Składniki ({meal.servings} porcje):
           </Text>
-          {recipe.ingredients.map((ing, idx) => (
-            <Text key={idx} className="text-xs text-slate-700">
-              • {ing.product} ({ing.weight * meal.servings}{ing.unit})
-            </Text>
-          ))}
+          {recipe.ingredients.map((ing, idx) => {
+            const difference = ingredientDifferences[ing.product];
+            const amount = `${ing.weight * meal.servings}${ing.unit}`;
+
+            if (difference === 'product') {
+              return (
+                <View key={idx} className="my-0.5 rounded-md bg-amber-100 px-2 py-1">
+                  <Text className="text-xs font-bold text-amber-900">
+                    • {ing.product} ({amount})
+                  </Text>
+                </View>
+              );
+            }
+
+            return (
+              <View
+                key={idx}
+                className={difference === 'amount' ? 'my-0.5 rounded-md bg-amber-50 px-2 py-1' : ''}
+              >
+                <Text className="text-xs text-slate-700">
+                  • {ing.product} (
+                  <Text className={difference === 'amount' ? 'font-bold text-amber-900' : ''}>
+                    {amount}
+                  </Text>
+                  )
+                </Text>
+              </View>
+            );
+          })}
 
           <Text className="mt-3 text-xs font-semibold text-slate-800">Instrukcje:</Text>
           {recipe.instructions.map((instr, idx) => (
