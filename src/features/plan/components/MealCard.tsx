@@ -44,7 +44,7 @@ export function MealCard({
 
   return (
     <Pressable
-      onPress={() => !readonly && setIsExpanded(!isExpanded)}
+      onPress={() => setIsExpanded(!isExpanded)}
       className={`rounded-lg border border-amber-200 bg-white p-3 ${
         readonly ? 'opacity-90' : ''
       }`}
@@ -73,7 +73,7 @@ export function MealCard({
       )}
 
       {/* Expanded View */}
-      {isExpanded && !readonly && (
+      {isExpanded && (
         <View>
           <Text className="text-sm font-bold text-amber-900">{recipe.name}</Text>
           <Text className="mt-3 text-xs font-semibold text-slate-800">
@@ -86,14 +86,11 @@ export function MealCard({
           ))}
 
           <Text className="mt-3 text-xs font-semibold text-slate-800">Instrukcje:</Text>
-          {recipe.instructions.slice(0, 2).map((instr, idx) => (
+          {recipe.instructions.map((instr, idx) => (
             <Text key={idx} className="text-xs text-slate-700">
               {idx + 1}. {instr}
             </Text>
           ))}
-          {recipe.instructions.length > 2 && (
-            <Text className="text-xs text-slate-600">... i {recipe.instructions.length - 2} więcej</Text>
-          )}
 
           <View className="mt-3 rounded-lg bg-slate-50 p-2">
             <Text className="text-xs font-semibold text-slate-800">📊 Makroskładniki:</Text>
@@ -111,30 +108,32 @@ export function MealCard({
 
           <Text className="mt-2 text-xs text-slate-600">⏱️ Czas przygotowania: {recipe.prepTimeMinutes} min</Text>
 
-          <View className="mt-4 flex-row gap-2">
-            <Pressable
-              className="flex-1 rounded-lg bg-amber-100 py-2"
-              accessible={true}
-              accessibilityRole="button"
-              accessibilityLabel="Edytuj porcje"
-            >
-              <Text className="text-center text-xs font-semibold text-amber-900">
-                Edytuj porcje
-              </Text>
-            </Pressable>
-            <Pressable
-              onPress={() => {
-                removeMeal(date, person, mealSlot);
-                setIsExpanded(false);
-              }}
-              className="flex-1 rounded-lg bg-red-100 py-2"
-              accessible={true}
-              accessibilityRole="button"
-              accessibilityLabel="Usuń"
-            >
-              <Text className="text-center text-xs font-semibold text-red-900">Usuń</Text>
-            </Pressable>
-          </View>
+          {!readonly && (
+            <View className="mt-4 flex-row gap-2">
+              <Pressable
+                className="flex-1 rounded-lg bg-amber-100 py-2"
+                accessible={true}
+                accessibilityRole="button"
+                accessibilityLabel="Edytuj porcje"
+              >
+                <Text className="text-center text-xs font-semibold text-amber-900">
+                  Edytuj porcje
+                </Text>
+              </Pressable>
+              <Pressable
+                onPress={() => {
+                  removeMeal(date, person, mealSlot);
+                  setIsExpanded(false);
+                }}
+                className="flex-1 rounded-lg bg-red-100 py-2"
+                accessible={true}
+                accessibilityRole="button"
+                accessibilityLabel="Usuń"
+              >
+                <Text className="text-center text-xs font-semibold text-red-900">Usuń</Text>
+              </Pressable>
+            </View>
+          )}
         </View>
       )}
     </Pressable>

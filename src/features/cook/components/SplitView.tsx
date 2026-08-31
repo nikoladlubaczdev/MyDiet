@@ -11,20 +11,29 @@ interface SplitViewProps {
 
 export function SplitView({ selectedDate, onAddRecipe, onOpenAddRecipe }: SplitViewProps) {
   return (
-    <View className="flex-row gap-2 px-2 py-4">
-      {/* You - Left */}
-      <View className="flex-1">
-        <Text className="mb-2 px-2 text-sm font-bold text-amber-900">TY</Text>
-        <View className="gap-2">
-          {MEAL_TYPES.map((mealType) => (
-            <View key={`you-${mealType}`}>
-              <Text className="mb-1 px-2 text-xs font-semibold text-slate-600">
-                {mealType}
-              </Text>
-              <MealCard 
-                date={selectedDate} 
-                person="you" 
-                mealSlot={mealType} 
+    <View className="gap-2 px-2 py-4">
+      <View className="flex-row gap-2">
+        <Text className="flex-1 px-2 text-sm font-bold text-amber-900">TY</Text>
+        <Text className="flex-1 px-2 text-sm font-bold text-amber-900">PARTNER</Text>
+      </View>
+
+      {MEAL_TYPES.map((mealType) => (
+        <View key={mealType}>
+          <View className="mb-1 flex-row gap-2">
+            <Text className="flex-1 px-2 text-xs font-semibold text-slate-600">
+              {mealType}
+            </Text>
+            <Text className="flex-1 px-2 text-xs font-semibold text-slate-600">
+              {mealType}
+            </Text>
+          </View>
+
+          <View className="flex-row items-start gap-2">
+            <View className="flex-1">
+              <MealCard
+                date={selectedDate}
+                person="you"
+                mealSlot={mealType}
                 readonly={!onAddRecipe}
                 onAddRecipe={onAddRecipe ? () => {
                   onAddRecipe(mealType, 'you');
@@ -32,23 +41,11 @@ export function SplitView({ selectedDate, onAddRecipe, onOpenAddRecipe }: SplitV
                 } : undefined}
               />
             </View>
-          ))}
-        </View>
-      </View>
-
-      {/* Partner - Right */}
-      <View className="flex-1">
-        <Text className="mb-2 px-2 text-sm font-bold text-amber-900">PARTNER</Text>
-        <View className="gap-2">
-          {MEAL_TYPES.map((mealType) => (
-            <View key={`partner-${mealType}`}>
-              <Text className="mb-1 px-2 text-xs font-semibold text-slate-600">
-                {mealType}
-              </Text>
-              <MealCard 
-                date={selectedDate} 
-                person="partner" 
-                mealSlot={mealType} 
+            <View className="flex-1">
+              <MealCard
+                date={selectedDate}
+                person="partner"
+                mealSlot={mealType}
                 readonly={!onAddRecipe}
                 onAddRecipe={onAddRecipe ? () => {
                   onAddRecipe(mealType, 'partner');
@@ -56,9 +53,9 @@ export function SplitView({ selectedDate, onAddRecipe, onOpenAddRecipe }: SplitV
                 } : undefined}
               />
             </View>
-          ))}
+          </View>
         </View>
-      </View>
+      ))}
     </View>
   );
 }
