@@ -1,5 +1,5 @@
 import { create } from 'zustand';
-import { persist } from 'zustand/middleware';
+import { createJSONStorage, persist } from 'zustand/middleware';
 import AsyncStorage from '@react-native-async-storage/async-storage';
 
 export interface MealPlan {
@@ -109,7 +109,7 @@ export const usePlanStore = create<PlanStoreState>()(
     }),
     {
       name: 'plan-storage',
-      storage: AsyncStorage,
+      storage: createJSONStorage(() => AsyncStorage),
     }
   )
 );

@@ -1,7 +1,6 @@
 import { useRecipes } from '@/features/recipes/hooks/useRecipes';
 import type { Recipe } from '@/shared/types/recipe';
-import { BottomSheet, Host } from '@expo/ui/swift-ui';
-import { Pressable, ScrollView, Text, View } from 'react-native';
+import { Modal, Pressable, ScrollView, Text, View } from 'react-native';
 
 interface AddRecipeBottomSheetProps {
   isVisible: boolean;
@@ -59,27 +58,35 @@ export function AddRecipeBottomSheet({
 }: AddRecipeBottomSheetProps) {
   const { recipes } = useRecipes();
 
-  if (!isVisible) {
-    return null;
-  }
-
   const handleRecipeSelect = (recipe: Recipe) => {
     onAdd(recipe.id, recipe.servings || 1);
-    onClose();
   };
 
   return (
-    <Host>
-      <BottomSheet isPresented={true} onIsPresentedChange={onClose}>
-        <View className="flex-col bg-white">
+    <Modal
+      visible={isVisible}
+      transparent={true}
+      animationType="slide"
+      presentationStyle="overFullScreen"
+      onRequestClose={onClose}
+    >
+      <View className="flex-1 justify-end bg-black/40">
+        <Pressable
+          className="flex-1"
+          onPress={onClose}
+          accessible={true}
+          accessibilityRole="button"
+          accessibilityLabel="Zamknij wybór przepisu"
+        />
+        <View className="max-h-[75%] overflow-hidden rounded-t-3xl bg-white pb-8">
           <Header mealSlot={mealSlot} recipeCount={recipes?.length || 0} />
-          <ScrollView className="flex-0">
+          <ScrollView>
             <View>
               <RecipesList recipes={recipes} onSelectRecipe={handleRecipeSelect} />
             </View>
           </ScrollView>
         </View>
-      </BottomSheet>
-    </Host>
+      </View>
+    </Modal>
   );
 }

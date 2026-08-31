@@ -7,14 +7,12 @@ interface MealSlotsProps {
   selectedDate: string;
   userType: 'you' | 'partner';
   onAddRecipe: (slot: string) => void;
-  onOpenAddRecipe: () => void;
 }
 
 export function MealSlots({
   selectedDate,
   userType,
   onAddRecipe,
-  onOpenAddRecipe,
 }: MealSlotsProps) {
   return (
     <View className="gap-3 px-4 py-4">
@@ -25,10 +23,7 @@ export function MealSlots({
             date={selectedDate}
             person={userType}
             mealSlot={mealType}
-            onAddRecipe={() => {
-              onAddRecipe(mealType);
-              onOpenAddRecipe();
-            }}
+            onAddRecipe={() => onAddRecipe(mealType)}
           />
         </View>
       ))}

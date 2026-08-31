@@ -23,9 +23,24 @@ export function PlanScreen() {
 
   const addMeal = usePlanStore((state) => state.addMeal);
 
+  const handleOpenAddRecipe = (mealSlot: string) => {
+    setSelectedMealSlot(mealSlot);
+    setIsAddRecipeVisible(true);
+  };
+
   const handleAddRecipe = (recipeId: string, servings: number) => {
+    if (!selectedMealSlot) {
+      return;
+    }
+
     addMeal(selectedDate, userType, selectedMealSlot, recipeId, servings);
     setIsAddRecipeVisible(false);
+    setSelectedMealSlot('');
+  };
+
+  const handleCloseAddRecipe = () => {
+    setIsAddRecipeVisible(false);
+    setSelectedMealSlot('');
   };
 
   return (
@@ -62,14 +77,13 @@ export function PlanScreen() {
         <MealSlots
           selectedDate={selectedDate}
           userType={userType}
-          onAddRecipe={setSelectedMealSlot}
-          onOpenAddRecipe={() => setIsAddRecipeVisible(true)}
+          onAddRecipe={handleOpenAddRecipe}
         />
       </ScrollView>
 
       <AddRecipeBottomSheet
         isVisible={isAddRecipeVisible}
-        onClose={() => setIsAddRecipeVisible(false)}
+        onClose={handleCloseAddRecipe}
         onAdd={handleAddRecipe}
         mealSlot={selectedMealSlot}
       />
