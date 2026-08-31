@@ -10,6 +10,9 @@ interface MealCardProps {
   person: 'you' | 'partner';
   mealSlot: string;
   readonly?: boolean;
+  isSharedRecipe?: boolean;
+  isSimilarRecipe?: boolean;
+  ingredientDifferences?: Record<string, 'product' | 'amount'>;
   onAddRecipe?: () => void;
 }
 
@@ -18,6 +21,9 @@ export function MealCard({
   person,
   mealSlot,
   readonly = false,
+  isSharedRecipe = false,
+  isSimilarRecipe = false,
+  ingredientDifferences = {},
   onAddRecipe,
 }: MealCardProps) {
   const [isExpanded, setIsExpanded] = useState(false);
@@ -44,13 +50,25 @@ export function MealCard({
 
   return (
     <Pressable
-      onPress={() => !readonly && setIsExpanded(!isExpanded)}
-      className={`rounded-lg border border-amber-200 bg-white p-3 ${
+      onPress={() => setIsExpanded(!isExpanded)}
+      className={`rounded-lg border bg-white p-3 ${
+        isSharedRecipe
+          ? 'border-2 border-emerald-400'
+          : isSimilarRecipe
+            ? 'border-2 border-amber-400'
+            : 'border-amber-200'
+      } ${
         readonly ? 'opacity-90' : ''
       }`}
       accessible={true}
       accessibilityRole="button"
-      accessibilityLabel="Karta przepisu"
+      accessibilityLabel={
+        isSharedRecipe
+          ? 'Karta wspólnego przepisu'
+          : isSimilarRecipe
+            ? 'Karta podobnego posiłku'
+            : 'Karta przepisu'
+      }
     >
       {/* Collapsed View */}
       {!isExpanded && (
@@ -73,27 +91,48 @@ export function MealCard({
       )}
 
       {/* Expanded View */}
-      {isExpanded && !readonly && (
+      {isExpanded && (
         <View>
           <Text className="text-sm font-bold text-amber-900">{recipe.name}</Text>
           <Text className="mt-3 text-xs font-semibold text-slate-800">
             Składniki ({meal.servings} porcje):
           </Text>
-          {recipe.ingredients.map((ing, idx) => (
-            <Text key={idx} className="text-xs text-slate-700">
-              • {ing.product} ({ing.weight * meal.servings}{ing.unit})
-            </Text>
-          ))}
+          {recipe.ingredients.map((ing, idx) => {
+            const difference = ingredientDifferences[ing.product];
+            const amount = `${ing.weight * meal.servings}${ing.unit}`;
+
+            if (difference === 'product') {
+              return (
+                <View key={idx} className="my-0.5 rounded-md bg-amber-100 px-2 py-1">
+                  <Text className="text-xs font-bold text-amber-900">
+                    • {ing.product} ({amount})
+                  </Text>
+                </View>
+              );
+            }
+
+            return (
+              <View
+                key={idx}
+                className={difference === 'amount' ? 'my-0.5 rounded-md bg-amber-50 px-2 py-1' : ''}
+              >
+                <Text className="text-xs text-slate-700">
+                  • {ing.product} (
+                  <Text className={difference === 'amount' ? 'font-bold text-amber-900' : ''}>
+                    {amount}
+                  </Text>
+                  )
+                </Text>
+              </View>
+            );
+          })}
 
           <Text className="mt-3 text-xs font-semibold text-slate-800">Instrukcje:</Text>
-          {recipe.instructions.slice(0, 2).map((instr, idx) => (
+          {recipe.instructions.map((instr, idx) => (
             <Text key={idx} className="text-xs text-slate-700">
               {idx + 1}. {instr}
             </Text>
           ))}
-          {recipe.instructions.length > 2 && (
-            <Text className="text-xs text-slate-600">... i {recipe.instructions.length - 2} więcej</Text>
-          )}
 
           <View className="mt-3 rounded-lg bg-slate-50 p-2">
             <Text className="text-xs font-semibold text-slate-800">📊 Makroskładniki:</Text>
@@ -111,30 +150,32 @@ export function MealCard({
 
           <Text className="mt-2 text-xs text-slate-600">⏱️ Czas przygotowania: {recipe.prepTimeMinutes} min</Text>
 
-          <View className="mt-4 flex-row gap-2">
-            <Pressable
-              className="flex-1 rounded-lg bg-amber-100 py-2"
-              accessible={true}
-              accessibilityRole="button"
-              accessibilityLabel="Edytuj porcje"
-            >
-              <Text className="text-center text-xs font-semibold text-amber-900">
-                Edytuj porcje
-              </Text>
-            </Pressable>
-            <Pressable
-              onPress={() => {
-                removeMeal(date, person, mealSlot);
-                setIsExpanded(false);
-              }}
-              className="flex-1 rounded-lg bg-red-100 py-2"
-              accessible={true}
-              accessibilityRole="button"
-              accessibilityLabel="Usuń"
-            >
-              <Text className="text-center text-xs font-semibold text-red-900">Usuń</Text>
-            </Pressable>
-          </View>
+          {!readonly && (
+            <View className="mt-4 flex-row gap-2">
+              <Pressable
+                className="flex-1 rounded-lg bg-amber-100 py-2"
+                accessible={true}
+                accessibilityRole="button"
+                accessibilityLabel="Edytuj porcje"
+              >
+                <Text className="text-center text-xs font-semibold text-amber-900">
+                  Edytuj porcje
+                </Text>
+              </Pressable>
+              <Pressable
+                onPress={() => {
+                  removeMeal(date, person, mealSlot);
+                  setIsExpanded(false);
+                }}
+                className="flex-1 rounded-lg bg-red-100 py-2"
+                accessible={true}
+                accessibilityRole="button"
+                accessibilityLabel="Usuń"
+              >
+                <Text className="text-center text-xs font-semibold text-red-900">Usuń</Text>
+              </Pressable>
+            </View>
+          )}
         </View>
       )}
     </Pressable>
