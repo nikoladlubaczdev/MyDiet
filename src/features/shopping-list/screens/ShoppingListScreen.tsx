@@ -236,10 +236,6 @@ export function ShoppingListScreen() {
 
   return (
     <View className="flex-1 bg-emerald-50">
-      <View className="border-b border-emerald-200 bg-white px-4 py-4">
-        <Text className="text-2xl font-bold text-emerald-900">Listy zakupów</Text>
-      </View>
-
       <ScrollView className="flex-1 px-4 py-4">
         <Pressable
           onPress={() => setIsCalendarVisible(true)}
