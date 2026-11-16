@@ -1,5 +1,5 @@
 import type { DayPlan } from '@/features/plan/stores/usePlanStore';
-import type { Recipe, WeightUnit } from '@/shared/types/recipe';
+import { getRecipeVariant, type Person, type Recipe, type WeightUnit } from '@/shared/types/recipe';
 import type { ShoppingListItem } from '../types/shoppingList';
 
 interface AggregatedItem {
@@ -28,7 +28,7 @@ export function createShoppingListItems(
       return;
     }
 
-    Object.values(dayPlan).forEach((personPlan) => {
+    (Object.entries(dayPlan) as [Person, DayPlan[string]][]).forEach(([person, personPlan]) => {
       Object.values(personPlan).forEach((meal) => {
         if (!meal) {
           return;
@@ -39,7 +39,7 @@ export function createShoppingListItems(
           return;
         }
 
-        recipe.ingredients.forEach((ingredient) => {
+        getRecipeVariant(recipe, person).ingredients.forEach((ingredient) => {
           const normalizedProduct = normalizeProductName(ingredient.product);
           const itemId = `${normalizedProduct}-${ingredient.unit}`;
           const existingItem = aggregatedItems.get(itemId);
