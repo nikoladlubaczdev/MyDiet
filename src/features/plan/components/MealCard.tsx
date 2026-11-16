@@ -35,7 +35,7 @@ export function MealCard({
   const meal = getMealForSlot(date, person, mealSlot);
   const recipe = meal ? recipes.find((r) => r.id === meal.recipeId) : null;
 
-  if (!recipe) {
+  if (!meal || !recipe) {
     return (
       <Pressable
         onPress={onAddRecipe}

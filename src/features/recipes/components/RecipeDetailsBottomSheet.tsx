@@ -4,6 +4,7 @@ import type { PresentationDetent } from '@expo/ui/swift-ui/modifiers';
 import { presentationDetents, presentationDragIndicator } from '@expo/ui/swift-ui/modifiers';
 import { ScrollView, Text, View } from 'react-native';
 import { useMemo } from 'react';
+import { normalizeProductName } from '@/shared/utils/normalizeProductName';
 
 const categoryLabels: Record<MealCategory, string> = {
   'ś': 'Śniadanie',
@@ -14,12 +15,6 @@ const categoryLabels: Record<MealCategory, string> = {
 };
 
 type Ingredient = Recipe['ingredients'][number];
-
-const normalizeProductName = (product: string) =>
-  product
-    .toLocaleLowerCase('pl')
-    .replace(/[^\p{L}\p{N}]+/gu, ' ')
-    .trim();
 
 interface IngredientRow {
   product: string;

@@ -1,20 +1,13 @@
 import type { DayPlan } from '@/features/plan/stores/usePlanStore';
 import { getRecipeVariant, type Person, type Recipe, type WeightUnit } from '@/shared/types/recipe';
+import { normalizeProductName } from '@/shared/utils/normalizeProductName';
 import type { ShoppingListItem } from '../types/shoppingList';
 
 interface AggregatedItem {
   product: string;
   weight: number;
   unit: WeightUnit;
-}
-
-const normalizeProductName = (product: string) =>
-  product
-    .toLocaleLowerCase('pl')
-    .replace(/[^\p{L}\p{N}]+/gu, ' ')
-    .trim();
-
-export function createShoppingListItems(
+}export function createShoppingListItems(
   plan: Record<string, DayPlan>,
   dates: string[],
   recipes: Recipe[]

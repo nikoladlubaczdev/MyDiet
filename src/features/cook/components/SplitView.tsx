@@ -3,6 +3,7 @@ import { MealCard } from '../../plan/components/MealCard';
 import { usePlanStore } from '../../plan/stores/usePlanStore';
 import { useRecipes } from '../../recipes/hooks/useRecipes';
 import { getRecipeVariant, type Recipe } from '@/shared/types/recipe';
+import { normalizeProductName } from '@/shared/utils/normalizeProductName';
 
 const MEAL_TYPES = ['Śniadanie', 'II Śniadanie', 'Obiad', 'Podwieczorek', 'Kolacja'];
 
@@ -17,12 +18,6 @@ interface RecipeComparison {
   yourDifferences: Record<string, 'product' | 'amount'>;
   partnerDifferences: Record<string, 'product' | 'amount'>;
 }
-
-const normalizeProductName = (product: string) =>
-  product
-    .toLocaleLowerCase('pl')
-    .replace(/[^\p{L}\p{N}]+/gu, ' ')
-    .trim();
 
 function compareRecipes(
   yourRecipe: Recipe | undefined,
