@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import { Text, View, Pressable } from 'react-native';
+import Ionicons from '@expo/vector-icons/Ionicons';
 import { usePlanStore } from '../stores/usePlanStore';
 import { getRecipeVariant } from '@/shared/types/recipe';
 import { useRecipes } from '@/features/recipes/hooks/useRecipes';
@@ -30,6 +31,7 @@ export function MealCard({
   const [isExpanded, setIsExpanded] = useState(false);
   const getMealForSlot = usePlanStore((state) => state.getMealForSlot);
   const removeMeal = usePlanStore((state) => state.removeMeal);
+  const addMeal = usePlanStore((state) => state.addMeal);
   const { recipes } = useRecipes();
 
   const meal = getMealForSlot(date, person, mealSlot);
@@ -50,6 +52,8 @@ export function MealCard({
   }
 
   const variant = getRecipeVariant(recipe, person);
+  const otherPerson = person === 'you' ? 'partner' : 'you';
+  const otherPersonName = person === 'you' ? 'Bartka' : 'Nikoli';
 
   return (
     <Pressable
@@ -179,6 +183,22 @@ export function MealCard({
               </Pressable>
             </View>
           )}
+        </View>
+      )}
+
+      {!readonly && (
+        <View className="mt-2 flex-row justify-end">
+          <Pressable
+            onPress={() => {
+              addMeal(date, otherPerson, mealSlot, meal.recipeId, meal.servings);
+            }}
+            className="rounded-full bg-amber-100 p-2"
+            accessible={true}
+            accessibilityRole="button"
+            accessibilityLabel={`Kopiuj posiłek dla ${otherPersonName}`}
+          >
+            <Ionicons name="swap-horizontal" size={16} color="#78350f" />
+          </Pressable>
         </View>
       )}
     </Pressable>
