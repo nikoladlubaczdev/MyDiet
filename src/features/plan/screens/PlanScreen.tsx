@@ -134,7 +134,9 @@ export function PlanScreen() {
       )}
 
       <ScrollView className="flex-1">
-        {mode === 'summary' && <DaySummary selectedDate={selectedDate} />}
+        {mode === 'summary' && (
+          <DaySummary selectedDate={selectedDate} onGoToEdit={() => setMode('edit')} />
+        )}
         <SplitView
           selectedDate={selectedDate}
           onAddRecipe={mode === 'edit' ? handleOpenAddRecipe : undefined}

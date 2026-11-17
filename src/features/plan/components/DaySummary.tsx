@@ -1,10 +1,12 @@
-import { Text, View } from 'react-native';
+import { Pressable, Text, View } from 'react-native';
+import Ionicons from '@expo/vector-icons/Ionicons';
 import { useRecipes } from '@/features/recipes/hooks/useRecipes';
 import { getRecipeVariant, type Person, type Recipe } from '@/shared/types/recipe';
 import { usePlanStore, type MealPlan } from '../stores/usePlanStore';
 
 interface DaySummaryProps {
   selectedDate: string;
+  onGoToEdit: () => void;
 }
 
 interface PersonTotals {
@@ -51,9 +53,35 @@ function SummaryColumn({ name, totals }: { name: string; totals: PersonTotals })
   );
 }
 
-export function DaySummary({ selectedDate }: DaySummaryProps) {
+export function DaySummary({ selectedDate, onGoToEdit }: DaySummaryProps) {
   const dayPlan = usePlanStore((state) => state.plan[selectedDate]);
   const { recipes } = useRecipes();
+
+  const hasAnyMeals = [dayPlan?.you, dayPlan?.partner].some((meals) =>
+    Object.values(meals ?? {}).some(Boolean)
+  );
+
+  if (!hasAnyMeals) {
+    return (
+      <View className="mx-2 mt-4 items-center rounded-lg border border-amber-200 bg-white p-6">
+        <Ionicons name="calendar-outline" size={32} color="#b45309" />
+        <Text className="mt-2 text-center text-base font-semibold text-amber-900">
+          Brak zaplanowanych posiłków
+        </Text>
+        <Text className="mt-1 text-center text-sm text-slate-600">
+          Dodaj posiłki w edycji, a tutaj zobaczysz sumę kalorii i makroskładników.
+        </Text>
+        <Pressable
+          onPress={onGoToEdit}
+          accessibilityRole="button"
+          accessibilityLabel="Przejdź do edycji"
+          className="mt-4 rounded-full bg-amber-500 px-5 py-2"
+        >
+          <Text className="text-sm font-semibold text-white">Przejdź do edycji</Text>
+        </Pressable>
+      </View>
+    );
+  }
 
   const yourTotals = calculateTotals(dayPlan?.you, 'you', recipes);
   const partnerTotals = calculateTotals(dayPlan?.partner, 'partner', recipes);
