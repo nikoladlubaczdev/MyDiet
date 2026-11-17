@@ -13,7 +13,6 @@ interface MealCardProps {
   mealSlot: string;
   readonly?: boolean;
   isSharedRecipe?: boolean;
-  isSimilarRecipe?: boolean;
   ingredientDifferences?: Record<string, 'product' | 'amount'>;
   onAddRecipe?: () => void;
 }
@@ -24,7 +23,6 @@ export function MealCard({
   mealSlot,
   readonly = false,
   isSharedRecipe = false,
-  isSimilarRecipe = false,
   ingredientDifferences = {},
   onAddRecipe,
 }: MealCardProps) {
@@ -74,23 +72,13 @@ export function MealCard({
     <Pressable
       onPress={() => setIsExpanded(!isExpanded)}
       className={`rounded-lg border bg-white p-3 ${
-        isSharedRecipe
-          ? 'border-2 border-emerald-400'
-          : isSimilarRecipe
-            ? 'border-2 border-amber-400'
-            : 'border-amber-200'
+        isSharedRecipe ? 'border-2 border-emerald-400' : 'border-amber-200'
       } ${
         readonly ? 'opacity-90' : ''
       }`}
       accessible={true}
       accessibilityRole="button"
-      accessibilityLabel={
-        isSharedRecipe
-          ? 'Karta wspólnego przepisu'
-          : isSimilarRecipe
-            ? 'Karta podobnego posiłku'
-            : 'Karta przepisu'
-      }
+      accessibilityLabel={isSharedRecipe ? 'Karta wspólnego przepisu' : 'Karta przepisu'}
     >
       {/* Collapsed View */}
       {!isExpanded && (

@@ -14,7 +14,6 @@ interface SplitViewProps {
 }
 
 interface RecipeComparison {
-  isSimilarRecipe: boolean;
   yourDifferences: Record<string, 'product' | 'amount'>;
   partnerDifferences: Record<string, 'product' | 'amount'>;
 }
@@ -26,7 +25,6 @@ function compareRecipes(
   partnerServings: number
 ): RecipeComparison {
   const emptyComparison: RecipeComparison = {
-    isSimilarRecipe: false,
     yourDifferences: {},
     partnerDifferences: {},
   };
@@ -83,7 +81,6 @@ function compareRecipes(
   });
 
   return {
-    isSimilarRecipe: yourRecipe.id !== partnerRecipe.id,
     yourDifferences,
     partnerDifferences,
   };
@@ -138,16 +135,6 @@ export function SplitView({ selectedDate, onAddRecipe }: SplitViewProps) {
             </Text>
           </View>
 
-          {comparison.isSimilarRecipe && (
-            <View className="mb-1 items-center">
-              <View className="rounded-full bg-amber-100 px-3 py-1">
-                <Text className="text-xs font-semibold text-amber-800">
-                  Podobne posiłki
-                </Text>
-              </View>
-            </View>
-          )}
-
           <View className="flex-row items-stretch gap-2">
             <View className="flex-1">
               <MealCard
@@ -156,7 +143,6 @@ export function SplitView({ selectedDate, onAddRecipe }: SplitViewProps) {
                 mealSlot={mealType}
                 readonly={!onAddRecipe}
                 isSharedRecipe={isSharedRecipe}
-                isSimilarRecipe={comparison.isSimilarRecipe}
                 ingredientDifferences={comparison.yourDifferences}
                 onAddRecipe={onAddRecipe ? () => onAddRecipe(mealType, 'you') : undefined}
               />
@@ -168,7 +154,6 @@ export function SplitView({ selectedDate, onAddRecipe }: SplitViewProps) {
                 mealSlot={mealType}
                 readonly={!onAddRecipe}
                 isSharedRecipe={isSharedRecipe}
-                isSimilarRecipe={comparison.isSimilarRecipe}
                 ingredientDifferences={comparison.partnerDifferences}
                 onAddRecipe={onAddRecipe ? () => onAddRecipe(mealType, 'partner') : undefined}
               />
