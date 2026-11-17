@@ -1,6 +1,7 @@
 import { Text, View } from 'react-native';
-import { MealCard } from '../../plan/components/MealCard';
-import { usePlanStore } from '../../plan/stores/usePlanStore';
+import { calculateTotals } from './DaySummary';
+import { MealCard } from './MealCard';
+import { usePlanStore } from '../stores/usePlanStore';
 import { useRecipes } from '../../recipes/hooks/useRecipes';
 import { getRecipeVariant, type Recipe } from '@/shared/types/recipe';
 import { normalizeProductName } from '@/shared/utils/normalizeProductName';
@@ -10,11 +11,9 @@ const MEAL_TYPES = ['Śniadanie', 'II Śniadanie', 'Obiad', 'Podwieczorek', 'Kol
 interface SplitViewProps {
   selectedDate: string;
   onAddRecipe?: (slot: string, person: 'you' | 'partner') => void;
-  onOpenAddRecipe?: () => void;
 }
 
 interface RecipeComparison {
-  isSimilarRecipe: boolean;
   yourDifferences: Record<string, 'product' | 'amount'>;
   partnerDifferences: Record<string, 'product' | 'amount'>;
 }
@@ -26,7 +25,6 @@ function compareRecipes(
   partnerServings: number
 ): RecipeComparison {
   const emptyComparison: RecipeComparison = {
-    isSimilarRecipe: false,
     yourDifferences: {},
     partnerDifferences: {},
   };
@@ -83,21 +81,32 @@ function compareRecipes(
   });
 
   return {
-    isSimilarRecipe: yourRecipe.id !== partnerRecipe.id,
     yourDifferences,
     partnerDifferences,
   };
 }
 
-export function SplitView({ selectedDate, onAddRecipe, onOpenAddRecipe }: SplitViewProps) {
+export function SplitView({ selectedDate, onAddRecipe }: SplitViewProps) {
   const dayPlan = usePlanStore((state) => state.plan[selectedDate]);
   const { recipes } = useRecipes();
+  const yourTotals = calculateTotals(dayPlan?.you, 'you', recipes);
+  const partnerTotals = calculateTotals(dayPlan?.partner, 'partner', recipes);
 
   return (
     <View className="gap-2 px-2 py-4">
       <View className="flex-row gap-2">
-        <Text className="flex-1 px-2 text-sm font-bold text-amber-900">NIKOLA</Text>
-        <Text className="flex-1 px-2 text-sm font-bold text-amber-900">BARTEK</Text>
+        <Text className="flex-1 px-2 text-center text-base font-bold text-amber-900">
+          NIKOLA
+          {onAddRecipe && (
+            <Text className="text-xs font-normal text-slate-500"> · {Math.round(yourTotals.kcal)} kcal</Text>
+          )}
+        </Text>
+        <Text className="flex-1 px-2 text-center text-base font-bold text-amber-900">
+          BARTEK
+          {onAddRecipe && (
+            <Text className="text-xs font-normal text-slate-500"> · {Math.round(partnerTotals.kcal)} kcal</Text>
+          )}
+        </Text>
       </View>
 
       {MEAL_TYPES.map((mealType) => {
@@ -118,35 +127,15 @@ export function SplitView({ selectedDate, onAddRecipe, onOpenAddRecipe }: SplitV
         return (
           <View key={mealType}>
           <View className="mb-1 flex-row gap-2">
-            <Text className="flex-1 px-2 text-xs font-semibold text-slate-600">
+            <Text className="flex-1 px-2 text-center text-xs font-semibold text-slate-600">
               {mealType}
             </Text>
-            <Text className="flex-1 px-2 text-xs font-semibold text-slate-600">
+            <Text className="flex-1 px-2 text-center text-xs font-semibold text-slate-600">
               {mealType}
             </Text>
           </View>
 
-          {isSharedRecipe && (
-            <View className="mb-1 items-center">
-              <View className="rounded-full bg-emerald-100 px-3 py-1">
-                <Text className="text-xs font-semibold text-emerald-800">
-                  Wspólny przepis
-                </Text>
-              </View>
-            </View>
-          )}
-
-          {comparison.isSimilarRecipe && (
-            <View className="mb-1 items-center">
-              <View className="rounded-full bg-amber-100 px-3 py-1">
-                <Text className="text-xs font-semibold text-amber-800">
-                  Podobne posiłki
-                </Text>
-              </View>
-            </View>
-          )}
-
-          <View className="flex-row items-start gap-2">
+          <View className="flex-row items-stretch gap-2">
             <View className="flex-1">
               <MealCard
                 date={selectedDate}
@@ -154,12 +143,8 @@ export function SplitView({ selectedDate, onAddRecipe, onOpenAddRecipe }: SplitV
                 mealSlot={mealType}
                 readonly={!onAddRecipe}
                 isSharedRecipe={isSharedRecipe}
-                isSimilarRecipe={comparison.isSimilarRecipe}
                 ingredientDifferences={comparison.yourDifferences}
-                onAddRecipe={onAddRecipe ? () => {
-                  onAddRecipe(mealType, 'you');
-                  onOpenAddRecipe?.();
-                } : undefined}
+                onAddRecipe={onAddRecipe ? () => onAddRecipe(mealType, 'you') : undefined}
               />
             </View>
             <View className="flex-1">
@@ -169,12 +154,8 @@ export function SplitView({ selectedDate, onAddRecipe, onOpenAddRecipe }: SplitV
                 mealSlot={mealType}
                 readonly={!onAddRecipe}
                 isSharedRecipe={isSharedRecipe}
-                isSimilarRecipe={comparison.isSimilarRecipe}
                 ingredientDifferences={comparison.partnerDifferences}
-                onAddRecipe={onAddRecipe ? () => {
-                  onAddRecipe(mealType, 'partner');
-                  onOpenAddRecipe?.();
-                } : undefined}
+                onAddRecipe={onAddRecipe ? () => onAddRecipe(mealType, 'partner') : undefined}
               />
             </View>
           </View>

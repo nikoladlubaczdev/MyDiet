@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import { Text, View, Pressable } from 'react-native';
+import Ionicons from '@expo/vector-icons/Ionicons';
 import { usePlanStore } from '../stores/usePlanStore';
 import { getRecipeVariant } from '@/shared/types/recipe';
 import { useRecipes } from '@/features/recipes/hooks/useRecipes';
@@ -12,7 +13,6 @@ interface MealCardProps {
   mealSlot: string;
   readonly?: boolean;
   isSharedRecipe?: boolean;
-  isSimilarRecipe?: boolean;
   ingredientDifferences?: Record<string, 'product' | 'amount'>;
   onAddRecipe?: () => void;
 }
@@ -23,19 +23,34 @@ export function MealCard({
   mealSlot,
   readonly = false,
   isSharedRecipe = false,
-  isSimilarRecipe = false,
   ingredientDifferences = {},
   onAddRecipe,
 }: MealCardProps) {
   const [isExpanded, setIsExpanded] = useState(false);
   const getMealForSlot = usePlanStore((state) => state.getMealForSlot);
   const removeMeal = usePlanStore((state) => state.removeMeal);
+  const addMeal = usePlanStore((state) => state.addMeal);
   const { recipes } = useRecipes();
 
   const meal = getMealForSlot(date, person, mealSlot);
   const recipe = meal ? recipes.find((r) => r.id === meal.recipeId) : null;
 
   if (!meal || !recipe) {
+    if (readonly) {
+      return (
+        <View className="flex-1 items-center justify-center rounded-lg border border-amber-200 bg-white py-6">
+          <View className="h-9 w-9">
+            <View className="absolute inset-0 items-center justify-center">
+              <Ionicons name="restaurant-outline" size={28} color="#fbbf24" />
+            </View>
+            <View className="absolute inset-0 items-center justify-center">
+              <Ionicons name="ban-outline" size={28} color="#fbbf24" />
+            </View>
+          </View>
+        </View>
+      );
+    }
+
     return (
       <Pressable
         onPress={onAddRecipe}
@@ -50,33 +65,28 @@ export function MealCard({
   }
 
   const variant = getRecipeVariant(recipe, person);
+  const otherPerson = person === 'you' ? 'partner' : 'you';
+  const otherPersonName = person === 'you' ? 'Bartka' : 'Nikoli';
 
   return (
     <Pressable
       onPress={() => setIsExpanded(!isExpanded)}
       className={`rounded-lg border bg-white p-3 ${
-        isSharedRecipe
-          ? 'border-2 border-emerald-400'
-          : isSimilarRecipe
-            ? 'border-2 border-amber-400'
-            : 'border-amber-200'
+        isSharedRecipe ? 'border-2 border-emerald-400' : 'border-amber-200'
       } ${
         readonly ? 'opacity-90' : ''
       }`}
       accessible={true}
       accessibilityRole="button"
-      accessibilityLabel={
-        isSharedRecipe
-          ? 'Karta wspólnego przepisu'
-          : isSimilarRecipe
-            ? 'Karta podobnego posiłku'
-            : 'Karta przepisu'
-      }
+      accessibilityLabel={isSharedRecipe ? 'Karta wspólnego przepisu' : 'Karta przepisu'}
     >
       {/* Collapsed View */}
       {!isExpanded && (
         <View>
-          <Text className="text-sm font-bold text-amber-900">{recipe.name}</Text>
+          <View className="flex-row items-center gap-1">
+            <Text className="flex-1 text-sm font-bold text-amber-900">{recipe.name}</Text>
+            {isSharedRecipe && <Ionicons name="people" size={16} color="#059669" />}
+          </View>
           <Text className="mt-1 text-xs text-slate-600">Składniki:</Text>
           {variant.ingredients.slice(0, 2).map((ing, idx) => (
             <Text key={idx} className="text-xs text-slate-600">
@@ -96,7 +106,10 @@ export function MealCard({
       {/* Expanded View */}
       {isExpanded && (
         <View>
-          <Text className="text-sm font-bold text-amber-900">{recipe.name}</Text>
+          <View className="flex-row items-center gap-1">
+            <Text className="flex-1 text-sm font-bold text-amber-900">{recipe.name}</Text>
+            {isSharedRecipe && <Ionicons name="people" size={16} color="#059669" />}
+          </View>
           <Text className="mt-3 text-xs font-semibold text-slate-800">
             Składniki ({meal.servings} porcje):
           </Text>
@@ -156,16 +169,6 @@ export function MealCard({
           {!readonly && (
             <View className="mt-4 flex-row gap-2">
               <Pressable
-                className="flex-1 rounded-lg bg-amber-100 py-2"
-                accessible={true}
-                accessibilityRole="button"
-                accessibilityLabel="Edytuj porcje"
-              >
-                <Text className="text-center text-xs font-semibold text-amber-900">
-                  Edytuj porcje
-                </Text>
-              </Pressable>
-              <Pressable
                 onPress={() => {
                   removeMeal(date, person, mealSlot);
                   setIsExpanded(false);
@@ -179,6 +182,22 @@ export function MealCard({
               </Pressable>
             </View>
           )}
+        </View>
+      )}
+
+      {!readonly && (
+        <View className="mt-2 flex-row justify-end">
+          <Pressable
+            onPress={() => {
+              addMeal(date, otherPerson, mealSlot, meal.recipeId, meal.servings);
+            }}
+            className="rounded-full bg-amber-100 p-2"
+            accessible={true}
+            accessibilityRole="button"
+            accessibilityLabel={`Kopiuj posiłek dla ${otherPersonName}`}
+          >
+            <Ionicons name="swap-horizontal" size={16} color="#78350f" />
+          </Pressable>
         </View>
       )}
     </Pressable>
