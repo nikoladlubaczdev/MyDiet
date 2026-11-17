@@ -31,12 +31,15 @@ export function PlanScreen() {
     setIsAddRecipeVisible(true);
   };
 
-  const handleAddRecipe = (recipeId: string, servings: number) => {
+  const handleAddRecipe = (recipeId: string, servings: number, includePartner: boolean) => {
     if (!selectedMealSlot) {
       return;
     }
 
     addMeal(selectedDate, selectedPerson, selectedMealSlot, recipeId, servings);
+    if (includePartner) {
+      addMeal(selectedDate, 'partner', selectedMealSlot, recipeId, servings);
+    }
     setIsAddRecipeVisible(false);
     setSelectedMealSlot('');
   };
@@ -88,6 +91,7 @@ export function PlanScreen() {
         onClose={handleCloseAddRecipe}
         onAdd={handleAddRecipe}
         mealSlot={selectedMealSlot}
+        person={selectedPerson}
       />
     </View>
   );

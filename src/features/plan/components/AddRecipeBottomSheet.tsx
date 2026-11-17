@@ -6,8 +6,9 @@ import { Modal, Pressable, ScrollView, Text, View } from 'react-native';
 interface AddRecipeBottomSheetProps {
   isVisible: boolean;
   onClose: () => void;
-  onAdd: (recipeId: string, servings: number) => void;
+  onAdd: (recipeId: string, servings: number, includePartner: boolean) => void;
   mealSlot: string;
+  person: 'you' | 'partner';
 }
 
 const categoryLabels: Record<MealCategory, string> = {
@@ -74,10 +75,12 @@ function CategoryFilter({
 
 function RecipesList({
   recipes,
+  showPartnerButton,
   onSelectRecipe,
 }: {
   recipes: Recipe[] | undefined;
-  onSelectRecipe: (recipe: Recipe) => void;
+  showPartnerButton: boolean;
+  onSelectRecipe: (recipe: Recipe, includePartner: boolean) => void;
 }) {
   if (!recipes || recipes.length === 0) {
     return (
@@ -88,17 +91,32 @@ function RecipesList({
   }
 
   return recipes.map((recipe) => (
-    <Pressable
+    <View
       key={recipe.id}
-      onPress={() => onSelectRecipe(recipe)}
-      accessible={true}
-      accessibilityRole="button"
-      accessibilityLabel={`Wybierz przepis ${recipe.name}`}
-      className="border-b border-amber-100 bg-white px-4 py-3"
+      className="flex-row items-center border-b border-amber-100 bg-white"
     >
-      <Text className="text-base text-slate-900">{recipe.name}</Text>
-      <Text className="text-xs text-slate-500">Porcji: 1</Text>
-    </Pressable>
+      <Pressable
+        onPress={() => onSelectRecipe(recipe, false)}
+        accessible={true}
+        accessibilityRole="button"
+        accessibilityLabel={`Wybierz przepis ${recipe.name}`}
+        className="flex-1 px-4 py-3"
+      >
+        <Text className="text-base text-slate-900">{recipe.name}</Text>
+        <Text className="text-xs text-slate-500">Porcji: 1</Text>
+      </Pressable>
+      {showPartnerButton && (
+        <Pressable
+          onPress={() => onSelectRecipe(recipe, true)}
+          accessible={true}
+          accessibilityRole="button"
+          accessibilityLabel={`Dodaj ${recipe.name} też dla Bartka`}
+          className="mr-4 rounded-full bg-amber-100 px-3 py-2"
+        >
+          <Text className="text-xs font-semibold text-amber-900">+ Bartek</Text>
+        </Pressable>
+      )}
+    </View>
   ));
 }
 
@@ -107,12 +125,13 @@ export function AddRecipeBottomSheet({
   onClose,
   onAdd,
   mealSlot,
+  person,
 }: AddRecipeBottomSheetProps) {
   const [selectedCategory, setSelectedCategory] = useState<MealCategory | undefined>();
   const { recipes, categories } = useRecipes({ category: selectedCategory });
 
-  const handleRecipeSelect = (recipe: Recipe) => {
-    onAdd(recipe.id, 1);
+  const handleRecipeSelect = (recipe: Recipe, includePartner: boolean) => {
+    onAdd(recipe.id, 1, includePartner);
   };
 
   return (
@@ -140,7 +159,11 @@ export function AddRecipeBottomSheet({
           />
           <ScrollView>
             <View>
-              <RecipesList recipes={recipes} onSelectRecipe={handleRecipeSelect} />
+              <RecipesList
+                recipes={recipes}
+                showPartnerButton={person === 'you'}
+                onSelectRecipe={handleRecipeSelect}
+              />
             </View>
           </ScrollView>
         </View>
