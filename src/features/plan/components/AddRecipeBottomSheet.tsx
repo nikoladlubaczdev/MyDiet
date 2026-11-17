@@ -3,7 +3,7 @@ import type { MealCategory, Person, Recipe } from '@/shared/types/recipe';
 import { getRecipeVariant } from '@/shared/types/recipe';
 import Ionicons from '@expo/vector-icons/Ionicons';
 import { useEffect, useState } from 'react';
-import { Modal, Pressable, ScrollView, Text, View } from 'react-native';
+import { Modal, Pressable, ScrollView, Text, TextInput, View } from 'react-native';
 
 interface AddRecipeBottomSheetProps {
   isVisible: boolean;
@@ -144,13 +144,18 @@ export function AddRecipeBottomSheet({
   const [selectedCategory, setSelectedCategory] = useState<MealCategory | undefined>(() =>
     getDefaultCategory(mealSlot)
   );
-  const { recipes, categories } = useRecipes({ category: selectedCategory });
+  const [searchQuery, setSearchQuery] = useState('');
+  const { recipes, categories } = useRecipes({
+    category: selectedCategory,
+    search: searchQuery.trim(),
+  });
 
   useEffect(() => {
     if (!isVisible) {
       return;
     }
     setSelectedCategory(getDefaultCategory(mealSlot));
+    setSearchQuery('');
   }, [isVisible, mealSlot]);
 
   const handleRecipeSelect = (recipe: Recipe, forBoth: boolean) => {
@@ -175,6 +180,18 @@ export function AddRecipeBottomSheet({
         />
         <View className="max-h-[75%] overflow-hidden rounded-t-3xl bg-white pb-8">
           <Header mealSlot={mealSlot} recipeCount={recipes.length} />
+          <View className="border-b border-amber-100 px-4 py-3">
+            <TextInput
+              value={searchQuery}
+              onChangeText={setSearchQuery}
+              placeholder="Szukaj po składniku"
+              placeholderTextColor="#94a3b8"
+              autoCorrect={false}
+              clearButtonMode="while-editing"
+              accessibilityLabel="Szukaj po składniku"
+              className="rounded-full border border-amber-200 bg-white px-4 py-2 text-base text-slate-900"
+            />
+          </View>
           <CategoryFilter
             categories={categories}
             selectedCategory={selectedCategory}

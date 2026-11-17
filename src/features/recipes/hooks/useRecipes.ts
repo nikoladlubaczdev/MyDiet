@@ -20,7 +20,11 @@ export function useRecipes(options?: UseRecipesOptions) {
     if (options?.search) {
       const query = options.search.toLowerCase();
       filtered = filtered.filter(recipe =>
-        recipe.name.toLowerCase().includes(query)
+        [recipe, recipe.partnerVariant].some(variant =>
+          variant?.ingredients.some(ingredient =>
+            ingredient.product.toLowerCase().includes(query)
+          )
+        )
       );
     }
 
