@@ -7,9 +7,8 @@ import { Modal, Pressable, ScrollView, Text, View } from 'react-native';
 interface AddRecipeBottomSheetProps {
   isVisible: boolean;
   onClose: () => void;
-  onAdd: (recipeId: string, servings: number, includePartner: boolean) => void;
+  onAdd: (recipeId: string, servings: number, forBoth: boolean) => void;
   mealSlot: string;
-  person: 'you' | 'partner';
 }
 
 const categoryLabels: Record<MealCategory, string> = {
@@ -76,12 +75,10 @@ function CategoryFilter({
 
 function RecipesList({
   recipes,
-  showPartnerButton,
   onSelectRecipe,
 }: {
   recipes: Recipe[] | undefined;
-  showPartnerButton: boolean;
-  onSelectRecipe: (recipe: Recipe, includePartner: boolean) => void;
+  onSelectRecipe: (recipe: Recipe, forBoth: boolean) => void;
 }) {
   if (!recipes || recipes.length === 0) {
     return (
@@ -106,17 +103,15 @@ function RecipesList({
         <Text className="text-base text-slate-900">{recipe.name}</Text>
         <Text className="text-xs text-slate-500">Porcji: 1</Text>
       </Pressable>
-      {showPartnerButton && (
-        <Pressable
-          onPress={() => onSelectRecipe(recipe, true)}
-          accessible={true}
-          accessibilityRole="button"
-          accessibilityLabel={`Dodaj ${recipe.name} dla obu osób`}
-          className="mr-4 rounded-full bg-amber-100 p-2"
-        >
-          <Ionicons name="people-outline" size={18} color="#78350f" />
-        </Pressable>
-      )}
+      <Pressable
+        onPress={() => onSelectRecipe(recipe, true)}
+        accessible={true}
+        accessibilityRole="button"
+        accessibilityLabel={`Dodaj ${recipe.name} dla obu osób`}
+        className="mr-4 rounded-full bg-amber-100 p-2"
+      >
+        <Ionicons name="people-outline" size={18} color="#78350f" />
+      </Pressable>
     </View>
   ));
 }
@@ -126,13 +121,12 @@ export function AddRecipeBottomSheet({
   onClose,
   onAdd,
   mealSlot,
-  person,
 }: AddRecipeBottomSheetProps) {
   const [selectedCategory, setSelectedCategory] = useState<MealCategory | undefined>();
   const { recipes, categories } = useRecipes({ category: selectedCategory });
 
-  const handleRecipeSelect = (recipe: Recipe, includePartner: boolean) => {
-    onAdd(recipe.id, 1, includePartner);
+  const handleRecipeSelect = (recipe: Recipe, forBoth: boolean) => {
+    onAdd(recipe.id, 1, forBoth);
   };
 
   return (
@@ -160,11 +154,7 @@ export function AddRecipeBottomSheet({
           />
           <ScrollView>
             <View>
-              <RecipesList
-                recipes={recipes}
-                showPartnerButton={person === 'you'}
-                onSelectRecipe={handleRecipeSelect}
-              />
+              <RecipesList recipes={recipes} onSelectRecipe={handleRecipeSelect} />
             </View>
           </ScrollView>
         </View>
