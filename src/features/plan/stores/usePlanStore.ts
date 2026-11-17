@@ -21,6 +21,7 @@ export interface PlanStoreState {
   addMeal: (date: string, person: 'you' | 'partner', mealSlot: string, recipeId: string, servings: number) => void;
   removeMeal: (date: string, person: 'you' | 'partner', mealSlot: string) => void;
   editServings: (date: string, person: 'you' | 'partner', mealSlot: string, servings: number) => void;
+  copyDayMeals: (fromDate: string, fromPerson: 'you' | 'partner', toDate: string, toPerson: 'you' | 'partner') => void;
   getMealForSlot: (date: string, person: 'you' | 'partner', mealSlot: string) => MealPlan | null;
   getDayPlan: (date: string, person: 'you' | 'partner') => Record<string, MealPlan | null>;
 }
@@ -92,6 +93,30 @@ export const usePlanStore = create<PlanStoreState>()(
                 [person]: {
                   ...(state.plan[date]?.[person] || {}),
                   [mealSlot]: { ...meal, servings },
+                },
+              },
+            },
+          };
+        });
+      },
+
+      copyDayMeals: (fromDate, fromPerson, toDate, toPerson) => {
+        set((state) => {
+          const source = state.plan[fromDate]?.[fromPerson] || {};
+          const filledMeals = Object.fromEntries(
+            Object.entries(source).filter(([, meal]) => meal !== null)
+          );
+          if (Object.keys(filledMeals).length === 0) return state;
+
+          const targetDay = state.plan[toDate] || createEmptyDayPlan();
+          return {
+            plan: {
+              ...state.plan,
+              [toDate]: {
+                ...targetDay,
+                [toPerson]: {
+                  ...targetDay[toPerson],
+                  ...filledMeals,
                 },
               },
             },

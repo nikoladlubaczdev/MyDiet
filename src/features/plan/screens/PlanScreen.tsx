@@ -1,5 +1,6 @@
 import { useState } from 'react';
-import { Pressable, ScrollView, Text, View } from 'react-native';
+import { Alert, Pressable, ScrollView, Text, View } from 'react-native';
+import Ionicons from '@expo/vector-icons/Ionicons';
 import { AddRecipeBottomSheet } from '../components/AddRecipeBottomSheet';
 import { DaySummary } from '../components/DaySummary';
 import { SplitView } from '../components/SplitView';
@@ -14,6 +15,12 @@ const MODES: { label: string; value: PlanMode }[] = [
   { label: 'Podsumowanie', value: 'summary' },
 ];
 
+const getPreviousDate = (date: string) => {
+  const previous = new Date(`${date}T00:00:00Z`);
+  previous.setUTCDate(previous.getUTCDate() - 1);
+  return previous.toISOString().split('T')[0];
+};
+
 export function PlanScreen() {
   const [mode, setMode] = useState<PlanMode>('edit');
   const [isAddRecipeVisible, setIsAddRecipeVisible] = useState(false);
@@ -25,6 +32,35 @@ export function PlanScreen() {
   });
 
   const addMeal = usePlanStore((state) => state.addMeal);
+  const copyDayMeals = usePlanStore((state) => state.copyDayMeals);
+  const plan = usePlanStore((state) => state.plan);
+
+  const hasMeals = (date: string, person: PersonKey) =>
+    Object.values(plan[date]?.[person] ?? {}).some(Boolean);
+
+  const copyFromYesterday = () => {
+    const yesterday = getPreviousDate(selectedDate);
+    const people: PersonKey[] = ['you', 'partner'];
+    const run = () =>
+      people.forEach((person) => copyDayMeals(yesterday, person, selectedDate, person));
+
+    if (!people.some((person) => hasMeals(selectedDate, person))) {
+      run();
+      return;
+    }
+    Alert.alert(
+      'Nadpisać posiłki?',
+      'Skopiowane posiłki zastąpią te, które są już zaplanowane w tym dniu.',
+      [
+        { text: 'Anuluj', style: 'cancel' },
+        { text: 'Nadpisz', style: 'destructive', onPress: run },
+      ]
+    );
+  };
+
+  const canCopyFromYesterday = (['you', 'partner'] as PersonKey[]).some((person) =>
+    hasMeals(getPreviousDate(selectedDate), person)
+  );
 
   const handleOpenAddRecipe = (mealSlot: string, person: PersonKey) => {
     setSelectedMealSlot(mealSlot);
@@ -80,6 +116,22 @@ export function PlanScreen() {
       </View>
 
       <DaysCarousel selectedDate={selectedDate} onSelectDate={setSelectedDate} />
+
+      {mode === 'edit' && (
+        <View className="flex-row px-4 py-2">
+          <Pressable
+            onPress={copyFromYesterday}
+            disabled={!canCopyFromYesterday}
+            accessibilityRole="button"
+            accessibilityLabel="Skopiuj z wczoraj"
+            className={`flex-row items-center gap-1.5 self-center rounded-full border border-amber-200 bg-white px-4 py-2 ${canCopyFromYesterday ? '' : 'opacity-50'
+              }`}
+          >
+            <Ionicons name="copy-outline" size={16} color="#b45309" />
+            <Text className="text-sm font-semibold text-amber-900">Skopiuj z wczoraj</Text>
+          </Pressable>
+        </View>
+      )}
 
       <ScrollView className="flex-1">
         {mode === 'summary' && <DaySummary selectedDate={selectedDate} />}
