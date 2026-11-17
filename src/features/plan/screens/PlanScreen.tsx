@@ -1,21 +1,23 @@
 import { useState } from 'react';
 import { Pressable, ScrollView, Text, View } from 'react-native';
 import { AddRecipeBottomSheet } from '../components/AddRecipeBottomSheet';
+import { SplitView } from '../components/SplitView';
 import { DaysCarousel } from '@/shared/components/DaysCarousel';
-import { MealSlots } from '../components/MealSlots';
 import { usePlanStore } from '../stores/usePlanStore';
 
-type UserType = 'you' | 'partner';
+type PersonKey = 'you' | 'partner';
+type PlanMode = 'edit' | 'summary';
 
-const VIEW_MODES: { label: string; value: UserType }[] = [
-  { label: 'Nikola', value: 'you' },
-  { label: 'Bartek', value: 'partner' },
+const MODES: { label: string; value: PlanMode }[] = [
+  { label: 'Edycja', value: 'edit' },
+  { label: 'Podsumowanie', value: 'summary' },
 ];
 
 export function PlanScreen() {
-  const [userType, setUserType] = useState<UserType>('you');
+  const [mode, setMode] = useState<PlanMode>('edit');
   const [isAddRecipeVisible, setIsAddRecipeVisible] = useState(false);
   const [selectedMealSlot, setSelectedMealSlot] = useState<string>('');
+  const [selectedPerson, setSelectedPerson] = useState<PersonKey>('you');
   const [selectedDate, setSelectedDate] = useState(() => {
     const today = new Date();
     return today.toISOString().split('T')[0];
@@ -23,8 +25,9 @@ export function PlanScreen() {
 
   const addMeal = usePlanStore((state) => state.addMeal);
 
-  const handleOpenAddRecipe = (mealSlot: string) => {
+  const handleOpenAddRecipe = (mealSlot: string, person: PersonKey) => {
     setSelectedMealSlot(mealSlot);
+    setSelectedPerson(person);
     setIsAddRecipeVisible(true);
   };
 
@@ -33,7 +36,7 @@ export function PlanScreen() {
       return;
     }
 
-    addMeal(selectedDate, userType, selectedMealSlot, recipeId, servings);
+    addMeal(selectedDate, selectedPerson, selectedMealSlot, recipeId, servings);
     setIsAddRecipeVisible(false);
     setSelectedMealSlot('');
   };
@@ -48,19 +51,19 @@ export function PlanScreen() {
       <View className="border-b border-amber-200 bg-white px-4 py-3">
         <View className="flex-row items-center justify-between gap-2">
           <View className="flex-1 flex-row gap-1 rounded-lg bg-amber-100 p-1">
-            {VIEW_MODES.map(({ label, value }) => (
+            {MODES.map(({ label, value }) => (
               <Pressable
                 key={value}
-                onPress={() => setUserType(value)}
-                className={`flex-1 rounded-md py-2 ${userType === value ? 'bg-white' : 'bg-transparent'
+                onPress={() => setMode(value)}
+                className={`flex-1 rounded-md py-2 ${mode === value ? 'bg-white' : 'bg-transparent'
                   }`}
                 accessible={true}
                 accessibilityRole="button"
                 accessibilityLabel={label}
-                accessibilityState={{ selected: userType === value }}
+                accessibilityState={{ selected: mode === value }}
               >
                 <Text
-                  className={`text-center text-sm font-semibold ${userType === value ? 'text-amber-900' : 'text-amber-700'
+                  className={`text-center text-sm font-semibold ${mode === value ? 'text-amber-900' : 'text-amber-700'
                     }`}
                 >
                   {label}
@@ -74,10 +77,9 @@ export function PlanScreen() {
       <DaysCarousel selectedDate={selectedDate} onSelectDate={setSelectedDate} />
 
       <ScrollView className="flex-1">
-        <MealSlots
+        <SplitView
           selectedDate={selectedDate}
-          userType={userType}
-          onAddRecipe={handleOpenAddRecipe}
+          onAddRecipe={mode === 'edit' ? handleOpenAddRecipe : undefined}
         />
       </ScrollView>
 

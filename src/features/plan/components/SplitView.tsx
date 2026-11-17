@@ -1,6 +1,6 @@
 import { Text, View } from 'react-native';
-import { MealCard } from '../../plan/components/MealCard';
-import { usePlanStore } from '../../plan/stores/usePlanStore';
+import { MealCard } from './MealCard';
+import { usePlanStore } from '../stores/usePlanStore';
 import { useRecipes } from '../../recipes/hooks/useRecipes';
 import { getRecipeVariant, type Recipe } from '@/shared/types/recipe';
 import { normalizeProductName } from '@/shared/utils/normalizeProductName';
@@ -10,7 +10,6 @@ const MEAL_TYPES = ['Śniadanie', 'II Śniadanie', 'Obiad', 'Podwieczorek', 'Kol
 interface SplitViewProps {
   selectedDate: string;
   onAddRecipe?: (slot: string, person: 'you' | 'partner') => void;
-  onOpenAddRecipe?: () => void;
 }
 
 interface RecipeComparison {
@@ -89,7 +88,7 @@ function compareRecipes(
   };
 }
 
-export function SplitView({ selectedDate, onAddRecipe, onOpenAddRecipe }: SplitViewProps) {
+export function SplitView({ selectedDate, onAddRecipe }: SplitViewProps) {
   const dayPlan = usePlanStore((state) => state.plan[selectedDate]);
   const { recipes } = useRecipes();
 
@@ -156,10 +155,7 @@ export function SplitView({ selectedDate, onAddRecipe, onOpenAddRecipe }: SplitV
                 isSharedRecipe={isSharedRecipe}
                 isSimilarRecipe={comparison.isSimilarRecipe}
                 ingredientDifferences={comparison.yourDifferences}
-                onAddRecipe={onAddRecipe ? () => {
-                  onAddRecipe(mealType, 'you');
-                  onOpenAddRecipe?.();
-                } : undefined}
+                onAddRecipe={onAddRecipe ? () => onAddRecipe(mealType, 'you') : undefined}
               />
             </View>
             <View className="flex-1">
@@ -171,10 +167,7 @@ export function SplitView({ selectedDate, onAddRecipe, onOpenAddRecipe }: SplitV
                 isSharedRecipe={isSharedRecipe}
                 isSimilarRecipe={comparison.isSimilarRecipe}
                 ingredientDifferences={comparison.partnerDifferences}
-                onAddRecipe={onAddRecipe ? () => {
-                  onAddRecipe(mealType, 'partner');
-                  onOpenAddRecipe?.();
-                } : undefined}
+                onAddRecipe={onAddRecipe ? () => onAddRecipe(mealType, 'partner') : undefined}
               />
             </View>
           </View>
