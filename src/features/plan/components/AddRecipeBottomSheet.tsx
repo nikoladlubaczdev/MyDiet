@@ -1,5 +1,6 @@
 import { useRecipes } from '@/features/recipes/hooks/useRecipes';
 import type { MealCategory, Recipe } from '@/shared/types/recipe';
+import Ionicons from '@expo/vector-icons/Ionicons';
 import { useState } from 'react';
 import { Modal, Pressable, ScrollView, Text, View } from 'react-native';
 
@@ -110,10 +111,10 @@ function RecipesList({
           onPress={() => onSelectRecipe(recipe, true)}
           accessible={true}
           accessibilityRole="button"
-          accessibilityLabel={`Dodaj ${recipe.name} też dla Bartka`}
-          className="mr-4 rounded-full bg-amber-100 px-3 py-2"
+          accessibilityLabel={`Dodaj ${recipe.name} dla obu osób`}
+          className="mr-4 rounded-full bg-amber-100 p-2"
         >
-          <Text className="text-xs font-semibold text-amber-900">+ Bartek</Text>
+          <Ionicons name="people-outline" size={18} color="#78350f" />
         </Pressable>
       )}
     </View>
