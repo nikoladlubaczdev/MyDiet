@@ -2,7 +2,8 @@ import { Text, View } from 'react-native';
 import { MealCard } from '../../plan/components/MealCard';
 import { usePlanStore } from '../../plan/stores/usePlanStore';
 import { useRecipes } from '../../recipes/hooks/useRecipes';
-import type { Recipe } from '@/shared/types/recipe';
+import { getRecipeVariant, type Recipe } from '@/shared/types/recipe';
+import { normalizeProductName } from '@/shared/utils/normalizeProductName';
 
 const MEAL_TYPES = ['Śniadanie', 'II Śniadanie', 'Obiad', 'Podwieczorek', 'Kolacja'];
 
@@ -17,12 +18,6 @@ interface RecipeComparison {
   yourDifferences: Record<string, 'product' | 'amount'>;
   partnerDifferences: Record<string, 'product' | 'amount'>;
 }
-
-const normalizeProductName = (product: string) =>
-  product
-    .toLocaleLowerCase('pl')
-    .replace(/[^\p{L}\p{N}]+/gu, ' ')
-    .trim();
 
 function compareRecipes(
   yourRecipe: Recipe | undefined,
@@ -41,10 +36,16 @@ function compareRecipes(
   }
 
   const yourIngredients = new Map(
-    yourRecipe.ingredients.map((ingredient) => [normalizeProductName(ingredient.product), ingredient])
+    getRecipeVariant(yourRecipe, 'you').ingredients.map((ingredient) => [
+      normalizeProductName(ingredient.product),
+      ingredient,
+    ])
   );
   const partnerIngredients = new Map(
-    partnerRecipe.ingredients.map((ingredient) => [normalizeProductName(ingredient.product), ingredient])
+    getRecipeVariant(partnerRecipe, 'partner').ingredients.map((ingredient) => [
+      normalizeProductName(ingredient.product),
+      ingredient,
+    ])
   );
   const allProducts = new Set([...yourIngredients.keys(), ...partnerIngredients.keys()]);
   const sharedProductCount = [...yourIngredients.keys()].filter((product) =>
@@ -95,8 +96,8 @@ export function SplitView({ selectedDate, onAddRecipe, onOpenAddRecipe }: SplitV
   return (
     <View className="gap-2 px-2 py-4">
       <View className="flex-row gap-2">
-        <Text className="flex-1 px-2 text-sm font-bold text-amber-900">TY</Text>
-        <Text className="flex-1 px-2 text-sm font-bold text-amber-900">PARTNER</Text>
+        <Text className="flex-1 px-2 text-sm font-bold text-amber-900">NIKOLA</Text>
+        <Text className="flex-1 px-2 text-sm font-bold text-amber-900">BARTEK</Text>
       </View>
 
       {MEAL_TYPES.map((mealType) => {

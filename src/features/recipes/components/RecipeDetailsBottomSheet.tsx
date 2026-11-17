@@ -4,6 +4,7 @@ import type { PresentationDetent } from '@expo/ui/swift-ui/modifiers';
 import { presentationDetents, presentationDragIndicator } from '@expo/ui/swift-ui/modifiers';
 import { ScrollView, Text, View } from 'react-native';
 import { useMemo } from 'react';
+import { normalizeProductName } from '@/shared/utils/normalizeProductName';
 
 const categoryLabels: Record<MealCategory, string> = {
   'ś': 'Śniadanie',
@@ -13,6 +14,39 @@ const categoryLabels: Record<MealCategory, string> = {
   'sm': 'Smoothie',
 };
 
+type Ingredient = Recipe['ingredients'][number];
+
+interface IngredientRow {
+  product: string;
+  nikola?: Ingredient;
+  bartek?: Ingredient;
+}
+
+function buildIngredientRows(nikolaIngredients: Ingredient[], bartekIngredients?: Ingredient[]): IngredientRow[] {
+  const rows = new Map<string, IngredientRow>();
+
+  nikolaIngredients.forEach((ingredient) => {
+    rows.set(normalizeProductName(ingredient.product), { product: ingredient.product, nikola: ingredient });
+  });
+
+  bartekIngredients?.forEach((ingredient) => {
+    const key = normalizeProductName(ingredient.product);
+    const existing = rows.get(key);
+    if (existing) {
+      existing.bartek = ingredient;
+    } else {
+      rows.set(key, { product: ingredient.product, bartek: ingredient });
+    }
+  });
+
+  return [...rows.values()];
+}
+
+function formatAmount(ingredient?: Ingredient) {
+  if (!ingredient) return { text: '-', hint: undefined };
+  return { text: `${ingredient.weight} ${ingredient.unit}`, hint: ingredient.hint };
+}
+
 interface RecipeDetailsBottomSheetProps {
   recipe: Recipe | null;
   isVisible: boolean;
@@ -20,18 +54,25 @@ interface RecipeDetailsBottomSheetProps {
 }
 
 export function RecipeDetailsBottomSheet({ recipe, isVisible, onClose }: RecipeDetailsBottomSheetProps) {
-  if (!recipe) return null;
-
   const detents: PresentationDetent[] = useMemo(() => {
     return [{ fraction: 0.6 }, 'large'];
   }, []);
 
+  if (!recipe) return null;
+
+  const personVariants = recipe.partnerVariant
+    ? [
+      { label: 'Nikola', variant: recipe },
+      { label: 'Bartek', variant: recipe.partnerVariant },
+    ]
+    : [{ label: '', variant: recipe }];
+
   return (
     <Host>
-      <BottomSheet isPresented={isVisible} onIsPresentedChange={onClose}>
+      <BottomSheet isPresented={isVisible} onIsPresentedChange={onClose} >
         <Group modifiers={[presentationDetents(detents), presentationDragIndicator('visible')]}>
           <ScrollView className="flex-1 bg-amber-50 ">
-            <View className="mt-2 bg-gradient-to-b from-amber-100 to-amber-50 px-4 py-6">
+            <View className="mt-2 ml-6 bg-gradient-to-b from-amber-100 to-amber-50 py-6 ">
               <Text className="mb-3 mt-6 text-center text-3xl font-bold text-amber-900">{recipe.name}</Text>
               <View className="mb-3 flex-row flex-wrap gap-2">
                 {recipe.categories.map((cat) => (
@@ -46,28 +87,49 @@ export function RecipeDetailsBottomSheet({ recipe, isVisible, onClose }: RecipeD
                   <Text className="text-lg font-bold text-amber-900">{recipe.prepTimeMinutes} min</Text>
                 </View>
                 <View className="flex-1 rounded-lg bg-white px-3 py-2">
-                  <Text className="text-xs font-medium text-slate-600">Kcal</Text>
+                  <Text className="text-xs font-medium text-slate-600">Kcal Nikola</Text>
                   <Text className="text-lg font-bold text-amber-900">{recipe.macros.K.toFixed(0)}</Text>
                 </View>
+                {recipe.partnerVariant && (
+                  <View className="flex-1 rounded-lg bg-white px-3 py-2">
+                    <Text className="text-xs font-medium text-slate-600">Kcal Bartek</Text>
+                    <Text className="text-lg font-bold text-amber-900">{recipe.partnerVariant.macros.K.toFixed(0)}</Text>
+                  </View>
+                )}
               </View>
             </View>
             {/* Content */}
-            <View className="px-4 py-3">
+            <View className="ml-6 py-3">
               {/* Ingredients */}
-              <View className="mb-2">
+              <View className="mb-2 w-full">
                 <Text className="mb-3 text-xl font-bold text-amber-900">Składniki</Text>
-                <View className="gap-2 rounded-xl bg-white p-4">
-                  {recipe.ingredients.map((ingredient, idx) => (
-                    <View key={idx} className="flex-row items-start justify-between border-b border-amber-100 pb-2 last:border-0">
-                      <View className="flex-1">
-                        <Text className="font-medium text-slate-800">{ingredient.product}</Text>
-                        {ingredient.hint && <Text className="text-xs text-slate-500">{ingredient.hint}</Text>}
+                <View className="w-full rounded-xl bg-white p-4">
+                  <View className="w-full flex-row border-b border-amber-200 pb-2">
+                    <Text className="flex-1 text-xs font-semibold uppercase text-slate-600">Składnik</Text>
+                    <Text className="w-24 text-right text-xs font-semibold uppercase text-amber-900">Nikola</Text>
+                    {recipe.partnerVariant && (
+                      <Text className="w-24 text-right text-xs font-semibold uppercase text-amber-900">Bartek</Text>
+                    )}
+                  </View>
+                  {buildIngredientRows(recipe.ingredients, recipe.partnerVariant?.ingredients).map((row) => {
+                    const nikolaAmount = formatAmount(row.nikola);
+                    const bartekAmount = formatAmount(row.bartek);
+                    return (
+                      <View key={row.product} className="w-full flex-row items-start border-b border-amber-100 py-2 last:border-0">
+                        <Text className="flex-1 font-medium text-slate-800">{row.product}</Text>
+                        <View className="w-24 items-end">
+                          <Text className="text-sm font-semibold text-amber-900">{nikolaAmount.text}</Text>
+                          {nikolaAmount.hint && <Text className="text-right text-xs text-slate-500">{nikolaAmount.hint}</Text>}
+                        </View>
+                        {recipe.partnerVariant && (
+                          <View className="w-24 items-end">
+                            <Text className="text-sm font-semibold text-amber-900">{bartekAmount.text}</Text>
+                            {bartekAmount.hint && <Text className="text-right text-xs text-slate-500">{bartekAmount.hint}</Text>}
+                          </View>
+                        )}
                       </View>
-                      <Text className="ml-2 text-sm font-semibold text-amber-900">
-                        {ingredient.weight} {ingredient.unit}
-                      </Text>
-                    </View>
-                  ))}
+                    );
+                  })}
                 </View>
               </View>
 
@@ -102,21 +164,23 @@ export function RecipeDetailsBottomSheet({ recipe, isVisible, onClose }: RecipeD
               )}
 
               {/* Macros */}
-              <View className="mb-6">
-                <Text className="mb-3 text-xl font-bold text-amber-900">Makroelementy</Text>
-                <View className="gap-2">
-                  <View className="flex-row gap-2">
-                    <MacroCard label="Białko" value={recipe.macros.B} unit="g" color="bg-red-100" textColor="text-red-900" />
-                    <MacroCard label="Tłuszcze" value={recipe.macros.T} unit="g" color="bg-yellow-100" textColor="text-yellow-900" />
-                    <MacroCard label="Węglowodany" value={recipe.macros.WP + recipe.macros.WW} unit="g" color="bg-green-100" textColor="text-green-900" />
-                  </View>
-                  <View className="flex-row gap-2">
-                    <MacroCard label="Włókno" value={recipe.macros.F} unit="g" color="bg-purple-100" textColor="text-purple-900" />
-                    <MacroCard label="Ww. Proste" value={recipe.macros.WP} unit="g" color="bg-orange-100" textColor="text-orange-900" />
-                    <MacroCard label="Ww. Złożone" value={recipe.macros.WW} unit="g" color="bg-cyan-100" textColor="text-cyan-900" />
+              {personVariants.map(({ label, variant }) => (
+                <View key={label} className="mb-6">
+                  <Text className="mb-3 text-xl font-bold text-amber-900">
+                    {label ? `Makroelementy: ${label}` : 'Makroelementy'}
+                  </Text>
+                  <View className="gap-2">
+                    <View className="flex-row gap-2">
+                      <MacroCard label="Białko" value={variant.macros.B} unit="g" color="bg-red-100" textColor="text-red-900" />
+                      <MacroCard label="Tłuszcze" value={variant.macros.T} unit="g" color="bg-yellow-100" textColor="text-yellow-900" />
+                      <MacroCard label="Węglowodany" value={variant.macros.WP + variant.macros.WW} unit="g" color="bg-green-100" textColor="text-green-900" />
+                    </View>
+                    <View className="flex-row gap-2">
+                      <MacroCard label="Włókno" value={variant.macros.F} unit="g" color="bg-purple-100" textColor="text-purple-900" />
+                    </View>
                   </View>
                 </View>
-              </View>
+              ))}
             </View>
           </ScrollView>
         </Group>

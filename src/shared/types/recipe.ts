@@ -18,13 +18,23 @@ export interface Macros {
   WW: number; // węglowodany złożone
 }
 
-export interface Recipe {
+export type Person = 'you' | 'partner';
+
+export interface RecipeVariant {
+  ingredients: Ingredient[];
+  macros: Macros;
+}
+
+export interface Recipe extends RecipeVariant {
   id: string;
   name: string;
   categories: MealCategory[];
-  ingredients: Ingredient[];
   instructions: string[]; // kroki przygotowania
   tips?: string[];
-  macros: Macros;
   prepTimeMinutes: number; // w minutach
+  partnerVariant?: RecipeVariant;
+}
+
+export function getRecipeVariant(recipe: Recipe, person: Person): RecipeVariant {
+  return person === 'partner' && recipe.partnerVariant ? recipe.partnerVariant : recipe;
 }

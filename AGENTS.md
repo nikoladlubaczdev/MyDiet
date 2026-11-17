@@ -27,3 +27,5 @@ This file establishes standard rules for automated agents working on the MyDiet 
    - No direct committing of features of code to `main`.
    - Use strict naming conventions: `feat/*`, `fix/*`, `chore/*`.
    - Work in branch-ready workflows, creating short-lived sub-branches before processing changes.
+   - Write commit messages and pull request titles and descriptions in English.
+   - Do not add `Co-authored-by` trailers to commit messages.

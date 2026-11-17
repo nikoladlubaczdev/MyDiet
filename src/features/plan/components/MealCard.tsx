@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import { Text, View, Pressable } from 'react-native';
 import { usePlanStore } from '../stores/usePlanStore';
+import { getRecipeVariant } from '@/shared/types/recipe';
 import { useRecipes } from '@/features/recipes/hooks/useRecipes';
 
 const MEAL_TYPES = ['Śniadanie', 'II Śniadanie', 'Obiad', 'Podwieczorek', 'Kolacja'];
@@ -34,7 +35,7 @@ export function MealCard({
   const meal = getMealForSlot(date, person, mealSlot);
   const recipe = meal ? recipes.find((r) => r.id === meal.recipeId) : null;
 
-  if (!recipe) {
+  if (!meal || !recipe) {
     return (
       <Pressable
         onPress={onAddRecipe}
@@ -47,6 +48,8 @@ export function MealCard({
       </Pressable>
     );
   }
+
+  const variant = getRecipeVariant(recipe, person);
 
   return (
     <Pressable
@@ -75,16 +78,16 @@ export function MealCard({
         <View>
           <Text className="text-sm font-bold text-amber-900">{recipe.name}</Text>
           <Text className="mt-1 text-xs text-slate-600">Składniki:</Text>
-          {recipe.ingredients.slice(0, 2).map((ing, idx) => (
+          {variant.ingredients.slice(0, 2).map((ing, idx) => (
             <Text key={idx} className="text-xs text-slate-600">
               • {ing.product} {ing.weight}{ing.unit}
             </Text>
           ))}
-          {recipe.ingredients.length > 2 && (
-            <Text className="text-xs text-slate-600">• +{recipe.ingredients.length - 2} więcej</Text>
+          {variant.ingredients.length > 2 && (
+            <Text className="text-xs text-slate-600">• +{variant.ingredients.length - 2} więcej</Text>
           )}
           <Text className="mt-2 text-xs text-slate-500">
-            {Math.round(recipe.macros.K * meal.servings)} kcal | {meal.servings} porcje |{' '}
+            {Math.round(variant.macros.K * meal.servings)} kcal | {meal.servings} porcje |{' '}
             {recipe.prepTimeMinutes} min
           </Text>
         </View>
@@ -97,7 +100,7 @@ export function MealCard({
           <Text className="mt-3 text-xs font-semibold text-slate-800">
             Składniki ({meal.servings} porcje):
           </Text>
-          {recipe.ingredients.map((ing, idx) => {
+          {variant.ingredients.map((ing, idx) => {
             const difference = ingredientDifferences[ing.product];
             const amount = `${ing.weight * meal.servings}${ing.unit}`;
 
@@ -137,14 +140,14 @@ export function MealCard({
           <View className="mt-3 rounded-lg bg-slate-50 p-2">
             <Text className="text-xs font-semibold text-slate-800">📊 Makroskładniki:</Text>
             <Text className="text-xs text-slate-700">
-              Kalorie: {Math.round(recipe.macros.K * meal.servings)} kcal
+              Kalorie: {Math.round(variant.macros.K * meal.servings)} kcal
             </Text>
             <Text className="text-xs text-slate-700">
-              Białko: {(recipe.macros.B * meal.servings).toFixed(0)}g | Tłuszcze:{' '}
-              {(recipe.macros.T * meal.servings).toFixed(0)}g
+              Białko: {(variant.macros.B * meal.servings).toFixed(0)}g | Tłuszcze:{' '}
+              {(variant.macros.T * meal.servings).toFixed(0)}g
             </Text>
             <Text className="text-xs text-slate-700">
-              Węglowodany: {((recipe.macros.WP + recipe.macros.WW) * meal.servings).toFixed(0)}g
+              Węglowodany: {((variant.macros.WP + variant.macros.WW) * meal.servings).toFixed(0)}g
             </Text>
           </View>
 

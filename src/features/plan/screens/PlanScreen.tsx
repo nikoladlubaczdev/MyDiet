@@ -8,8 +8,8 @@ import { usePlanStore } from '../stores/usePlanStore';
 type UserType = 'you' | 'partner';
 
 const VIEW_MODES: { label: string; value: UserType }[] = [
-  { label: 'Ty', value: 'you' },
-  { label: 'Partner', value: 'partner' },
+  { label: 'Nikola', value: 'you' },
+  { label: 'Bartek', value: 'partner' },
 ];
 
 export function PlanScreen() {
