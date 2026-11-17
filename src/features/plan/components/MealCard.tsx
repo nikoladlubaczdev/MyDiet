@@ -160,16 +160,6 @@ export function MealCard({
           {!readonly && (
             <View className="mt-4 flex-row gap-2">
               <Pressable
-                className="flex-1 rounded-lg bg-amber-100 py-2"
-                accessible={true}
-                accessibilityRole="button"
-                accessibilityLabel="Edytuj porcje"
-              >
-                <Text className="text-center text-xs font-semibold text-amber-900">
-                  Edytuj porcje
-                </Text>
-              </Pressable>
-              <Pressable
                 onPress={() => {
                   removeMeal(date, person, mealSlot);
                   setIsExpanded(false);
