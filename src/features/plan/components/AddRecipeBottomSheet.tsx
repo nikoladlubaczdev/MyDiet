@@ -1,5 +1,6 @@
 import { useRecipes } from '@/features/recipes/hooks/useRecipes';
-import type { Recipe } from '@/shared/types/recipe';
+import type { MealCategory, Recipe } from '@/shared/types/recipe';
+import { useState } from 'react';
 import { Modal, Pressable, ScrollView, Text, View } from 'react-native';
 
 interface AddRecipeBottomSheetProps {
@@ -9,6 +10,14 @@ interface AddRecipeBottomSheetProps {
   mealSlot: string;
 }
 
+const categoryLabels: Record<MealCategory, string> = {
+  'ś': 'Śniadanie',
+  'o': 'Obiad',
+  'k': 'Kolacja',
+  'p': 'Przekąska',
+  'sm': 'Smoothie',
+};
+
 function Header({ mealSlot, recipeCount }: { mealSlot: string; recipeCount: number }) {
   return (
     <View className="border-b border-amber-200 px-6 py-6">
@@ -17,6 +26,42 @@ function Header({ mealSlot, recipeCount }: { mealSlot: string; recipeCount: numb
       </Text>
       <Text className="text-xs text-slate-500">{recipeCount} przepisów</Text>
     </View>
+  );
+}
+
+function CategoryFilter({
+  categories,
+  selectedCategory,
+  onSelectCategory,
+}: {
+  categories: MealCategory[];
+  selectedCategory: MealCategory | undefined;
+  onSelectCategory: (category: MealCategory | undefined) => void;
+}) {
+  const chips: { key: string; label: string; value: MealCategory | undefined }[] = [
+    { key: 'all', label: 'Wszystkie', value: undefined },
+    ...categories.map((cat) => ({ key: cat, label: categoryLabels[cat], value: cat })),
+  ];
+
+  return (
+    <ScrollView horizontal showsHorizontalScrollIndicator={false} className="border-b border-amber-100 px-4 py-3">
+      <View className="flex-row gap-2">
+        {chips.map(({ key, label, value }) => (
+          <Pressable
+            key={key}
+            onPress={() => onSelectCategory(value)}
+            accessible={true}
+            accessibilityRole="button"
+            accessibilityState={{ selected: selectedCategory === value }}
+            className={`rounded-full px-4 py-2 ${selectedCategory === value ? 'bg-amber-200' : 'bg-white'}`}
+          >
+            <Text className={`text-xs font-semibold ${selectedCategory === value ? 'text-amber-900' : 'text-slate-700'}`}>
+              {label}
+            </Text>
+          </Pressable>
+        ))}
+      </View>
+    </ScrollView>
   );
 }
 
@@ -45,7 +90,7 @@ function RecipesList({
       className="border-b border-amber-100 bg-white px-4 py-3"
     >
       <Text className="text-base text-slate-900">{recipe.name}</Text>
-      <Text className="text-xs text-slate-500">Porcji: {recipe.servings || 1}</Text>
+      <Text className="text-xs text-slate-500">Porcji: 1</Text>
     </Pressable>
   ));
 }
@@ -56,10 +101,11 @@ export function AddRecipeBottomSheet({
   onAdd,
   mealSlot,
 }: AddRecipeBottomSheetProps) {
-  const { recipes } = useRecipes();
+  const [selectedCategory, setSelectedCategory] = useState<MealCategory | undefined>();
+  const { recipes, categories } = useRecipes({ category: selectedCategory });
 
   const handleRecipeSelect = (recipe: Recipe) => {
-    onAdd(recipe.id, recipe.servings || 1);
+    onAdd(recipe.id, 1);
   };
 
   return (
@@ -79,7 +125,12 @@ export function AddRecipeBottomSheet({
           accessibilityLabel="Zamknij wybór przepisu"
         />
         <View className="max-h-[75%] overflow-hidden rounded-t-3xl bg-white pb-8">
-          <Header mealSlot={mealSlot} recipeCount={recipes?.length || 0} />
+          <Header mealSlot={mealSlot} recipeCount={recipes.length} />
+          <CategoryFilter
+            categories={categories}
+            selectedCategory={selectedCategory}
+            onSelectCategory={setSelectedCategory}
+          />
           <ScrollView>
             <View>
               <RecipesList recipes={recipes} onSelectRecipe={handleRecipeSelect} />
