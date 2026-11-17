@@ -44,7 +44,13 @@ function CategoryFilter({
   ];
 
   return (
-    <ScrollView horizontal showsHorizontalScrollIndicator={false} className="border-b border-amber-100 px-4 py-3">
+    <View className="border-b border-amber-100">
+      <ScrollView
+        horizontal={true}
+        showsHorizontalScrollIndicator={false}
+        style={{ flexGrow: 0 }}
+        contentContainerStyle={{ paddingHorizontal: 16, paddingVertical: 12 }}
+      >
       <View className="flex-row gap-2">
         {chips.map(({ key, label, value }) => (
           <Pressable
@@ -61,7 +67,8 @@ function CategoryFilter({
           </Pressable>
         ))}
       </View>
-    </ScrollView>
+      </ScrollView>
+    </View>
   );
 }
 
