@@ -238,7 +238,12 @@ export function ShoppingListScreen() {
     <View className="flex-1 bg-emerald-50">
       <ScrollView className="flex-1 px-4 py-4">
         <Pressable
-          onPress={() => setIsCalendarVisible(true)}
+          onPress={() => {
+            const today = new Date();
+            setSelectedDates([]);
+            setVisibleMonth(new Date(today.getFullYear(), today.getMonth(), 1));
+            setIsCalendarVisible(true);
+          }}
           className="mb-4 items-center rounded-2xl bg-emerald-600 px-4 py-4"
           accessible={true}
           accessibilityRole="button"
@@ -358,13 +363,14 @@ export function ShoppingListScreen() {
 
                 const dateKey = toDateKey(date);
                 const isSelected = selectedDates.includes(dateKey);
+                const isToday = dateKey === toDateKey(new Date());
 
                 return (
                   <View key={dateKey} className="w-[14.285%] items-center py-1">
                     <Pressable
                       onPress={() => handleToggleDate(date)}
                       className={`h-10 w-10 items-center justify-center rounded-full ${
-                        isSelected ? 'bg-emerald-600' : 'bg-transparent'
+                        isSelected ? 'bg-emerald-600' : isToday ? 'bg-emerald-100' : 'bg-transparent'
                       }`}
                       accessible={true}
                       accessibilityRole="button"
@@ -375,7 +381,7 @@ export function ShoppingListScreen() {
                     >
                       <Text
                         className={`text-sm ${
-                          isSelected ? 'font-bold text-white' : 'text-slate-700'
+                        isSelected ? 'font-bold text-white' : isToday ? 'font-bold text-emerald-700' : 'text-slate-700'
                         }`}
                       >
                         {date.getDate()}
