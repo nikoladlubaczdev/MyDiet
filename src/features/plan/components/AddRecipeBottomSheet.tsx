@@ -1,5 +1,6 @@
 import { useRecipes } from '@/features/recipes/hooks/useRecipes';
-import type { MealCategory, Recipe } from '@/shared/types/recipe';
+import type { MealCategory, Person, Recipe } from '@/shared/types/recipe';
+import { getRecipeVariant } from '@/shared/types/recipe';
 import Ionicons from '@expo/vector-icons/Ionicons';
 import { useEffect, useState } from 'react';
 import { Modal, Pressable, ScrollView, Text, View } from 'react-native';
@@ -9,6 +10,7 @@ interface AddRecipeBottomSheetProps {
   onClose: () => void;
   onAdd: (recipeId: string, servings: number, forBoth: boolean) => void;
   mealSlot: string;
+  person: Person;
 }
 
 const categoryLabels: Record<MealCategory, string> = {
@@ -87,9 +89,11 @@ function CategoryFilter({
 
 function RecipesList({
   recipes,
+  person,
   onSelectRecipe,
 }: {
   recipes: Recipe[] | undefined;
+  person: Person;
   onSelectRecipe: (recipe: Recipe, forBoth: boolean) => void;
 }) {
   if (!recipes || recipes.length === 0) {
@@ -113,6 +117,9 @@ function RecipesList({
         className="flex-1 px-4 py-3"
       >
         <Text className="text-base text-slate-900">{recipe.name}</Text>
+        <Text className="text-xs text-slate-500">
+          {Math.round(getRecipeVariant(recipe, person).macros.K)} kcal
+        </Text>
       </Pressable>
       <Pressable
         onPress={() => onSelectRecipe(recipe, true)}
@@ -132,6 +139,7 @@ export function AddRecipeBottomSheet({
   onClose,
   onAdd,
   mealSlot,
+  person,
 }: AddRecipeBottomSheetProps) {
   const [selectedCategory, setSelectedCategory] = useState<MealCategory | undefined>(() =>
     getDefaultCategory(mealSlot)
@@ -174,7 +182,7 @@ export function AddRecipeBottomSheet({
           />
           <ScrollView>
             <View>
-              <RecipesList recipes={recipes} onSelectRecipe={handleRecipeSelect} />
+              <RecipesList recipes={recipes} person={person} onSelectRecipe={handleRecipeSelect} />
             </View>
           </ScrollView>
         </View>

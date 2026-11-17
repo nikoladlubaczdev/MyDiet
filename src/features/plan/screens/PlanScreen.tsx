@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import { Pressable, ScrollView, Text, View } from 'react-native';
 import { AddRecipeBottomSheet } from '../components/AddRecipeBottomSheet';
+import { DaySummary } from '../components/DaySummary';
 import { SplitView } from '../components/SplitView';
 import { DaysCarousel } from '@/shared/components/DaysCarousel';
 import { usePlanStore } from '../stores/usePlanStore';
@@ -81,6 +82,7 @@ export function PlanScreen() {
       <DaysCarousel selectedDate={selectedDate} onSelectDate={setSelectedDate} />
 
       <ScrollView className="flex-1">
+        {mode === 'summary' && <DaySummary selectedDate={selectedDate} />}
         <SplitView
           selectedDate={selectedDate}
           onAddRecipe={mode === 'edit' ? handleOpenAddRecipe : undefined}
@@ -92,6 +94,7 @@ export function PlanScreen() {
         onClose={handleCloseAddRecipe}
         onAdd={handleAddRecipe}
         mealSlot={selectedMealSlot}
+        person={selectedPerson}
       />
     </View>
   );

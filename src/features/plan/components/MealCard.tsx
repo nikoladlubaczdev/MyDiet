@@ -95,7 +95,10 @@ export function MealCard({
       {/* Collapsed View */}
       {!isExpanded && (
         <View>
-          <Text className="text-sm font-bold text-amber-900">{recipe.name}</Text>
+          <View className="flex-row items-center gap-1">
+            <Text className="flex-1 text-sm font-bold text-amber-900">{recipe.name}</Text>
+            {isSharedRecipe && <Ionicons name="people" size={16} color="#059669" />}
+          </View>
           <Text className="mt-1 text-xs text-slate-600">Składniki:</Text>
           {variant.ingredients.slice(0, 2).map((ing, idx) => (
             <Text key={idx} className="text-xs text-slate-600">
@@ -115,7 +118,10 @@ export function MealCard({
       {/* Expanded View */}
       {isExpanded && (
         <View>
-          <Text className="text-sm font-bold text-amber-900">{recipe.name}</Text>
+          <View className="flex-row items-center gap-1">
+            <Text className="flex-1 text-sm font-bold text-amber-900">{recipe.name}</Text>
+            {isSharedRecipe && <Ionicons name="people" size={16} color="#059669" />}
+          </View>
           <Text className="mt-3 text-xs font-semibold text-slate-800">
             Składniki ({meal.servings} porcje):
           </Text>

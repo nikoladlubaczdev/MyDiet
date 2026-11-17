@@ -1,4 +1,5 @@
 import { Text, View } from 'react-native';
+import { calculateTotals } from './DaySummary';
 import { MealCard } from './MealCard';
 import { usePlanStore } from '../stores/usePlanStore';
 import { useRecipes } from '../../recipes/hooks/useRecipes';
@@ -91,12 +92,24 @@ function compareRecipes(
 export function SplitView({ selectedDate, onAddRecipe }: SplitViewProps) {
   const dayPlan = usePlanStore((state) => state.plan[selectedDate]);
   const { recipes } = useRecipes();
+  const yourTotals = calculateTotals(dayPlan?.you, 'you', recipes);
+  const partnerTotals = calculateTotals(dayPlan?.partner, 'partner', recipes);
 
   return (
     <View className="gap-2 px-2 py-4">
       <View className="flex-row gap-2">
-        <Text className="flex-1 px-2 text-sm font-bold text-amber-900">NIKOLA</Text>
-        <Text className="flex-1 px-2 text-sm font-bold text-amber-900">BARTEK</Text>
+        <Text className="flex-1 px-2 text-center text-base font-bold text-amber-900">
+          NIKOLA
+          {onAddRecipe && (
+            <Text className="text-xs font-normal text-slate-500"> · {Math.round(yourTotals.kcal)} kcal</Text>
+          )}
+        </Text>
+        <Text className="flex-1 px-2 text-center text-base font-bold text-amber-900">
+          BARTEK
+          {onAddRecipe && (
+            <Text className="text-xs font-normal text-slate-500"> · {Math.round(partnerTotals.kcal)} kcal</Text>
+          )}
+        </Text>
       </View>
 
       {MEAL_TYPES.map((mealType) => {
@@ -117,23 +130,13 @@ export function SplitView({ selectedDate, onAddRecipe }: SplitViewProps) {
         return (
           <View key={mealType}>
           <View className="mb-1 flex-row gap-2">
-            <Text className="flex-1 px-2 text-xs font-semibold text-slate-600">
+            <Text className="flex-1 px-2 text-center text-xs font-semibold text-slate-600">
               {mealType}
             </Text>
-            <Text className="flex-1 px-2 text-xs font-semibold text-slate-600">
+            <Text className="flex-1 px-2 text-center text-xs font-semibold text-slate-600">
               {mealType}
             </Text>
           </View>
-
-          {isSharedRecipe && (
-            <View className="mb-1 items-center">
-              <View className="rounded-full bg-emerald-100 px-3 py-1">
-                <Text className="text-xs font-semibold text-emerald-800">
-                  Wspólny przepis
-                </Text>
-              </View>
-            </View>
-          )}
 
           {comparison.isSimilarRecipe && (
             <View className="mb-1 items-center">
