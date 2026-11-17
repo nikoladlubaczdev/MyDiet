@@ -145,7 +145,7 @@ export function SplitView({ selectedDate, onAddRecipe }: SplitViewProps) {
             </View>
           )}
 
-          <View className="flex-row items-start gap-2">
+          <View className="flex-row items-stretch gap-2">
             <View className="flex-1">
               <MealCard
                 date={selectedDate}

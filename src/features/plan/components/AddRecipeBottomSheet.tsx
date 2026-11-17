@@ -1,7 +1,7 @@
 import { useRecipes } from '@/features/recipes/hooks/useRecipes';
 import type { MealCategory, Recipe } from '@/shared/types/recipe';
 import Ionicons from '@expo/vector-icons/Ionicons';
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import { Modal, Pressable, ScrollView, Text, View } from 'react-native';
 
 interface AddRecipeBottomSheetProps {
@@ -18,6 +18,18 @@ const categoryLabels: Record<MealCategory, string> = {
   'p': 'Przekąska',
   'sm': 'Smoothie',
 };
+
+const defaultCategoryBySlot: Record<string, MealCategory> = {
+  'Śniadanie': 'ś',
+  'II Śniadanie': 'p',
+  'Obiad': 'o',
+  'Podwieczorek': 'p',
+  'Kolacja': 'k',
+};
+
+function getDefaultCategory(mealSlot: string): MealCategory | undefined {
+  return defaultCategoryBySlot[mealSlot];
+}
 
 function Header({ mealSlot, recipeCount }: { mealSlot: string; recipeCount: number }) {
   return (
@@ -101,7 +113,6 @@ function RecipesList({
         className="flex-1 px-4 py-3"
       >
         <Text className="text-base text-slate-900">{recipe.name}</Text>
-        <Text className="text-xs text-slate-500">Porcji: 1</Text>
       </Pressable>
       <Pressable
         onPress={() => onSelectRecipe(recipe, true)}
@@ -122,8 +133,17 @@ export function AddRecipeBottomSheet({
   onAdd,
   mealSlot,
 }: AddRecipeBottomSheetProps) {
-  const [selectedCategory, setSelectedCategory] = useState<MealCategory | undefined>();
+  const [selectedCategory, setSelectedCategory] = useState<MealCategory | undefined>(() =>
+    getDefaultCategory(mealSlot)
+  );
   const { recipes, categories } = useRecipes({ category: selectedCategory });
+
+  useEffect(() => {
+    if (!isVisible) {
+      return;
+    }
+    setSelectedCategory(getDefaultCategory(mealSlot));
+  }, [isVisible, mealSlot]);
 
   const handleRecipeSelect = (recipe: Recipe, forBoth: boolean) => {
     onAdd(recipe.id, 1, forBoth);

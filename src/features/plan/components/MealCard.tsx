@@ -38,6 +38,21 @@ export function MealCard({
   const recipe = meal ? recipes.find((r) => r.id === meal.recipeId) : null;
 
   if (!meal || !recipe) {
+    if (readonly) {
+      return (
+        <View className="flex-1 items-center justify-center rounded-lg border border-amber-200 bg-white py-6">
+          <View className="h-9 w-9">
+            <View className="absolute inset-0 items-center justify-center">
+              <Ionicons name="restaurant-outline" size={28} color="#fbbf24" />
+            </View>
+            <View className="absolute inset-0 items-center justify-center">
+              <Ionicons name="ban-outline" size={28} color="#fbbf24" />
+            </View>
+          </View>
+        </View>
+      );
+    }
+
     return (
       <Pressable
         onPress={onAddRecipe}
