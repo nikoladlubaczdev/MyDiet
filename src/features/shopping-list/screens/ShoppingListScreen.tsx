@@ -158,7 +158,9 @@ export function ShoppingListScreen() {
 
   if (selectedList) {
     const checkedItems = selectedList.items.filter((item) => item.isChecked).length;
-
+    const sortedItems = [...selectedList.items].sort(
+      (firstItem, secondItem) => Number(firstItem.isChecked) - Number(secondItem.isChecked)
+    );
     return (
       <View className="flex-1 bg-emerald-50">
         <View className="border-b border-emerald-200 bg-white px-4 pb-3 pt-4">
@@ -196,7 +198,7 @@ export function ShoppingListScreen() {
             </View>
           ) : (
             <View className="overflow-hidden rounded-2xl bg-white">
-              {selectedList.items.map((item) => (
+              {sortedItems.map((item) => (
                 <Pressable
                   key={item.id}
                   onPress={() => toggleItem(selectedList.id, item.id)}
