@@ -110,6 +110,9 @@ export const usePlanStore = create<PlanStoreState>()(
     {
       name: 'plan-storage',
       storage: createJSONStorage(() => AsyncStorage),
+      // v2: recipes were rewritten to per-person variants; old recipe IDs no longer exist.
+      version: 2,
+      migrate: () => ({ plan: {} }),
     }
   )
 );

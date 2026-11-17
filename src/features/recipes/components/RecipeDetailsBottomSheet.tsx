@@ -54,6 +54,10 @@ interface RecipeDetailsBottomSheetProps {
 }
 
 export function RecipeDetailsBottomSheet({ recipe, isVisible, onClose }: RecipeDetailsBottomSheetProps) {
+  const detents: PresentationDetent[] = useMemo(() => {
+    return [{ fraction: 0.6 }, 'large'];
+  }, []);
+
   if (!recipe) return null;
 
   const personVariants = recipe.partnerVariant
@@ -63,16 +67,12 @@ export function RecipeDetailsBottomSheet({ recipe, isVisible, onClose }: RecipeD
     ]
     : [{ label: '', variant: recipe }];
 
-  const detents: PresentationDetent[] = useMemo(() => {
-    return [{ fraction: 0.6 }, 'large'];
-  }, []);
-
   return (
     <Host>
       <BottomSheet isPresented={isVisible} onIsPresentedChange={onClose} >
         <Group modifiers={[presentationDetents(detents), presentationDragIndicator('visible')]}>
           <ScrollView className="flex-1 bg-amber-50 ">
-            <View className="mt-2 ml-6 bg-gradient-to-b from-amber-100 to-amber-50 py-6 ">
+            <View className="mt-2 mx-6 bg-gradient-to-b from-amber-100 to-amber-50 py-6 ">
               <Text className="mb-3 mt-6 text-center text-3xl font-bold text-amber-900">{recipe.name}</Text>
               <View className="mb-3 flex-row flex-wrap gap-2">
                 {recipe.categories.map((cat) => (
@@ -99,7 +99,7 @@ export function RecipeDetailsBottomSheet({ recipe, isVisible, onClose }: RecipeD
               </View>
             </View>
             {/* Content */}
-            <View className="ml-6 py-3">
+            <View className="mx-6 py-3">
               {/* Ingredients */}
               <View className="mb-2 w-full">
                 <Text className="mb-3 text-xl font-bold text-amber-900">Składniki</Text>
